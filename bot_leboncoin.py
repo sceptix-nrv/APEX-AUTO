@@ -406,7 +406,8 @@ def formater_message(ad, nom, score, ia=None):
         avis     = ia.get("avis", "").strip()
         fiab     = ia.get("fiabilite_moteur", "").strip()
         if verdict == "ATTENTION":
-            redflag = (ia.get("redflag_detail") or "").strip()
+            # redflag uniquement si redflag=true, sinon on n'affiche que l'avis
+            redflag = (ia.get("redflag_detail") or "").strip() if ia.get("redflag") else ""
             ia_s  = f"⚠️ *Expert :* {redflag}\n💬 {avis}" if redflag else f"⚠️ *Expert :* {avis}"
         else:
             ia_s  = f"🧠 *Expert :* {avis}" if avis else "🧠 *Expert :* Pas d'infos suffisantes."
@@ -504,21 +505,59 @@ Règles strictes :
 - "fiabilite_moteur" : 1 à 2 phrases sur la fiabilité connue du moteur identifié dans l'annonce (ex: "Le 1.4 HDI est un moteur réputé très fiable et économique, peu de problèmes connus." ou "Le 1.6 THP est connu pour ses problèmes de distribution et de joints de culasse, surveille ça."). Si tu ne identifies pas le moteur précisément, donne un avis général sur la motorisation."""
 
 
-def analyser_annonce_ia(ad, r):
+def fetch_description(driver, ad_id):
+    """Visite la page de l'annonce et récupère la description via __NEXT_DATA__."""
+    url = f"https://www.leboncoin.fr/voitures/{ad_id}.htm"
+    try:
+        driver.get(url)
+        WebDriverWait(driver, 15).until(
+            lambda d: d.execute_script("return !!document.getElementById('__NEXT_DATA__')")
+        )
+        time.sleep(random.uniform(1, 2))
+        raw = driver.execute_script(
+            "return JSON.parse(document.getElementById('__NEXT_DATA__').textContent)"
+        )
+        props = raw.get("props", {}).get("pageProps", {})
+        ad_data = (props.get("adData") or props.get("ad") or
+                   (props.get("hydrationData") or {}).get("adView") or {})
+        body = ad_data.get("body", "")
+        if not body:
+            # fallback : cherche dans les props imbriqués
+            for key in ("adDetail", "adview"):
+                sub = props.get(key) or {}
+                body = sub.get("body", "")
+                if body:
+                    break
+        return (body or "").strip()[:600]
+    except Exception:
+        return ""
+
+
+def analyser_annonce_ia(ad, r, driver=None):
     """Retourne dict avec correspond/redflag/verdict, ou None si IA indisponible."""
     if not GROQ_KEY:
         return None
 
-    attrs = _get_attrs(ad)
-    titre = ad.get("subject", "")
-    desc  = (ad.get("body") or "")[:500]
-    prix  = ad.get("price", [None])[0] if ad.get("price") else "?"
-    km    = attrs.get("mileage", "?")
-    annee = (attrs.get("regdate") or "")[:4] or "?"
+    attrs   = _get_attrs(ad)
+    titre   = ad.get("subject", "")
+    ad_id   = str(ad.get("list_id", ""))
+    prix    = ad.get("price", [None])[0] if ad.get("price") else "?"
+    km      = attrs.get("mileage", "?")
+    annee   = (attrs.get("regdate") or "")[:4] or "?"
+
+    # Récupère la description depuis la page individuelle si driver dispo
+    desc = (ad.get("body") or "").strip()
+    if not desc and driver and ad_id:
+        log("NET", f"Fetch description annonce {ad_id}...")
+        desc = fetch_description(driver, ad_id)
+        if desc:
+            log("NET", f"Description recuperee ({len(desc)} chars)")
+        else:
+            log("WARN", f"Aucune description trouvee pour {ad_id}")
 
     prompt = PROMPT_ANALYSE.format(
         nom=r.get("nom", ""), keywords=r.get("keywords", ""),
-        titre=titre, description=desc or "(aucune description)",
+        titre=titre, description=desc or "(vendeur n'a pas mis de description)",
         prix=prix, km=km, annee=annee,
     )
 
@@ -642,7 +681,7 @@ def scan():
                 ia = None
                 if GROQ_KEY:
                     log("SYS", f"Analyse IA : {titre[:40]}...")
-                    ia = analyser_annonce_ia(ad, r)
+                    ia = analyser_annonce_ia(ad, r, driver)
                     if ia:
                         verdict = ia.get("verdict", "OK")
                         if not ia.get("correspond", True):

@@ -1002,7 +1002,7 @@ function renderAnnonces() {
 
     const iaBlock = (a.ia_avis || a.ia_moteur || (a.ia_verdict === 'ATTENTION' && a.ia_detail)) ? `
       <div class="ac-ia">
-        ${a.ia_verdict === 'ATTENTION' && a.ia_detail ? `<div class="ac-ia-warn">⚠ ${esc(a.ia_detail)}</div>` : ''}
+        ${a.ia_verdict === 'ATTENTION' && a.ia_detail && a.ia_detail.length > 5 ? `<div class="ac-ia-warn">⚠ ${esc(a.ia_detail)}</div>` : ''}
         ${a.ia_avis   ? `<div class="ac-ia-avis">🧠 ${esc(a.ia_avis)}</div>`   : ''}
         ${a.ia_moteur ? `<div class="ac-ia-moteur">🔧 ${esc(a.ia_moteur)}</div>` : ''}
       </div>` : '';
