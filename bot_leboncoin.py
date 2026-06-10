@@ -499,51 +499,21 @@ def extraire_marche(ad, nom):
 GROQ_URL   = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
 
-PROMPT_ANALYSE = """Tu es un expert en achat de voitures d'occasion en France. Analyse cette annonce LeBonCoin comme un professionnel qui conseille un ami.
+PROMPT_ANALYSE = """Tu es un expert en achat de voitures d'occasion en France. Analyse cette annonce LeBonCoin.
 
 Recherche : "{nom}" (mots-clés : {keywords})
 Titre : {titre}
-Description : {description}
-Prix : {prix} EUR | Kilométrage : {km} km | Année : {annee}
+Prix : {prix} EUR | Kilométrage : {km} km | Année : {annee} | Carburant : {fuel}
 
 Réponds UNIQUEMENT en JSON valide, sans markdown :
 {{"correspond": true/false, "raison_correspond": "...", "redflag": true/false, "redflag_detail": "...", "verdict": "OK", "avis": "...", "fiabilite_moteur": "..."}}
 
-Règles strictes :
+Règles :
 - "correspond" = le titre correspond EXACTEMENT au modèle recherché (cherche "206" → "207", "206+", "206 SW" = false)
-- "redflag" = true SEULEMENT si : moteur HS/changé, boîte cassée, accident grave non réparé, épave, papiers étrangers à refaire (allemands, belges, etc.)
-- Petites réparations (plaquettes, pneus, CT, révision) = PAS un redflag
+- "redflag" = true SEULEMENT si le titre mentionne : épave, accidenté, pour pièces, moteur HS, papiers étrangers
 - "verdict" : "OK", "ATTENTION" ou "ELIMINER"
-- "avis" : commence TOUJOURS par une recommandation claire ("Je te conseille d'y aller", "À éviter", "Intéressant, négocie", "Fonce", "Méfie-toi", etc.) puis 1 phrase max sur les points clés de la description (distrib faite, CT ok, km cohérent, vendeur vague, carnet absent, etc.). Ton ami mécanicien direct. Si la description est vide, dis-le. NE PARLE PAS du modèle ou du titre, uniquement de l'état et des infos pratiques.
-- "fiabilite_moteur" : 1 à 2 phrases sur la fiabilité connue du moteur identifié dans l'annonce (ex: "Le 1.4 HDI est un moteur réputé très fiable et économique, peu de problèmes connus." ou "Le 1.6 THP est connu pour ses problèmes de distribution et de joints de culasse, surveille ça."). Si tu ne identifies pas le moteur précisément, donne un avis général sur la motorisation."""
-
-
-def fetch_description(driver, ad_id):
-    """Visite la page de l'annonce et récupère la description via __NEXT_DATA__."""
-    url = f"https://www.leboncoin.fr/voitures/{ad_id}.htm"
-    try:
-        driver.get(url)
-        WebDriverWait(driver, 15).until(
-            lambda d: d.execute_script("return !!document.getElementById('__NEXT_DATA__')")
-        )
-        time.sleep(random.uniform(1, 2))
-        raw = driver.execute_script(
-            "return JSON.parse(document.getElementById('__NEXT_DATA__').textContent)"
-        )
-        props = raw.get("props", {}).get("pageProps", {})
-        ad_data = (props.get("adData") or props.get("ad") or
-                   (props.get("hydrationData") or {}).get("adView") or {})
-        body = ad_data.get("body", "")
-        if not body:
-            # fallback : cherche dans les props imbriqués
-            for key in ("adDetail", "adview"):
-                sub = props.get(key) or {}
-                body = sub.get("body", "")
-                if body:
-                    break
-        return (body or "").strip()[:600]
-    except Exception:
-        return ""
+- "avis" : commence par une recommandation claire ("Fonce", "Intéressant", "Méfie-toi", "À négocier", etc.) puis commente le rapport km/année/prix en 1 phrase. Pas de description dispo, base-toi sur les chiffres.
+- "fiabilite_moteur" : 1-2 phrases sur la fiabilité du moteur identifié dans le titre (ex: "1.4 HDI fiable et économique" ou "1.6 THP fragile, surveille la distribution"). Si moteur non identifiable, dis-le."""
 
 
 def analyser_annonce_ia(ad, r, driver=None):
@@ -551,27 +521,17 @@ def analyser_annonce_ia(ad, r, driver=None):
     if not GROQ_KEY:
         return None
 
-    attrs   = _get_attrs(ad)
-    titre   = ad.get("subject", "")
-    ad_id   = str(ad.get("list_id", ""))
-    prix    = ad.get("price", [None])[0] if ad.get("price") else "?"
-    km      = attrs.get("mileage", "?")
-    annee   = (attrs.get("regdate") or "")[:4] or "?"
-
-    # Récupère la description depuis la page individuelle si driver dispo
-    desc = (ad.get("body") or "").strip()
-    if not desc and driver and ad_id:
-        log("NET", f"Fetch description annonce {ad_id}...")
-        desc = fetch_description(driver, ad_id)
-        if desc:
-            log("NET", f"Description recuperee ({len(desc)} chars)")
-        else:
-            log("WARN", f"Aucune description trouvee pour {ad_id}")
+    attrs  = _get_attrs(ad)
+    titre  = ad.get("subject", "")
+    prix   = ad.get("price", [None])[0] if ad.get("price") else "?"
+    km     = attrs.get("mileage", "?")
+    annee  = (attrs.get("regdate") or "")[:4] or "?"
+    fuel   = FUEL_LABELS.get(str(attrs.get("fuel", "")), "?")
+    carros = attrs.get("vehicle_type", "")
 
     prompt = PROMPT_ANALYSE.format(
         nom=r.get("nom", ""), keywords=r.get("keywords", ""),
-        titre=titre, description=desc or "(vendeur n'a pas mis de description)",
-        prix=prix, km=km, annee=annee,
+        titre=titre, prix=prix, km=km, annee=annee, fuel=fuel, carros=carros,
     )
 
     for attempt in range(3):
@@ -694,7 +654,7 @@ def scan():
                 ia = None
                 if GROQ_KEY:
                     log("SYS", f"Analyse IA : {titre[:40]}...")
-                    ia = analyser_annonce_ia(ad, r, driver)
+                    ia = analyser_annonce_ia(ad, r)
                     if ia:
                         verdict = ia.get("verdict", "OK")
                         if not ia.get("correspond", True):
