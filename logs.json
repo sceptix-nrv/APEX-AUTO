@@ -613,5 +613,165 @@
     "ts": "2026-06-10T11:03:58",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot 207 CC 1.6 VTI 16V SPORT PACK..."
+  },
+  {
+    "ts": "2026-06-10T11:03:59",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 207 CC 1.6 VTI 16V SPORT PACK — Le modèle recherché est 207, mais l'annonce correspond à un Peugeot 207 CC"
+  },
+  {
+    "ts": "2026-06-10T11:03:59",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.4 HDi 68ch business..."
+  },
+  {
+    "ts": "2026-06-10T11:04:00",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 1.4 HDi 68ch business"
+  },
+  {
+    "ts": "2026-06-10T11:04:01",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3210661952] Peugeot 207 1.4 HDi 68ch business — 5990€ | score -50% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:04:01",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.4 95Cv homologué Bioethano..."
+  },
+  {
+    "ts": "2026-06-10T11:04:02",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 1.4 95Cv homologué Bioethano"
+  },
+  {
+    "ts": "2026-06-10T11:04:03",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213321578] Peugeot 207 1.4 95Cv homologué Bioethanol — 4000€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:04:03",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 hdi 90 ch..."
+  },
+  {
+    "ts": "2026-06-10T11:04:03",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 207 1.6 hdi 90 ch — Le modèle recherché est 207, mais l'annonce correspond à un 206"
+  },
+  {
+    "ts": "2026-06-10T11:04:03",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI..."
+  },
+  {
+    "ts": "2026-06-10T11:04:04",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 207 1.6 HDI — Le modèle recherché est 207, mais l'annonce correspond à un 206"
+  },
+  {
+    "ts": "2026-06-10T11:04:04",
+    "lvl": "SYS",
+    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
+  },
+  {
+    "ts": "2026-06-10T11:04:05",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est 207, mais l'annonce concerne un Renault Twingo"
+  },
+  {
+    "ts": "2026-06-10T11:04:05",
+    "lvl": "SYS",
+    "msg": "Analyse IA : PEUGEOT 207 1.6 HDi 16v 110ch..."
+  },
+  {
+    "ts": "2026-06-10T11:04:06",
+    "lvl": "OK",
+    "msg": "IA OK : PEUGEOT 207 1.6 HDi 16v 110ch"
+  },
+  {
+    "ts": "2026-06-10T11:04:07",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3154617639] PEUGEOT 207 1.6 HDi 16v 110ch — 3990€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:04:07",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Clio 3 1l2 tce..."
+  },
+  {
+    "ts": "2026-06-10T11:04:08",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Clio 3 1l2 tce — Le modèle recherché est 207, mais le titre mentionne un Clio 3 1l2 tce"
+  },
+  {
+    "ts": "2026-06-10T11:04:08",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo II GT 1.2 TCE 101 cv..."
+  },
+  {
+    "ts": "2026-06-10T11:04:08",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Renault Twingo II GT 1.2 TCE 101 cv — Le modèle recherché est le 206, mais l'annonce concerne le 207"
+  },
+  {
+    "ts": "2026-06-10T11:04:08",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 cc sport 1.6 hdi 112..."
+  },
+  {
+    "ts": "2026-06-10T11:04:09",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 cc sport 1.6 hdi 112"
+  },
+  {
+    "ts": "2026-06-10T11:04:10",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3207003975] Peugeot 207 cc sport 1.6 hdi 112 — 7990€ | score -99% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:04:10",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI90 PREMIUM PACK 5P..."
+  },
+  {
+    "ts": "2026-06-10T11:04:12",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 1.6 HDI90 PREMIUM PACK 5P"
+  },
+  {
+    "ts": "2026-06-10T11:04:12",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3185760381] Peugeot 207 1.6 HDI90 PREMIUM PACK 5P — 4999€ | score -25% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:04:12",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Vend BMW X1..."
+  },
+  {
+    "ts": "2026-06-10T11:04:13",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Vend BMW X1 — Le modèle recherché est 207, mais le titre mentionne une BMW X1"
+  },
+  {
+    "ts": "2026-06-10T11:04:13",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 CC 1.6 HDI110 FELINE FAP..."
+  },
+  {
+    "ts": "2026-06-10T11:04:14",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 CC 1.6 HDI110 FELINE FAP"
+  },
+  {
+    "ts": "2026-06-10T11:04:15",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3117293282] Peugeot 207 CC 1.6 HDI110 FELINE FAP — 5499€ | score -37% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:04:15",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI90 ACTIVE 3P..."
   }
 ]
