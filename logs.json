@@ -1,125 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:15:33",
-    "lvl": "OK",
-    "msg": "IA OK : Jolie Peugeot 208 1.0i 68cv 94.000km cit"
-  },
-  {
-    "ts": "2026-06-10T16:15:34",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3188698025] Jolie Peugeot 208 1.0i 68cv 94.000km citadine 4cv  — 4500€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:15:34",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 HDi..."
-  },
-  {
-    "ts": "2026-06-10T16:15:34",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 207 HDi"
-  },
-  {
-    "ts": "2026-06-10T16:15:35",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213236821] Peugeot 207 HDi — 4250€ | score +6% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:15:35",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 1.6 92cv hdi premium..."
-  },
-  {
-    "ts": "2026-06-10T16:15:36",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 207 1.6 92cv hdi premium — "
-  },
-  {
-    "ts": "2026-06-10T16:15:36",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213227216] Peugeot 207 1.6 92cv hdi premium — 2800€ | score +38% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:15:36",
-    "lvl": "SYS",
-    "msg": "Analyse IA : PEUGEOT 207 1.4 5cv 75ch 99317 KM GARANT..."
-  },
-  {
-    "ts": "2026-06-10T16:15:37",
-    "lvl": "OK",
-    "msg": "IA OK : PEUGEOT 207 1.4 5cv 75ch 99317 KM GARANT"
-  },
-  {
-    "ts": "2026-06-10T16:15:38",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213295220] PEUGEOT 207 1.4 5cv 75ch 99317 KM GARANTIE 12 MOIS — 5490€ | score -22% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:15:38",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 essence 1.4 L - 75CV Année 2..."
-  },
-  {
-    "ts": "2026-06-10T16:15:39",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 207 essence 1.4 L - 75CV Année 2"
-  },
-  {
-    "ts": "2026-06-10T16:15:40",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3188025305] Peugeot 207 essence 1.4 L - 75CV Année 2008 avec s — 3490€ | score +22% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:15:40",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 CC 1.6 VTI 16V SPORT PACK..."
-  },
-  {
-    "ts": "2026-06-10T16:15:40",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Peugeot 207 CC 1.6 VTI 16V SPORT PACK — Le modèle recherché est le 207, mais l'annonce concerne le 207 CC"
-  },
-  {
-    "ts": "2026-06-10T16:15:40",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 1.4 HDi 68ch business..."
-  },
-  {
-    "ts": "2026-06-10T16:15:41",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 207 1.4 HDi 68ch business"
-  },
-  {
-    "ts": "2026-06-10T16:15:41",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3210661952] Peugeot 207 1.4 HDi 68ch business — 5990€ | score -33% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:15:41",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 1.4 95Cv homologué Bioethano..."
-  },
-  {
-    "ts": "2026-06-10T16:15:42",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Peugeot 207 1.4 95Cv homologué Bioethano — Le modèle recherché est le 207, mais l'annonce concerne un 207"
-  },
-  {
-    "ts": "2026-06-10T16:15:42",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 1.6 hdi 90 ch..."
-  },
-  {
-    "ts": "2026-06-10T16:15:42",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 207 1.6 hdi 90 ch — "
-  },
-  {
-    "ts": "2026-06-10T16:15:43",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3198572594] Peugeot 207 1.6 hdi 90 ch — 3490€ | score +22% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T16:15:43",
     "lvl": "SYS",
     "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
@@ -1498,5 +1378,125 @@
     "ts": "2026-06-10T17:07:02",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=CITROEN%20C4&locations=Nancy_..."
+  },
+  {
+    "ts": "2026-06-10T17:07:12",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T17:07:12",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T17:07:12",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 5 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T17:07:12",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 600€ | median 3490€ | max 4000€"
+  },
+  {
+    "ts": "2026-06-10T17:07:12",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Citroen c4 II PHASE2 1.2essence 131ch bo..."
+  },
+  {
+    "ts": "2026-06-10T17:07:13",
+    "lvl": "OK",
+    "msg": "IA OK : Citroen c4 II PHASE2 1.2essence 131ch bo"
+  },
+  {
+    "ts": "2026-06-10T17:07:14",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213763366] Citroen c4 II PHASE2 1.2essence 131ch boite mecani — 3990€ | score -14% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:07:14",
+    "lvl": "SYS",
+    "msg": "Analyse IA : CITROËN C4 1.6 VTI 120 cv CT ok entretie..."
+  },
+  {
+    "ts": "2026-06-10T17:07:15",
+    "lvl": "OK",
+    "msg": "IA OK : CITROËN C4 1.6 VTI 120 cv CT ok entretie"
+  },
+  {
+    "ts": "2026-06-10T17:07:16",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213862571] CITROËN C4 1.6 VTI 120 cv CT ok entretien complet — 3490€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:07:16",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Citroën C4 1.6 HDI..."
+  },
+  {
+    "ts": "2026-06-10T17:07:18",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Citroën C4 1.6 HDI — "
+  },
+  {
+    "ts": "2026-06-10T17:07:18",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213912404] Citroën C4 1.6 HDI — 1450€ | score +58% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:07:18",
+    "lvl": "SYS",
+    "msg": "Analyse IA : C4 Picasso..."
+  },
+  {
+    "ts": "2026-06-10T17:07:20",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : C4 Picasso — Le modèle recherché est le CITROEN C4, mais l'annonce concerne un CITROEN C4 Picasso"
+  },
+  {
+    "ts": "2026-06-10T17:07:20",
+    "lvl": "SYS",
+    "msg": "Analyse IA : C4 Picasso..."
+  },
+  {
+    "ts": "2026-06-10T17:07:21",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : C4 Picasso — Le modèle recherché est le CITROEN C4, mais l'annonce correspond à un CITROEN C4 Picasso"
+  },
+  {
+    "ts": "2026-06-10T17:07:21",
+    "lvl": "OK",
+    "msg": "3 alerte(s) envoyee(s) pour 'C4'"
+  },
+  {
+    "ts": "2026-06-10T17:07:22",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T17:07:25",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=8) — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T17:07:25",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 69 entrees"
+  },
+  {
+    "ts": "2026-06-10T17:07:27",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 95 entrees"
+  },
+  {
+    "ts": "2026-06-10T17:07:29",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +5 entrees (95 total)"
+  },
+  {
+    "ts": "2026-06-10T17:07:29",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 5 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
