@@ -1,75 +1,5 @@
 [
   {
-    "ts": "2026-06-10T10:58:52",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206.1.9d..."
-  },
-  {
-    "ts": "2026-06-10T10:58:53",
-    "lvl": "OK",
-    "msg": "IA OK : 206.1.9d"
-  },
-  {
-    "ts": "2026-06-10T10:58:54",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T10:58:54",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
-  },
-  {
-    "ts": "2026-06-10T10:58:55",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206 3portes 1.4HDI Eco"
-  },
-  {
-    "ts": "2026-06-10T10:58:56",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +28% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T10:58:56",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1,9D 172 000 km..."
-  },
-  {
-    "ts": "2026-06-10T10:58:57",
-    "lvl": "OK",
-    "msg": "IA OK : 206 1,9D 172 000 km"
-  },
-  {
-    "ts": "2026-06-10T10:58:58",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +44% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T10:58:58",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Renault Twingo faible kilométrage contrô..."
-  },
-  {
-    "ts": "2026-06-10T10:58:59",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Renault Twingo faible kilométrage contrô — Le modèle recherché est 206, mais l'annonce concerne un Renault Twingo"
-  },
-  {
-    "ts": "2026-06-10T10:58:59",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 2l HDI..."
-  },
-  {
-    "ts": "2026-06-10T10:59:00",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206 2l HDI"
-  },
-  {
-    "ts": "2026-06-10T10:59:04",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +0% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T10:59:04",
     "lvl": "SYS",
     "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
@@ -1498,5 +1428,75 @@
     "ts": "2026-06-10T11:22:24",
     "lvl": "SYS",
     "msg": "Analyse IA : Golf 8R Line..."
+  },
+  {
+    "ts": "2026-06-10T11:22:25",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Golf 8R Line — "
+  },
+  {
+    "ts": "2026-06-10T11:22:26",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3182964625] Golf 8R Line — 38500€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:22:26",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 8 GTI Clubsport..."
+  },
+  {
+    "ts": "2026-06-10T11:22:27",
+    "lvl": "OK",
+    "msg": "IA OK : Golf 8 GTI Clubsport"
+  },
+  {
+    "ts": "2026-06-10T11:22:28",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3193557917] Golf 8 GTI Clubsport — 36000€ | score +6% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:22:28",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 8 gti 2.0 tsi 265cv..."
+  },
+  {
+    "ts": "2026-06-10T11:22:29",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Golf 8 gti 2.0 tsi 265cv — "
+  },
+  {
+    "ts": "2026-06-10T11:22:29",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3195219473] Golf 8 gti 2.0 tsi 265cv — 30490€ | score +21% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:22:29",
+    "lvl": "OK",
+    "msg": "4 alerte(s) envoyee(s) pour 'GOLF 8R'"
+  },
+  {
+    "ts": "2026-06-10T11:22:30",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T11:22:33",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 32 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:22:34",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 73 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:22:36",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +4 entrees (73 total)"
+  },
+  {
+    "ts": "2026-06-10T11:22:36",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 4 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
