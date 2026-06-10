@@ -123,5 +123,50 @@
     "ts": "2026-06-10T11:54:42",
     "lvl": "WARN",
     "msg": "Aucune description trouvee pour 3213322986"
+  },
+  {
+    "ts": "2026-06-10T11:54:43",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 1.4i — "
+  },
+  {
+    "ts": "2026-06-10T11:54:44",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213322986] Peugeot 206 1.4i — 1800€ | score +28% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:54:44",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+ ct ok pack clim..."
+  },
+  {
+    "ts": "2026-06-10T11:54:44",
+    "lvl": "NET",
+    "msg": "Fetch description annonce 3213409974..."
+  },
+  {
+    "ts": "2026-06-10T11:54:59",
+    "lvl": "WARN",
+    "msg": "Aucune description trouvee pour 3213409974"
+  },
+  {
+    "ts": "2026-06-10T11:55:00",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206+ ct ok pack clim — "
+  },
+  {
+    "ts": "2026-06-10T11:55:01",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213409974] 206+ ct ok pack clim — 2000€ | score +20% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:55:01",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo II GT 1.2 TCE 101 cv..."
+  },
+  {
+    "ts": "2026-06-10T11:55:01",
+    "lvl": "NET",
+    "msg": "Fetch description annonce 3213417921..."
   }
 ]
