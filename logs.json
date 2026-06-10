@@ -1,30 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:44:16",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206cc Roland garos — "
-  },
-  {
-    "ts": "2026-06-10T17:44:17",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3205967687] 206cc Roland garos — 3200€ | score -7% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:44:17",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206..."
-  },
-  {
-    "ts": "2026-06-10T17:44:18",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 — "
-  },
-  {
-    "ts": "2026-06-10T17:44:18",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score +0% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T17:44:18",
     "lvl": "SYS",
     "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
@@ -1498,5 +1473,30 @@
     "ts": "2026-06-10T18:15:58",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T18:16:04",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 23 entrees"
+  },
+  {
+    "ts": "2026-06-10T18:16:06",
+    "lvl": "SYS",
+    "msg": "Annonces sauvegardees — 23 total"
+  },
+  {
+    "ts": "2026-06-10T18:16:06",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 66 entrees"
+  },
+  {
+    "ts": "2026-06-10T18:16:08",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +6 entrees (66 total)"
+  },
+  {
+    "ts": "2026-06-10T18:16:08",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 1 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
