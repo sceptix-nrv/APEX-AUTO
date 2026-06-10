@@ -1150,5 +1150,23 @@
     "ia_avis": "Fonce, le rapport km/année est raisonnable pour un modèle de 2008",
     "ia_moteur": "Le 1.6 HDI est généralement considéré comme un moteur fiable et économique",
     "ia_note": 7
+  },
+  {
+    "id": "3213916619",
+    "titre": "Vente Citroën c3",
+    "prix": 3500.0,
+    "km": 133000,
+    "annee": "2010",
+    "ville": "Bouxwiller",
+    "lien": "https://www.leboncoin.fr/voitures/3213916619.htm",
+    "recherche": "C3",
+    "score": -40,
+    "date": "2026-06-10T17:03",
+    "statut": "nouvelle",
+    "ia_verdict": "OK",
+    "ia_detail": "",
+    "ia_avis": "Fonce, le rapport km/année est raisonnable pour un modèle de 2010",
+    "ia_moteur": "Moteur 1.4 HDI, fiable et économique",
+    "ia_note": 7
   }
 ]
