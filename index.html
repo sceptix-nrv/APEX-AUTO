@@ -430,6 +430,47 @@
       <div style="color:#333;text-align:center;margin-top:180px;">// EN ATTENTE DE CONNEXION //</div>
     </div>
   </div>
+
+  <!-- PARAMÈTRES / DANGER ZONE -->
+  <div style="margin-top:2.5rem;">
+    <div style="font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem;">Paramètres</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
+
+      <div class="card" style="border-color:#ff3c3c22;">
+        <div class="card-body" style="padding:1.1rem;">
+          <div style="font-weight:600;font-size:.875rem;margin-bottom:.3rem;">Vider les annonces détectées</div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:.85rem;">Supprime toutes les annonces de <code>annonces.json</code>. L'expert continuera à tourner normalement.</div>
+          <button class="btn btn-danger btn-sm" onclick="resetConfirm('annonces')">🗑 Vider les annonces</button>
+        </div>
+      </div>
+
+      <div class="card" style="border-color:#ff3c3c22;">
+        <div class="card-body" style="padding:1.1rem;">
+          <div style="font-weight:600;font-size:.875rem;margin-bottom:.3rem;">Réinitialiser l'historique</div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:.85rem;">Vide <code>historique.json</code>. L'expert re-détectera toutes les annonces déjà vues au prochain cycle.</div>
+          <button class="btn btn-danger btn-sm" onclick="resetConfirm('historique')">🔄 Reset historique</button>
+        </div>
+      </div>
+
+      <div class="card" style="border-color:#ff3c3c22;">
+        <div class="card-body" style="padding:1.1rem;">
+          <div style="font-weight:600;font-size:.875rem;margin-bottom:.3rem;">Vider la base marché</div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:.85rem;">Supprime toutes les données de <code>marche.json</code> utilisées pour l'estimateur de prix.</div>
+          <button class="btn btn-danger btn-sm" onclick="resetConfirm('marche')">📊 Vider le marché</button>
+        </div>
+      </div>
+
+      <div class="card" style="border-color:#ff3c3c22;">
+        <div class="card-body" style="padding:1.1rem;">
+          <div style="font-weight:600;font-size:.875rem;margin-bottom:.3rem;">Tout remettre à zéro</div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:.85rem;">Vide annonces, historique, marché et logs en une seule action.</div>
+          <button class="btn btn-danger btn-sm" onclick="resetConfirm('tout')">⚠️ Reset complet</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 <!-- PAGE ESTIMATION -->
@@ -1261,6 +1302,63 @@ async function ghLoadLogs() {
     if (status) status.textContent = 'ERR';
     console.error(e);
   }
+}
+
+async function ghResetFile(fname, emptySha) {
+  const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${fname}`, {
+    headers: { Authorization: `token ${ghToken}`, Accept: 'application/vnd.github+json' }
+  });
+  if (!res.ok) return false;
+  const j = await res.json();
+  const put = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${fname}`, {
+    method: 'PUT',
+    headers: { Authorization: `token ${ghToken}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `[Reset] ${fname}`, content: btoa('[]'), sha: j.sha })
+  });
+  return put.ok;
+}
+
+async function resetConfirm(cible) {
+  const labels = {
+    annonces:   'toutes les annonces détectées',
+    historique: "l'historique des vues",
+    marche:     'la base marché',
+    tout:       'annonces + historique + marché + logs',
+  };
+  if (!confirm(`Supprimer ${labels[cible]} ?\n\nCette action est irréversible.`)) return;
+
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = '⏳ En cours...';
+
+  const files = {
+    annonces:   ['annonces.json'],
+    historique: ['historique.json'],
+    marche:     ['marche.json'],
+    tout:       ['annonces.json', 'historique.json', 'marche.json', 'logs.json'],
+  }[cible] || [];
+
+  let ok = true;
+  for (const f of files) {
+    const r = await ghResetFile(f);
+    if (!r) { ok = false; }
+    // Reset local state
+    if (f === 'annonces.json')   { annoncesData = []; ghAnnoncesSha = null; }
+    if (f === 'marche.json')     { marcheData = []; }
+    if (f === 'logs.json')       { logsData = []; _lastLogsSha = null; renderLogs(); }
+  }
+
+  if (cible === 'annonces' || cible === 'tout') renderAnnonces();
+  if (cible === 'tout') renderExpertStats();
+
+  btn.disabled = false;
+  btn.textContent = ok ? '✓ Fait' : '✗ Erreur';
+  setTimeout(() => {
+    const map = { annonces:'🗑 Vider les annonces', historique:'🔄 Reset historique', marche:'📊 Vider le marché', tout:'⚠️ Reset complet' };
+    btn.textContent = map[cible];
+  }, 2500);
+
+  toast(ok ? `${labels[cible]} supprimé ✓` : 'Erreur lors du reset', ok ? 'green' : 'red');
 }
 
 async function clearLogsView() {
