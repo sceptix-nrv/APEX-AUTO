@@ -68,5 +68,30 @@
     "ts": "2026-06-10T20:16:34",
     "lvl": "OK",
     "msg": "Captcha résolu pour 'passat' — reprise du scan"
+  },
+  {
+    "ts": "2026-06-10T20:16:38",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonces brutes"
+  },
+  {
+    "ts": "2026-06-10T20:16:38",
+    "lvl": "BOT",
+    "msg": "Chrome fermé"
+  },
+  {
+    "ts": "2026-06-10T20:16:40",
+    "lvl": "SCAN",
+    "msg": "[JOUR] Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T20:16:41",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:16:41",
+    "lvl": "BOT",
+    "msg": "Chrome stealth 1387x932"
   }
 ]
