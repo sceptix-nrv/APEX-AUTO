@@ -826,5 +826,53 @@
     "cp": "57220",
     "recherche": "308",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3195219473",
+    "titre": "Golf 8 gti 2.0 tsi 265cv",
+    "prix": 30490.0,
+    "km": 89500,
+    "annee": 2021,
+    "carburant": "essence",
+    "ville": "Florange",
+    "cp": "57190",
+    "recherche": "GOLF 8R",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3193557917",
+    "titre": "Golf 8 GTI Clubsport",
+    "prix": 36000.0,
+    "km": 48000,
+    "annee": 2021,
+    "carburant": "essence",
+    "ville": "Longwy",
+    "cp": "54400",
+    "recherche": "GOLF 8R",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3182964625",
+    "titre": "Golf 8R Line",
+    "prix": 38500.0,
+    "km": 6000,
+    "annee": 2025,
+    "carburant": "diesel",
+    "ville": "Nancy",
+    "cp": "54000",
+    "recherche": "GOLF 8R",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3181636520",
+    "titre": "Golf 8r",
+    "prix": 38490.0,
+    "km": 75000,
+    "annee": 2022,
+    "carburant": "essence",
+    "ville": "Metz",
+    "cp": "57000",
+    "recherche": "GOLF 8R",
+    "date": "2026-06-10"
   }
 ]
