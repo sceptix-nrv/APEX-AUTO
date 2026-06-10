@@ -1,15 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:09",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206"
-  },
-  {
-    "ts": "2026-06-10T17:56:10",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +40% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T17:56:10",
     "lvl": "SYS",
     "msg": "Analyse IA : 206.1.9d..."
@@ -1498,5 +1488,15 @@
     "ts": "2026-06-10T18:56:03",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T18:56:16",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.7s, scroll 153px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T18:56:16",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy..."
   }
 ]
