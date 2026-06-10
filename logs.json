@@ -513,5 +513,30 @@
     "ts": "2026-06-10T19:46:59",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1279x840"
+  },
+  {
+    "ts": "2026-06-10T19:47:04",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T19:47:16",
+    "lvl": "BOT",
+    "msg": "Session etablie (6.3s, scroll 238px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T19:47:16",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4..."
+  },
+  {
+    "ts": "2026-06-10T19:47:17",
+    "lvl": "ERR",
+    "msg": "Exception sur 'passat' : Message: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=149.0.7827.54)\nStacktrace:\n\tundetected_chromedriver!GetHandleVerifier [0xaafa13+106c3]\n\tundetected_chromedriver!GetHandleVerifier [0xaafa54+10704]\n\tundetected_chromedriver!(No symbol) [0x8aa830]\n\tundetected_chromedriver!(No symbol) [0x889693]\n\tundetected_chromedriver!(No symbol) [0x91c61b]\n\tundetected_chromedriver!(No symbol) [0x932d59]\n\tundetected_chromedriver!(No symbol) [0x916026]\n\tundetected_chromedriver!(No symbol) [0x8e9289]\n\tundetected_chromedriver!(No symbol) [0x8ea054]\n\tundetected_chromedriver!GetHandleVerifier [0xd344fa+2951aa]\n\tundetected_chromedriver!GetHandleVerifier [0xd2fb56+290806]\n\tundetected_chromedriver!GetHandleVerifier [0xd4ff8b+2b0c3b]\n\tundetected_chromedriver!GetHandleVerifier [0xac9ed6+2ab86]\n\tundetected_chromedriver!GetHandleVerifier [0xad124d+31efd]\n\tundetected_chromedriver!GetHandleVerifier [0xab83d8+19088]\n\tundetected_chromedriver!GetHandleVerifier [0xab8585+19235]\n\tundetected_chromedriver!GetHandleVerifier [0xaa125f+1f0f]\n\tKERNEL32!BaseThreadInitThunk [0x75cc5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x7705d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x7705d7c1+231]\n"
+  },
+  {
+    "ts": "2026-06-10T19:47:17",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
   }
 ]
