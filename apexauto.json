@@ -1,31 +1,6 @@
 {
   "vehicules": [],
-  "recherches": [
-    {
-      "id": "mq85heffud9pcnbfrh",
-      "nom": "208",
-      "keywords": "207 PEUGEOT",
-      "prix_max": 10000,
-      "km_max": 200000,
-      "fuel": "",
-      "rayon": 100,
-      "ville": "nancy",
-      "destinataire": "steven",
-      "active": true
-    },
-    {
-      "id": "mq860ifnjy6hgev6rhb",
-      "nom": "407",
-      "keywords": "407",
-      "prix_max": 9000,
-      "km_max": null,
-      "fuel": "",
-      "rayon": 100,
-      "ville": "nancy",
-      "destinataire": "steven",
-      "active": true
-    }
-  ],
+  "recherches": [],
   "initialized": true,
   "force_scan": false
 }
