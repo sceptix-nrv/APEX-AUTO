@@ -458,5 +458,60 @@
     "ts": "2026-06-10T19:46:22",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 2 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T19:46:57",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T19:46:57",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 19:46:57] ==="
+  },
+  {
+    "ts": "2026-06-10T19:46:57",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T19:46:57",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T19:46:57",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T19:46:58",
+    "lvl": "SYS",
+    "msg": "Historique : 7 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T19:46:58",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T19:46:58",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T19:46:59",
+    "lvl": "SYS",
+    "msg": "Base chargee — 7 vues | 2 annonces | 7 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T19:46:59",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : passat ---"
+  },
+  {
+    "ts": "2026-06-10T19:46:59",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1279x840"
   }
 ]
