@@ -1,15 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:55:59",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206cc Roland garos..."
-  },
-  {
-    "ts": "2026-06-10T17:56:01",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206cc Roland garos — "
-  },
-  {
     "ts": "2026-06-10T17:56:02",
     "lvl": "OK",
     "msg": "NOUVELLE : [3205967687] 206cc Roland garos — 3200€ | score -7% → Telegram envoye"
@@ -1498,5 +1488,15 @@
     "ts": "2026-06-10T18:54:45",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T18:54:59",
+    "lvl": "BOT",
+    "msg": "Session etablie (6.4s, scroll 348px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T18:54:59",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4..."
   }
 ]
