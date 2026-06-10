@@ -658,5 +658,95 @@
     "ts": "2026-06-10T17:34:30",
     "lvl": "WARN",
     "msg": "IA ATTENTION : 206.1.9d — "
+  },
+  {
+    "ts": "2026-06-10T17:34:31",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score +1% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:34:31",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
+  },
+  {
+    "ts": "2026-06-10T17:34:32",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
+  },
+  {
+    "ts": "2026-06-10T17:34:33",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +57% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:34:33",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1,9D 172 000 km..."
+  },
+  {
+    "ts": "2026-06-10T17:34:34",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
+  },
+  {
+    "ts": "2026-06-10T17:34:35",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:34:35",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206+ 1.4 HDi Blue Lion 68cv..."
+  },
+  {
+    "ts": "2026-06-10T17:34:36",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206+ 1.4 HDi Blue Lion 68cv"
+  },
+  {
+    "ts": "2026-06-10T17:34:37",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3202916341] Peugeot 206+ 1.4 HDi Blue Lion 68cv — 3499€ | score -17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:34:37",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Bêle Peugeot 206 1.6 16V 110cv..."
+  },
+  {
+    "ts": "2026-06-10T17:34:38",
+    "lvl": "OK",
+    "msg": "IA OK : Bêle Peugeot 206 1.6 16V 110cv"
+  },
+  {
+    "ts": "2026-06-10T17:34:39",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213633886] Bêle Peugeot 206 1.6 16V 110cv — 3500€ | score -17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:34:39",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 2l HDI..."
+  },
+  {
+    "ts": "2026-06-10T17:34:40",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 2l HDI — "
+  },
+  {
+    "ts": "2026-06-10T17:34:41",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +40% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:34:41",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T17:34:42",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
