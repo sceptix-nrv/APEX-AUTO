@@ -598,5 +598,29 @@
     "cp": "70300",
     "recherche": "206",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3213706241",
+    "titre": "206+",
+    "prix": 2500.0,
+    "km": 232800,
+    "annee": 2009,
+    "carburant": "diesel",
+    "ville": "Créhange",
+    "cp": "57690",
+    "recherche": "206",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3205041448",
+    "titre": "Peugeot 206 + 1.4 hdi 70cv contrôle technique ok",
+    "prix": 1690.0,
+    "km": 218000,
+    "annee": 2009,
+    "carburant": "diesel",
+    "ville": "L'Hôpital",
+    "cp": "57490",
+    "recherche": "206",
+    "date": "2026-06-10"
   }
 ]
