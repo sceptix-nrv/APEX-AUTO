@@ -5,8 +5,8 @@ import time
 from datetime import datetime
 
 import asyncio
+import nodriver as uc
 import requests
-from camoufox.async_api import AsyncCamoufox
 
 # CONFIG TELEGRAM
 TELEGRAM_TOKEN = "8631165512:AAFtYjnanMCsF_SCwXd_8VEeNX31xM9x5UY"
@@ -259,32 +259,22 @@ def construire_url(r):
 
 async def scraper_recherche(page, url, nom):
     try:
-        await page.goto(url, wait_until="domcontentloaded", timeout=40000)
-        await page.wait_for_timeout(4000)
-    except Exception as e:
-        print(f"  Erreur navigation ({nom}) : {e}")
-        return []
-
-    # Debug : sauvegarder le HTML pour voir ce que LBC retourne
-    html = await page.content()
-    with open("debug_lbc.html", "w", encoding="utf-8") as f:
-        f.write(html)
-
-    next_data = await page.evaluate("""
-        () => {
-            const el = document.getElementById('__NEXT_DATA__');
-            if (!el) return null;
-            try { return JSON.parse(el.textContent); }
-            catch { return null; }
-        }
-    """)
-
-    if not next_data:
-        print(f"  [WARN] __NEXT_DATA__ introuvable — voir debug_lbc.html")
-        return []
-
-    try:
-        props = next_data.get("props", {}).get("pageProps", {})
+        await asyncio.sleep(5)
+        raw = await page.evaluate("""
+            () => {
+                const el = document.getElementById('__NEXT_DATA__');
+                if (!el) return null;
+                try { return JSON.parse(el.textContent); }
+                catch { return null; }
+            }
+        """)
+        if not raw:
+            html = await page.get_content()
+            with open("debug_lbc.html", "w", encoding="utf-8") as f:
+                f.write(html)
+            print(f"  [WARN] __NEXT_DATA__ introuvable — voir debug_lbc.html")
+            return []
+        props = raw.get("props", {}).get("pageProps", {})
         ads = props.get("searchData", {}).get("ads", [])
         if not ads:
             ads = props.get("hydrationData", {}).get("searchData", {}).get("ads", [])
@@ -432,15 +422,14 @@ async def scan():
     total_nouvelles       = 0
 
     try:
-        async with AsyncCamoufox(headless=True, humanize=True) as browser:
-            for r in recherches:
-                nom = r.get("nom", "Recherche")
-                url = construire_url(r)
-                print(f"  Scan : {nom}...", end=" ", flush=True)
-                try:
-                    page = await browser.new_page()
-                    annonces = await scraper_recherche(page, url, nom)
-                    await page.close()
+        browser = await uc.start(headless=False)
+        for r in recherches:
+            nom = r.get("nom", "Recherche")
+            url = construire_url(r)
+            print(f"  Scan : {nom}...", end=" ", flush=True)
+            try:
+                page = await browser.get(url)
+                annonces = await scraper_recherche(page, url, nom)
 
                     valides   = [ad for ad in annonces if annonce_valide(ad, r)]
                     tous_prix = [
@@ -481,8 +470,9 @@ async def scan():
                 except Exception as e:
                     print(f"Erreur : {e}")
 
-                await asyncio.sleep(2)
+                await asyncio.sleep(3)
 
+        browser.stop()
     except Exception as e:
         print(f"  Erreur navigateur : {e}")
 
