@@ -688,5 +688,40 @@
     "ts": "2026-06-10T19:50:07",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T20:09:48",
+    "lvl": "SYS",
+    "msg": "── Cycle jour #1  [20:09] ──────────────"
+  },
+  {
+    "ts": "2026-06-10T20:09:49",
+    "lvl": "SYS",
+    "msg": "─── Scan jour ─────────────────────────────"
+  },
+  {
+    "ts": "2026-06-10T20:09:51",
+    "lvl": "SYS",
+    "msg": "Vues locales chargées : 0 IDs"
+  },
+  {
+    "ts": "2026-06-10T20:09:51",
+    "lvl": "SYS",
+    "msg": "Chargement config GitHub…"
+  },
+  {
+    "ts": "2026-06-10T20:09:51",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s)"
+  },
+  {
+    "ts": "2026-06-10T20:09:52",
+    "lvl": "SCAN",
+    "msg": "[JOUR] passat"
+  },
+  {
+    "ts": "2026-06-10T20:09:54",
+    "lvl": "BOT",
+    "msg": "Chrome stealth 1332x935"
   }
 ]
