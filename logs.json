@@ -1,100 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:43:41",
-    "lvl": "SYS",
-    "msg": "Chargement historique annonces vues..."
-  },
-  {
-    "ts": "2026-06-10T17:43:42",
-    "lvl": "SYS",
-    "msg": "Historique : 0 annonces deja vues"
-  },
-  {
-    "ts": "2026-06-10T17:43:42",
-    "lvl": "SYS",
-    "msg": "Chargement index annonces..."
-  },
-  {
-    "ts": "2026-06-10T17:43:44",
-    "lvl": "SYS",
-    "msg": "Chargement base marche..."
-  },
-  {
-    "ts": "2026-06-10T17:43:44",
-    "lvl": "SYS",
-    "msg": "Base chargee — 0 vues | 0 annonces | 0 entrees marche"
-  },
-  {
-    "ts": "2026-06-10T17:43:44",
-    "lvl": "SCAN",
-    "msg": "--- Recherche [1/1] : 206 ---"
-  },
-  {
-    "ts": "2026-06-10T17:43:44",
-    "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1289x811"
-  },
-  {
-    "ts": "2026-06-10T17:43:54",
-    "lvl": "BOT",
-    "msg": "Navigation homepage LeBonCoin — etablissement session..."
-  },
-  {
-    "ts": "2026-06-10T17:44:07",
-    "lvl": "BOT",
-    "msg": "Session etablie (5.3s, scroll 183px) — fingerprint OK"
-  },
-  {
-    "ts": "2026-06-10T17:44:07",
-    "lvl": "NET",
-    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=206%20PEUGEOT&locations=Nancy..."
-  },
-  {
-    "ts": "2026-06-10T17:44:13",
-    "lvl": "NET",
-    "msg": "Page chargee — extraction __NEXT_DATA__"
-  },
-  {
-    "ts": "2026-06-10T17:44:13",
-    "lvl": "NET",
-    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
-  },
-  {
-    "ts": "2026-06-10T17:44:13",
-    "lvl": "SCAN",
-    "msg": "35 brutes → 27 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T17:44:13",
-    "lvl": "SCAN",
-    "msg": "Prix marche : min 1€ | median 2990€ | max 4000€"
-  },
-  {
-    "ts": "2026-06-10T17:44:13",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Suzuki swift new 1.3 glx 5 portes..."
-  },
-  {
-    "ts": "2026-06-10T17:44:14",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le 206 Peugeot, mais l'annonce concerne un Suzuki Swift."
-  },
-  {
-    "ts": "2026-06-10T17:44:14",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206+ 1.4 hdi 70cv..."
-  },
-  {
-    "ts": "2026-06-10T17:44:15",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Peugeot 206+ 1.4 hdi 70cv — Le modèle recherché est le 206, mais l'annonce mentionne un 206+"
-  },
-  {
-    "ts": "2026-06-10T17:44:15",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206cc Roland garos..."
-  },
-  {
     "ts": "2026-06-10T17:44:16",
     "lvl": "WARN",
     "msg": "IA ATTENTION : 206cc Roland garos — "
@@ -1498,5 +1403,100 @@
     "ts": "2026-06-10T18:15:38",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4..."
+  },
+  {
+    "ts": "2026-06-10T18:15:49",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T18:15:49",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T18:15:49",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 6 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T18:15:49",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 3400€ | median 7500€ | max 8990€"
+  },
+  {
+    "ts": "2026-06-10T18:15:49",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Honda accord 2.0..."
+  },
+  {
+    "ts": "2026-06-10T18:15:51",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Honda accord 2.0 — Le titre mentionne une Honda Accord, pas un Passat"
+  },
+  {
+    "ts": "2026-06-10T18:15:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Audi A4 1.8T 150ch 2001 excellent état..."
+  },
+  {
+    "ts": "2026-06-10T18:15:52",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Audi A4 1.8T 150ch 2001 excellent état — Le modèle recherché est 'passat', mais le titre mentionne un 'Audi A4'"
+  },
+  {
+    "ts": "2026-06-10T18:15:52",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Laguna 3..."
+  },
+  {
+    "ts": "2026-06-10T18:15:53",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Laguna 3 — Le titre mentionne un Laguna 3, pas un Passat"
+  },
+  {
+    "ts": "2026-06-10T18:15:53",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Alfa Romeo 159 ti..."
+  },
+  {
+    "ts": "2026-06-10T18:15:54",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Alfa Romeo 159 ti — Le modèle recherché est 'passat' mais le titre mentionne 'Alfa Romeo 159 ti'"
+  },
+  {
+    "ts": "2026-06-10T18:15:54",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Audi A3 Sportback 1.9 TDI 105cv Attracti..."
+  },
+  {
+    "ts": "2026-06-10T18:15:55",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Audi A3 Sportback 1.9 TDI 105cv Attracti — Le modèle recherché est 'passat' mais le titre mentionne 'Audi A3'"
+  },
+  {
+    "ts": "2026-06-10T18:15:55",
+    "lvl": "SYS",
+    "msg": "Analyse IA : VW Passat SW 2.0 TDI 140 Sport – Automat..."
+  },
+  {
+    "ts": "2026-06-10T18:15:57",
+    "lvl": "OK",
+    "msg": "IA OK : VW Passat SW 2.0 TDI 140 Sport – Automat"
+  },
+  {
+    "ts": "2026-06-10T18:15:58",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212718228] VW Passat SW 2.0 TDI 140 Sport – Automatique – CT  — 4800€ | score +36% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T18:15:58",
+    "lvl": "OK",
+    "msg": "1 alerte(s) envoyee(s) pour 'passat'"
+  },
+  {
+    "ts": "2026-06-10T18:15:58",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
   }
 ]
