@@ -868,5 +868,140 @@
     "ts": "2026-06-10T15:54:42",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot 207 1.4 95Cv homologué Bioethano..."
+  },
+  {
+    "ts": "2026-06-10T15:54:43",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 207 1.4 95Cv homologué Bioethano — Le modèle recherché est 206, non 207"
+  },
+  {
+    "ts": "2026-06-10T15:54:43",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 hdi 90 ch..."
+  },
+  {
+    "ts": "2026-06-10T15:54:44",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.6 hdi 90 ch — "
+  },
+  {
+    "ts": "2026-06-10T15:54:44",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3198572594] Peugeot 207 1.6 hdi 90 ch — 3490€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:54:44",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI..."
+  },
+  {
+    "ts": "2026-06-10T15:54:45",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.6 HDI — "
+  },
+  {
+    "ts": "2026-06-10T15:54:45",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213348513] Peugeot 207 1.6 HDI — 1600€ | score +54% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:54:45",
+    "lvl": "SYS",
+    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
+  },
+  {
+    "ts": "2026-06-10T15:54:46",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est le 206, mais l'annonce concerne un Renault Twingo"
+  },
+  {
+    "ts": "2026-06-10T15:54:46",
+    "lvl": "SYS",
+    "msg": "Analyse IA : PEUGEOT 207 1.6 HDi 16v 110ch..."
+  },
+  {
+    "ts": "2026-06-10T15:54:46",
+    "lvl": "OK",
+    "msg": "IA OK : PEUGEOT 207 1.6 HDi 16v 110ch"
+  },
+  {
+    "ts": "2026-06-10T15:54:47",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3154617639] PEUGEOT 207 1.6 HDi 16v 110ch — 3990€ | score -14% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:54:47",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo II GT 1.2 TCE 101 cv..."
+  },
+  {
+    "ts": "2026-06-10T15:54:47",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Renault Twingo II GT 1.2 TCE 101 cv — Le modèle recherché est le Renault 206, mais l'annonce concerne un Renault Twingo II"
+  },
+  {
+    "ts": "2026-06-10T15:54:47",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo faible kilométrage contrô..."
+  },
+  {
+    "ts": "2026-06-10T15:54:48",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Renault Twingo faible kilométrage contrô — Le modèle recherché est le 206, mais l'annonce concerne un Renault Twingo"
+  },
+  {
+    "ts": "2026-06-10T15:54:48",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207..."
+  },
+  {
+    "ts": "2026-06-10T15:54:49",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 — "
+  },
+  {
+    "ts": "2026-06-10T15:54:49",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213655673] Peugeot 207 — 3500€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:54:49",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 sw 1.6 hdi 110cv pack premiu..."
+  },
+  {
+    "ts": "2026-06-10T15:54:50",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 sw 1.6 hdi 110cv pack premiu — "
+  },
+  {
+    "ts": "2026-06-10T15:54:50",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213823063] Peugeot 207 sw 1.6 hdi 110cv pack premium — 2990€ | score +14% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:54:50",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 hdi 110..."
+  },
+  {
+    "ts": "2026-06-10T15:54:51",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.6 hdi 110 — "
+  },
+  {
+    "ts": "2026-06-10T15:54:51",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213850419] Peugeot 207 1.6 hdi 110 — 2900€ | score +17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:54:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 SW 1.4i 16V VTI 95Cv Urban M..."
+  },
+  {
+    "ts": "2026-06-10T15:54:51",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
