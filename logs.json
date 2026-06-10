@@ -753,5 +753,15 @@
     "ts": "2026-06-10T20:10:25",
     "lvl": "BOT",
     "msg": "Chrome stealth 1363x852"
+  },
+  {
+    "ts": "2026-06-10T20:11:04",
+    "lvl": "BOT",
+    "msg": "Session établie (6.2s, scroll 292px)"
+  },
+  {
+    "ts": "2026-06-10T20:11:04",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy__48.6954_…"
   }
 ]
