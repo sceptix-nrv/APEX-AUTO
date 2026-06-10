@@ -244,7 +244,7 @@
     "recherche": "206",
     "score": 99,
     "date": "2026-06-10T17:58",
-    "statut": "nouvelle",
+    "statut": "ignoree",
     "ia_verdict": "ATTENTION",
     "ia_detail": "",
     "ia_avis": "À négocier, 240 000 km pour un véhicule de 2007 sont élevés, mais le prix de 1 € est très bas.",
@@ -398,7 +398,7 @@
   {
     "id": "3212718228",
     "titre": "VW Passat SW 2.0 TDI 140 Sport – Automatique – CT OK",
-    "prix": 4800.0,
+    "prix": 4800,
     "km": 175289,
     "annee": "2005",
     "ville": "Bayonne",
