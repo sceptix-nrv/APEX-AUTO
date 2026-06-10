@@ -1,65 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:44:27",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
-  },
-  {
-    "ts": "2026-06-10T17:44:28",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +67% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:44:28",
-    "lvl": "OK",
-    "msg": "7 alerte(s) envoyee(s) pour '206'"
-  },
-  {
-    "ts": "2026-06-10T17:44:29",
-    "lvl": "BOT",
-    "msg": "Session Chrome fermee proprement"
-  },
-  {
-    "ts": "2026-06-10T17:44:32",
-    "lvl": "SYS",
-    "msg": "Reset detecte (GitHub=0 < memoire=10) — historique non ecrase"
-  },
-  {
-    "ts": "2026-06-10T17:44:33",
-    "lvl": "SYS",
-    "msg": "Reset annonces detecte — sauvegarde annulee"
-  },
-  {
-    "ts": "2026-06-10T17:44:33",
-    "lvl": "SYS",
-    "msg": "Annonces sauvegardees — 7 total"
-  },
-  {
-    "ts": "2026-06-10T17:44:33",
-    "lvl": "SYS",
-    "msg": "Sauvegarde marche — 27 entrees"
-  },
-  {
-    "ts": "2026-06-10T17:44:35",
-    "lvl": "SYS",
-    "msg": "Base marche mise a jour +27 entrees (27 total)"
-  },
-  {
-    "ts": "2026-06-10T17:44:35",
-    "lvl": "SYS",
-    "msg": "=== SCAN TERMINE — 7 nouvelle(s) | prochain cycle dans 10 min ==="
-  },
-  {
-    "ts": "2026-06-10T17:55:14",
-    "lvl": "SYS",
-    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
-  },
-  {
-    "ts": "2026-06-10T17:55:15",
-    "lvl": "SYS",
-    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 17:55:15] ==="
-  },
-  {
     "ts": "2026-06-10T17:55:15",
     "lvl": "SYS",
     "msg": "Chargement config depuis GitHub..."
@@ -1498,5 +1438,65 @@
     "ts": "2026-06-10T18:46:57",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T18:47:12",
+    "lvl": "SYS",
+    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
+  },
+  {
+    "ts": "2026-06-10T18:47:13",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 18:47:13] ==="
+  },
+  {
+    "ts": "2026-06-10T18:47:13",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T18:47:13",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T18:47:13",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T18:47:14",
+    "lvl": "SYS",
+    "msg": "Historique : 43 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T18:47:14",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T18:47:15",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T18:47:15",
+    "lvl": "SYS",
+    "msg": "Base chargee — 43 vues | 23 annonces | 66 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T18:47:15",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : passat ---"
+  },
+  {
+    "ts": "2026-06-10T18:47:15",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1324x897"
+  },
+  {
+    "ts": "2026-06-10T18:47:20",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
