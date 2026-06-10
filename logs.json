@@ -663,5 +663,25 @@
     "ts": "2026-06-10T19:49:42",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy..."
+  },
+  {
+    "ts": "2026-06-10T19:50:02",
+    "lvl": "WARN",
+    "msg": "Timeout sur 'Peugeot 206' — DataDome probable, dump HTML sauvegarde"
+  },
+  {
+    "ts": "2026-06-10T19:50:02",
+    "lvl": "SCAN",
+    "msg": "0 brutes → 0 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T19:50:02",
+    "lvl": "SCAN",
+    "msg": "Aucune nouvelle annonce — 0 deja connues"
+  },
+  {
+    "ts": "2026-06-10T19:50:03",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
   }
 ]
