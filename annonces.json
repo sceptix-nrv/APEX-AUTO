@@ -674,5 +674,18 @@
     "score": 0,
     "date": "2026-06-10T08:41",
     "statut": "nouvelle"
+  },
+  {
+    "id": "2625078704",
+    "titre": "Peugeot 206 CC 1.6 16V SPORT",
+    "prix": 3990.0,
+    "km": 119500,
+    "annee": "2006",
+    "ville": "Seingbouse",
+    "lien": "https://www.leboncoin.fr/voitures/2625078704.htm",
+    "recherche": "206",
+    "score": -38,
+    "date": "2026-06-10T08:44",
+    "statut": "nouvelle"
   }
 ]
