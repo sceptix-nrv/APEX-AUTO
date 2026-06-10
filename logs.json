@@ -58,5 +58,15 @@
     "ts": "2026-06-10T20:51:33",
     "lvl": "NET",
     "msg": "HTML OK — 35 annonces brutes (page 1)"
+  },
+  {
+    "ts": "2026-06-10T20:51:36",
+    "lvl": "SYS",
+    "msg": "[JOUR] Scan terminé — 0 nouvelle (total 0)"
+  },
+  {
+    "ts": "2026-06-10T20:51:37",
+    "lvl": "SYS",
+    "msg": "Attente 10min"
   }
 ]
