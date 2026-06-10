@@ -948,5 +948,130 @@
     "ts": "2026-06-10T11:10:03",
     "lvl": "WARN",
     "msg": "IA ATTENTION : PEUGEOT 207 1.4 5cv 75ch 99317 KM GARANT — "
+  },
+  {
+    "ts": "2026-06-10T11:10:04",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213295220] PEUGEOT 207 1.4 5cv 75ch 99317 KM GARANTIE 12 MOIS — 5490€ | score -37% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:04",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 essence 1.4 L - 75CV Année 2..."
+  },
+  {
+    "ts": "2026-06-10T11:10:05",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 essence 1.4 L - 75CV Année 2 — "
+  },
+  {
+    "ts": "2026-06-10T11:10:06",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3188025305] Peugeot 207 essence 1.4 L - 75CV Année 2008 avec s — 3490€ | score +13% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:06",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 CC 1.6 VTI 16V SPORT PACK..."
+  },
+  {
+    "ts": "2026-06-10T11:10:07",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 CC 1.6 VTI 16V SPORT PACK — "
+  },
+  {
+    "ts": "2026-06-10T11:10:08",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3081229269] Peugeot 207 CC 1.6 VTI 16V SPORT PACK — 3990€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:08",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.4 HDi 68ch business..."
+  },
+  {
+    "ts": "2026-06-10T11:10:10",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.4 HDi 68ch business — "
+  },
+  {
+    "ts": "2026-06-10T11:10:11",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3210661952] Peugeot 207 1.4 HDi 68ch business — 5990€ | score -50% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:11",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.4 95Cv homologué Bioethano..."
+  },
+  {
+    "ts": "2026-06-10T11:10:12",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.4 95Cv homologué Bioethano — "
+  },
+  {
+    "ts": "2026-06-10T11:10:13",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213321578] Peugeot 207 1.4 95Cv homologué Bioethanol — 4000€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:13",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 hdi 90 ch..."
+  },
+  {
+    "ts": "2026-06-10T11:10:14",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.6 hdi 90 ch — "
+  },
+  {
+    "ts": "2026-06-10T11:10:14",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3198572594] Peugeot 207 1.6 hdi 90 ch — 3490€ | score +13% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:14",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI..."
+  },
+  {
+    "ts": "2026-06-10T11:10:16",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.6 HDI — "
+  },
+  {
+    "ts": "2026-06-10T11:10:17",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213348513] Peugeot 207 1.6 HDI — 1600€ | score +60% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:17",
+    "lvl": "SYS",
+    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
+  },
+  {
+    "ts": "2026-06-10T11:10:18",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est le 207, mais l'annonce concerne un Renault Twingo."
+  },
+  {
+    "ts": "2026-06-10T11:10:18",
+    "lvl": "SYS",
+    "msg": "Analyse IA : PEUGEOT 207 1.6 HDi 16v 110ch..."
+  },
+  {
+    "ts": "2026-06-10T11:10:19",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : PEUGEOT 207 1.6 HDi 16v 110ch — "
+  },
+  {
+    "ts": "2026-06-10T11:10:20",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3154617639] PEUGEOT 207 1.6 HDi 16v 110ch — 3990€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:10:20",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Clio 3 1l2 tce..."
   }
 ]
