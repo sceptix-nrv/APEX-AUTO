@@ -1,7 +1,7 @@
 {
-  "etat": "attente",
-  "label": "⏳ En attente",
-  "color": "#7e7fa8",
-  "detail": "Prochain scan dans 10min",
-  "ts": "10/06 20:54:17"
+  "etat": "demarre",
+  "label": "🚀 Démarrage",
+  "color": "#22d3a0",
+  "detail": "",
+  "ts": "10/06 21:01:54"
 }
