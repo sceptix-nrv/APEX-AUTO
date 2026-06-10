@@ -648,5 +648,31 @@
     "score": -99,
     "date": "2026-06-10T08:01",
     "statut": "nouvelle"
+  },
+  {
+    "id": "3205041448",
+    "titre": "Peugeot 206 + 1.4 hdi 70cv contrôle technique ok",
+    "prix": 1690.0,
+    "km": 218000,
+    "annee": "2009",
+    "ville": "L'Hôpital",
+    "lien": "https://www.leboncoin.fr/voitures/3205041448.htm",
+    "recherche": "206",
+    "score": 32,
+    "date": "2026-06-10T08:41",
+    "statut": "nouvelle"
+  },
+  {
+    "id": "3213706241",
+    "titre": "206+",
+    "prix": 2500.0,
+    "km": 232800,
+    "annee": "2009",
+    "ville": "Créhange",
+    "lien": "https://www.leboncoin.fr/voitures/3213706241.htm",
+    "recherche": "206",
+    "score": 0,
+    "date": "2026-06-10T08:41",
+    "statut": "nouvelle"
   }
 ]
