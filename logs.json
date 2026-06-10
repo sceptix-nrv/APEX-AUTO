@@ -833,5 +833,15 @@
     "ts": "2026-06-10T11:09:23",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T11:09:37",
+    "lvl": "BOT",
+    "msg": "Session etablie (6.4s, scroll 325px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T11:09:37",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=207&locations=Nancy__48.6954_..."
   }
 ]
