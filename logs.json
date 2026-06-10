@@ -1,60 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:13:05",
-    "lvl": "OK",
-    "msg": "IA OK : Golf 7r"
-  },
-  {
-    "ts": "2026-06-10T16:13:05",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3198870799] Golf 7r — 27990€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:05",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Volkswagen Golf 7R 2.0 TSI 300 BlueMotio..."
-  },
-  {
-    "ts": "2026-06-10T16:13:06",
-    "lvl": "OK",
-    "msg": "IA OK : Volkswagen Golf 7R 2.0 TSI 300 BlueMotio"
-  },
-  {
-    "ts": "2026-06-10T16:13:06",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3205360270] Volkswagen Golf 7R 2.0 TSI 300 BlueMotion Technolo — 24990€ | score +11% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:06",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Volkswagen golf 7 r phase 2 310 cv full ..."
-  },
-  {
-    "ts": "2026-06-10T16:13:07",
-    "lvl": "OK",
-    "msg": "IA OK : Volkswagen golf 7 r phase 2 310 cv full "
-  },
-  {
-    "ts": "2026-06-10T16:13:07",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3207805126] Volkswagen golf 7 r phase 2 310 cv full options to — 27990€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:07",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 7R..."
-  },
-  {
-    "ts": "2026-06-10T16:13:08",
-    "lvl": "OK",
-    "msg": "IA OK : Golf 7R"
-  },
-  {
-    "ts": "2026-06-10T16:13:08",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3155893760] Golf 7R — 25999€ | score +7% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T16:13:08",
     "lvl": "SYS",
     "msg": "Analyse IA : Golf 7R 300CV..."
@@ -1498,5 +1443,60 @@
     "ts": "2026-06-10T16:58:00",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 30 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T17:03:05",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T17:03:05",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 17:03:05] ==="
+  },
+  {
+    "ts": "2026-06-10T17:03:05",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T17:03:06",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T17:03:06",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T17:03:07",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T17:03:07",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T17:03:08",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T17:03:08",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 64 annonces | 87 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T17:03:08",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : C3 ---"
+  },
+  {
+    "ts": "2026-06-10T17:03:08",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1258x869"
   }
 ]
