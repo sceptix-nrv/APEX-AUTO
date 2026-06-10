@@ -1,65 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:55:24",
-    "lvl": "BOT",
-    "msg": "Navigation homepage LeBonCoin — etablissement session..."
-  },
-  {
-    "ts": "2026-06-10T17:55:43",
-    "lvl": "BOT",
-    "msg": "Session etablie (6.3s, scroll 393px) — fingerprint OK"
-  },
-  {
-    "ts": "2026-06-10T17:55:43",
-    "lvl": "NET",
-    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=206%20PEUGEOT&locations=Nancy..."
-  },
-  {
-    "ts": "2026-06-10T17:55:53",
-    "lvl": "NET",
-    "msg": "Page chargee — extraction __NEXT_DATA__"
-  },
-  {
-    "ts": "2026-06-10T17:55:54",
-    "lvl": "NET",
-    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
-  },
-  {
-    "ts": "2026-06-10T17:55:54",
-    "lvl": "SCAN",
-    "msg": "35 brutes → 27 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T17:55:54",
-    "lvl": "SCAN",
-    "msg": "Prix marche : min 1€ | median 2990€ | max 4000€"
-  },
-  {
-    "ts": "2026-06-10T17:55:54",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Suzuki swift new 1.3 glx 5 portes..."
-  },
-  {
-    "ts": "2026-06-10T17:55:56",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le Peugeot 206, mais l'annonce concerne un Suzuki Swift."
-  },
-  {
-    "ts": "2026-06-10T17:55:56",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206+ 1.4 hdi 70cv..."
-  },
-  {
-    "ts": "2026-06-10T17:55:57",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206+ 1.4 hdi 70cv — "
-  },
-  {
-    "ts": "2026-06-10T17:55:59",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3173029848] Peugeot 206+ 1.4 hdi 70cv — 3990€ | score -33% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T17:55:59",
     "lvl": "SYS",
     "msg": "Analyse IA : 206cc Roland garos..."
@@ -1498,5 +1438,65 @@
     "ts": "2026-06-10T18:47:47",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T18:54:38",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T18:54:38",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 18:54:38] ==="
+  },
+  {
+    "ts": "2026-06-10T18:54:38",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T18:54:39",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T18:54:39",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T18:54:39",
+    "lvl": "SYS",
+    "msg": "Historique : 43 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T18:54:39",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T18:54:40",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T18:54:40",
+    "lvl": "SYS",
+    "msg": "Base chargee — 43 vues | 23 annonces | 66 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T18:54:40",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : passat ---"
+  },
+  {
+    "ts": "2026-06-10T18:54:40",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1206x869"
+  },
+  {
+    "ts": "2026-06-10T18:54:45",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
