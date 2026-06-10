@@ -143,5 +143,75 @@
     "ts": "2026-06-10T20:46:52",
     "lvl": "BOT",
     "msg": "Refresh cookie DataDome via UC…"
+  },
+  {
+    "ts": "2026-06-10T20:47:05",
+    "lvl": "BOT",
+    "msg": "UC cookies récupérés : ['_crcl3b62c763', 'pa_privacy', 'didomi_token', 'cnfdVisitorId', '__Secure-Install', 'datadome', '_pcid', '_pctx']"
+  },
+  {
+    "ts": "2026-06-10T20:47:08",
+    "lvl": "BOT",
+    "msg": "Cookie DataDome valide jusqu'à 21:42"
+  },
+  {
+    "ts": "2026-06-10T20:47:08",
+    "lvl": "NET",
+    "msg": "API OK — 0 annonces brutes (page 1)"
+  },
+  {
+    "ts": "2026-06-10T20:47:08",
+    "lvl": "BOT",
+    "msg": "API échouée pour 'passat' — tentative HTML tls_client"
+  },
+  {
+    "ts": "2026-06-10T20:47:08",
+    "lvl": "NET",
+    "msg": "HTML OK — 35 annonces brutes (page 1)"
+  },
+  {
+    "ts": "2026-06-10T20:47:11",
+    "lvl": "SCAN",
+    "msg": "[JOUR] Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T20:47:12",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:47:12",
+    "lvl": "BOT",
+    "msg": "Scrape 'Peugeot 206' p.1 — cookie valide: True"
+  },
+  {
+    "ts": "2026-06-10T20:47:12",
+    "lvl": "NET",
+    "msg": "API OK — 0 annonces brutes (page 1)"
+  },
+  {
+    "ts": "2026-06-10T20:47:12",
+    "lvl": "BOT",
+    "msg": "API échouée pour 'Peugeot 206' — tentative HTML tls_client"
+  },
+  {
+    "ts": "2026-06-10T20:47:12",
+    "lvl": "NET",
+    "msg": "HTML OK — 35 annonces brutes (page 1)"
+  },
+  {
+    "ts": "2026-06-10T20:47:15",
+    "lvl": "SYS",
+    "msg": "[JOUR] Scan terminé — 0 nouvelle (total 0)"
+  },
+  {
+    "ts": "2026-06-10T20:47:16",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:47:16",
+    "lvl": "SYS",
+    "msg": "Attente 10min"
   }
 ]
