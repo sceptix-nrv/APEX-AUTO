@@ -1,60 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:32:00",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
-    "ts": "2026-06-10T17:32:12",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 2l HDI — "
-  },
-  {
-    "ts": "2026-06-10T17:32:13",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +40% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:32:13",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
-  },
-  {
-    "ts": "2026-06-10T17:32:14",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 2007 Peugeot 206 1.4 hdi — "
-  },
-  {
-    "ts": "2026-06-10T17:32:15",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213643613] 2007 Peugeot 206 1.4 hdi — 1500€ | score +50% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:32:15",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
-  },
-  {
-    "ts": "2026-06-10T17:32:16",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
-    "ts": "2026-06-10T17:32:27",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Peugeot206/Ford Ka /Fiesta/Chevrolet mat — Le titre mentionne plusieurs modèles différents"
-  },
-  {
-    "ts": "2026-06-10T17:32:27",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 + 1.4 hdi 70cv contrôle tech..."
-  },
-  {
-    "ts": "2026-06-10T17:32:28",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206 + 1.4 hdi 70cv contrôle tech"
-  },
-  {
     "ts": "2026-06-10T17:32:29",
     "lvl": "OK",
     "msg": "NOUVELLE : [3205041448] Peugeot 206 + 1.4 hdi 70cv contrôle technique ok — 1690€ | score +43% → Telegram envoye"
@@ -1498,5 +1443,60 @@
     "ts": "2026-06-10T17:57:39",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 8 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T17:57:53",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T17:57:53",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 17:57:53] ==="
+  },
+  {
+    "ts": "2026-06-10T17:57:53",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T17:57:53",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T17:57:53",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T17:57:54",
+    "lvl": "SYS",
+    "msg": "Historique : 20 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T17:57:54",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T17:57:55",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T17:57:56",
+    "lvl": "SYS",
+    "msg": "Base chargee — 20 vues | 8 annonces | 27 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T17:57:56",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : 206 ---"
+  },
+  {
+    "ts": "2026-06-10T17:57:56",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1395x976"
   }
 ]
