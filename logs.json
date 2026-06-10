@@ -418,5 +418,75 @@
     "ts": "2026-06-10T11:43:52",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T11:50:53",
+    "lvl": "SYS",
+    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
+  },
+  {
+    "ts": "2026-06-10T11:50:53",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 11:50:53] ==="
+  },
+  {
+    "ts": "2026-06-10T11:50:53",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T11:50:53",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T11:50:53",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T11:50:54",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T11:50:54",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T11:50:54",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T11:50:54",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 13 annonces | 16 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T11:50:54",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : 206 ---"
+  },
+  {
+    "ts": "2026-06-10T11:50:54",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1291x828"
+  },
+  {
+    "ts": "2026-06-10T11:50:55",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T11:51:08",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.8s, scroll 378px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T11:51:08",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy..."
   }
 ]
