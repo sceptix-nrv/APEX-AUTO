@@ -128,5 +128,45 @@
     "ts": "2026-06-10T20:54:05",
     "lvl": "OK",
     "msg": "[JOUR] Nouvelle : Peugeot 206+ 1.4 HDi Basis CT OK — 4899.0€"
+  },
+  {
+    "ts": "2026-06-10T20:54:08",
+    "lvl": "OK",
+    "msg": "Telegram → steven"
+  },
+  {
+    "ts": "2026-06-10T20:54:09",
+    "lvl": "OK",
+    "msg": "Telegram → brieuc"
+  },
+  {
+    "ts": "2026-06-10T20:54:10",
+    "lvl": "OK",
+    "msg": "[JOUR] Nouvelle : 206 HDI 4 chevaux — 4000.0€"
+  },
+  {
+    "ts": "2026-06-10T20:54:13",
+    "lvl": "OK",
+    "msg": "Telegram → steven"
+  },
+  {
+    "ts": "2026-06-10T20:54:14",
+    "lvl": "OK",
+    "msg": "Telegram → brieuc"
+  },
+  {
+    "ts": "2026-06-10T20:54:16",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 2 entrées"
+  },
+  {
+    "ts": "2026-06-10T20:54:17",
+    "lvl": "SYS",
+    "msg": "[JOUR] Scan terminé — 2 nouvelle(s), 2 alerte(s), 2 total GitHub"
+  },
+  {
+    "ts": "2026-06-10T20:54:18",
+    "lvl": "SYS",
+    "msg": "Attente 10min"
   }
 ]
