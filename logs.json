@@ -1,11 +1,6 @@
 [
   {
     "ts": "2026-06-10T17:56:13",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
-  },
-  {
-    "ts": "2026-06-10T17:56:13",
     "lvl": "OK",
     "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +57% → Telegram envoye"
   },
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T18:56:38",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T18:56:41",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
