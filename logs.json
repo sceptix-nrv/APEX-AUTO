@@ -408,5 +408,15 @@
     "ts": "2026-06-10T11:42:50",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1234x937"
+  },
+  {
+    "ts": "2026-06-10T11:43:50",
+    "lvl": "ERR",
+    "msg": "Exception sur '206' : Message: session not created: cannot connect to chrome at 127.0.0.1:40691\nfrom chrome not reachable\nStacktrace:\n#0 0x561802cf77ca <unknown>\n#1 0x5618026da040 <unknown>\n#2 0x5618026c58cc <unknown>\n#3 0x56180271dc6e <unknown>\n#4 0x561802712dd1 <unknown>\n#5 0x561802762e76 <unknown>\n#6 0x56180276255c <unknown>\n#7 0x561802721f7f <unknown>\n#8 0x561802722d61 <unknown>\n#9 0x561802cbe0b7 <unknown>\n#10 0x561802cbc87d <unknown>\n#11 0x561802ca7566 <unknown>\n#12 0x561802cbd45a <unknown>\n#13 0x561802c8f520 <unknown>\n#14 0x561802ce4248 <unknown>\n#15 0x561802ce43e5 <unknown>\n#16 0x561802cf634e <unknown>\n#17 0x7f1a3448b3f9 start_thread\n"
+  },
+  {
+    "ts": "2026-06-10T11:43:52",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
