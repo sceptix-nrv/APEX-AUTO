@@ -353,5 +353,60 @@
     "ts": "2026-06-10T13:00:02",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 13 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 11:42:49] ==="
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T11:42:49",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T11:42:50",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T11:42:50",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 13 annonces | 16 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T11:42:50",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : 206 ---"
+  },
+  {
+    "ts": "2026-06-10T11:42:50",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1234x937"
   }
 ]
