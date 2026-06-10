@@ -328,5 +328,30 @@
     "ts": "2026-06-10T12:59:58",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T13:00:00",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=16) — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T13:00:00",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 13 entrees"
+  },
+  {
+    "ts": "2026-06-10T13:00:01",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 16 entrees"
+  },
+  {
+    "ts": "2026-06-10T13:00:02",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +16 entrees (16 total)"
+  },
+  {
+    "ts": "2026-06-10T13:00:02",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 13 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
