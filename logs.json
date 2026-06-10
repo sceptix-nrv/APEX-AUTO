@@ -1,60 +1,5 @@
 [
   {
-    "ts": "2026-06-10T15:39:52",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206"
-  },
-  {
-    "ts": "2026-06-10T15:39:52",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:39:52",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206.1.9d..."
-  },
-  {
-    "ts": "2026-06-10T15:39:53",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206.1.9d — "
-  },
-  {
-    "ts": "2026-06-10T15:39:54",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:39:54",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
-  },
-  {
-    "ts": "2026-06-10T15:39:54",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
-  },
-  {
-    "ts": "2026-06-10T15:39:55",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +28% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:39:55",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1,9D 172 000 km..."
-  },
-  {
-    "ts": "2026-06-10T15:39:55",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
-  },
-  {
-    "ts": "2026-06-10T15:39:56",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +44% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T15:39:56",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot 206 2l HDI..."
@@ -1498,5 +1443,60 @@
     "ts": "2026-06-10T16:12:19",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 2 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T16:12:32",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T16:12:32",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 16:12:32] ==="
+  },
+  {
+    "ts": "2026-06-10T16:12:32",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T16:12:33",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T16:12:33",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T16:12:33",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T16:12:33",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T16:12:34",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T16:12:34",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 22 annonces | 32 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T16:12:34",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : 7R ---"
+  },
+  {
+    "ts": "2026-06-10T16:12:34",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1203x975"
   }
 ]
