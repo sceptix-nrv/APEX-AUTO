@@ -228,5 +228,80 @@
     "ts": "2026-06-10T12:48:40",
     "lvl": "OK",
     "msg": "IA OK : Peugeot 206 + 1.4 hdi 70cv contrôle tech"
+  },
+  {
+    "ts": "2026-06-10T12:48:44",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3205041448] Peugeot 206 + 1.4 hdi 70cv contrôle technique ok — 1690€ | score +6% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T12:48:44",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+..."
+  },
+  {
+    "ts": "2026-06-10T12:48:45",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : 206+ — Le titre mentionne '206+' qui n'est pas exactement le modèle recherché"
+  },
+  {
+    "ts": "2026-06-10T12:48:45",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206..."
+  },
+  {
+    "ts": "2026-06-10T12:48:46",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 — "
+  },
+  {
+    "ts": "2026-06-10T12:48:46",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213715488] 206 — 1150€ | score +36% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T12:48:46",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T12:48:47",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 — "
+  },
+  {
+    "ts": "2026-06-10T12:48:48",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213818520] Peugeot 206 — 500€ | score +72% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T12:48:48",
+    "lvl": "OK",
+    "msg": "10 alerte(s) envoyee(s) pour '206'"
+  },
+  {
+    "ts": "2026-06-10T12:48:48",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T12:48:51",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 10 entrees"
+  },
+  {
+    "ts": "2026-06-10T12:48:53",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 16 entrees"
+  },
+  {
+    "ts": "2026-06-10T12:48:54",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +16 entrees (16 total)"
+  },
+  {
+    "ts": "2026-06-10T12:48:54",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 10 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
