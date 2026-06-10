@@ -1,11 +1,6 @@
 [
   {
     "ts": "2026-06-10T17:32:29",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3205041448] Peugeot 206 + 1.4 hdi 70cv contrôle technique ok — 1690€ | score +43% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:32:29",
     "lvl": "SYS",
     "msg": "Analyse IA : 206+..."
   },
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T17:57:56",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1395x976"
+  },
+  {
+    "ts": "2026-06-10T17:58:01",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
