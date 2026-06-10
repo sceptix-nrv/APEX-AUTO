@@ -1,30 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:13:01",
-    "lvl": "SCAN",
-    "msg": "18 brutes → 17 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T16:13:01",
-    "lvl": "SCAN",
-    "msg": "Prix marche : min 18990€ | median 27990€ | max 60000€"
-  },
-  {
-    "ts": "2026-06-10T16:13:01",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 6r..."
-  },
-  {
-    "ts": "2026-06-10T16:13:01",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Golf 6r — Le modèle recherché est Golf 7R, mais l'annonce correspond à un Golf 6r"
-  },
-  {
-    "ts": "2026-06-10T16:13:01",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 7r..."
-  },
-  {
     "ts": "2026-06-10T16:13:02",
     "lvl": "OK",
     "msg": "IA OK : Golf 7r"
@@ -1496,6 +1471,31 @@
   },
   {
     "ts": "2026-06-10T16:57:27",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T16:57:39",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Opel INSIGNIA SP TOURER 2.0 CDTI 170CH — Le modèle recherché est le 407, mais l'annonce concerne un Opel Insignia."
+  },
+  {
+    "ts": "2026-06-10T16:57:39",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 407 SW 2.0 HDI 136 Sport * CUIR ..."
+  },
+  {
+    "ts": "2026-06-10T16:57:40",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 407 SW 2.0 HDI 136 Sport * CUIR  — Le modèle recherché est le 407, mais l'annonce correspond à un 407 SW"
+  },
+  {
+    "ts": "2026-06-10T16:57:40",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 407 1.6 HDI110 PREMIUM PACK FAP..."
+  },
+  {
+    "ts": "2026-06-10T16:57:41",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
   }
