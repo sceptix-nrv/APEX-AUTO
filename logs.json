@@ -1,30 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:48",
-    "lvl": "SYS",
-    "msg": "Chargement config depuis GitHub..."
-  },
-  {
-    "ts": "2026-06-10T17:56:49",
-    "lvl": "SYS",
-    "msg": "1 recherche(s) active(s) chargee(s)"
-  },
-  {
-    "ts": "2026-06-10T17:56:49",
-    "lvl": "SYS",
-    "msg": "Chargement historique annonces vues..."
-  },
-  {
-    "ts": "2026-06-10T17:56:50",
-    "lvl": "SYS",
-    "msg": "Historique : 10 annonces deja vues"
-  },
-  {
-    "ts": "2026-06-10T17:56:50",
-    "lvl": "SYS",
-    "msg": "Chargement index annonces..."
-  },
-  {
     "ts": "2026-06-10T17:56:50",
     "lvl": "SYS",
     "msg": "Chargement base marche..."
@@ -1498,5 +1473,30 @@
     "ts": "2026-06-10T19:07:54",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4..."
+  },
+  {
+    "ts": "2026-06-10T19:08:15",
+    "lvl": "WARN",
+    "msg": "Timeout sur 'passat' — DataDome probable, dump HTML sauvegarde"
+  },
+  {
+    "ts": "2026-06-10T19:08:15",
+    "lvl": "SCAN",
+    "msg": "0 brutes → 0 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T19:08:15",
+    "lvl": "SCAN",
+    "msg": "Aucune nouvelle annonce — 0 deja connues"
+  },
+  {
+    "ts": "2026-06-10T19:08:15",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T19:08:17",
+    "lvl": "BOT",
+    "msg": "Pause anti-detection 67s avant prochaine session Chrome..."
   }
 ]
