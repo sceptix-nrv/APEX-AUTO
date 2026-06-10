@@ -638,5 +638,20 @@
     "ts": "2026-06-10T19:48:35",
     "lvl": "BOT",
     "msg": "Pause anti-detection 47s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T19:49:22",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : Peugeot 206 ---"
+  },
+  {
+    "ts": "2026-06-10T19:49:22",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1273x888"
+  },
+  {
+    "ts": "2026-06-10T19:49:27",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
