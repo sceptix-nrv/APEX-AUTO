@@ -12,6 +12,18 @@
       "ville": "nancy",
       "destinataire": "steven",
       "active": true
+    },
+    {
+      "id": "mq7urhhkhio02k8orqt",
+      "nom": "308",
+      "keywords": "308",
+      "prix_max": 9000,
+      "km_max": null,
+      "fuel": "",
+      "rayon": 100,
+      "ville": "nancy",
+      "destinataire": "steven",
+      "active": true
     }
   ],
   "initialized": true
