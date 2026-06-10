@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:44:24",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
-  },
-  {
     "ts": "2026-06-10T17:44:25",
     "lvl": "WARN",
     "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T18:19:28",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1279x885"
+  },
+  {
+    "ts": "2026-06-10T18:19:34",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
