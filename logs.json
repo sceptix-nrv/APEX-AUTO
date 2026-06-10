@@ -1,20 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:44:25",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
-  },
-  {
-    "ts": "2026-06-10T17:44:26",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +57% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:44:26",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1,9D 172 000 km..."
-  },
-  {
     "ts": "2026-06-10T17:44:27",
     "lvl": "WARN",
     "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
@@ -1498,5 +1483,20 @@
     "ts": "2026-06-10T18:19:34",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T18:46:55",
+    "lvl": "ERR",
+    "msg": "Exception sur 'passat' : Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: Unable to receive message from renderer\n  (Session info: chrome=149.0.7827.54); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tundetected_chromedriver!GetHandleVerifier [0x3afa13+106c3]\n\tundetected_chromedriver!GetHandleVerifier [0x3afa54+10704]\n\tundetected_chromedriver!(No symbol) [0x1aa830]\n\tundetected_chromedriver!(No symbol) [0x19ada3]\n\tundetected_chromedriver!(No symbol) [0x19aad5]\n\tundetected_chromedriver!(No symbol) [0x198ca8]\n\tundetected_chromedriver!(No symbol) [0x1994f6]\n\tundetected_chromedriver!(No symbol) [0x1b0dff]\n\tundetected_chromedriver!(No symbol) [0x1b388d]\n\tundetected_chromedriver!(No symbol) [0x234046]\n\tundetected_chromedriver!(No symbol) [0x21628c]\n\tundetected_chromedriver!(No symbol) [0x2332fa]\n\tundetected_chromedriver!(No symbol) [0x216026]\n\tundetected_chromedriver!(No symbol) [0x1e9289]\n\tundetected_chromedriver!(No symbol) [0x1ea054]\n\tundetected_chromedriver!GetHandleVerifier [0x6344fa+2951aa]\n\tundetected_chromedriver!GetHandleVerifier [0x62fb56+290806]\n\tundetected_chromedriver!GetHandleVerifier [0x64ff8b+2b0c3b]\n\tundetected_chromedriver!GetHandleVerifier [0x3c9ed6+2ab86]\n\tundetected_chromedriver!GetHandleVerifier [0x3d124d+31efd]\n\tundetected_chromedriver!GetHandleVerifier [0x3b83d8+19088]\n\tundetected_chromedriver!GetHandleVerifier [0x3b8585+19235]\n\tundetected_chromedriver!GetHandleVerifier [0x3a125f+1f0f]\n\tKERNEL32!BaseThreadInitThunk [0x75cc5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x7705d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x7705d7c1+231]\n\t(No symbol) [(nil)]\n"
+  },
+  {
+    "ts": "2026-06-10T18:46:55",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T18:46:57",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
