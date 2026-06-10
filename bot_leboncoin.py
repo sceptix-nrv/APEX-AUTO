@@ -4,8 +4,9 @@ import os
 import time
 from datetime import datetime
 
+import asyncio
 import requests
-from curl_cffi import requests as cf
+from camoufox.async_api import AsyncCamoufox
 
 # CONFIG TELEGRAM
 TELEGRAM_TOKEN = "8631165512:AAFtYjnanMCsF_SCwXd_8VEeNX31xM9x5UY"
@@ -42,11 +43,6 @@ FUEL_LABELS = {"2": "diesel", "1": "essence", "3": "electrique", "5": "hybride"}
 
 annonces_sha = None
 
-LBC_HEADERS = {
-    "Accept": "application/json, text/plain, */*",
-    "api_key": "ba0c2dad52b3585c9a5b232ed1522a29",
-    "Content-Type": "application/json",
-}
 
 
 def gh_headers():
@@ -182,7 +178,7 @@ def construire_payload(r):
     }
 
 
-def construire_url_search(r):
+def construire_url(r):
     ville = VILLES.get(r.get("ville", "nancy"), VILLES["nancy"])
     rayon_m = int(r.get("rayon", 100)) * 1000
     location = f"{ville['nom']}__{ville['lat']}_{ville['lng']}_0_{rayon_m}"
@@ -202,40 +198,42 @@ def construire_url_search(r):
     return "https://www.leboncoin.fr/recherche?" + "&".join(params)
 
 
-def scraper_recherche(r):
-    url = construire_url_search(r)
+async def scraper_recherche(page, url, nom):
     try:
-        session = cf.Session(impersonate="chrome120")
-        # Visite la page d'accueil pour obtenir les cookies
-        session.get("https://www.leboncoin.fr", timeout=15)
-        time.sleep(1)
-        res = session.get(url, timeout=20)
-        if res.status_code != 200:
-            print(f"  [LBC] Erreur {res.status_code}")
-            return []
-        html = res.text
-        # Extraire __NEXT_DATA__
-        marker = '"ads":'
-        idx = html.find(marker)
-        if idx == -1:
-            print(f"  [LBC] __NEXT_DATA__ introuvable")
-            return []
-        # Parser __NEXT_DATA__ proprement
-        start = html.find('id="__NEXT_DATA__"')
-        if start == -1:
-            print(f"  [LBC] __NEXT_DATA__ tag introuvable")
-            return []
-        start = html.find('>', start) + 1
-        end = html.find('</script>', start)
-        import json as _json
-        data = _json.loads(html[start:end])
-        props = data.get("props", {}).get("pageProps", {})
+        await page.goto(url, timeout=40000)
+        # Attendre que __NEXT_DATA__ soit présent dans le DOM
+        await page.wait_for_function(
+            "() => !!document.getElementById('__NEXT_DATA__')",
+            timeout=20000,
+        )
+        await page.wait_for_timeout(1500)
+    except Exception as e:
+        print(f"  Erreur navigation ({nom}) : {e}")
+        return []
+
+    next_data = await page.evaluate("""
+        () => {
+            const el = document.getElementById('__NEXT_DATA__');
+            if (!el) return null;
+            try { return JSON.parse(el.textContent); }
+            catch { return null; }
+        }
+    """)
+
+    if not next_data:
+        print(f"  [WARN] __NEXT_DATA__ introuvable pour {nom}")
+        return []
+
+    try:
+        props = next_data.get("props", {}).get("pageProps", {})
         ads = props.get("searchData", {}).get("ads", [])
         if not ads:
             ads = props.get("hydrationData", {}).get("searchData", {}).get("ads", [])
+        if not ads:
+            ads = props.get("initialProps", {}).get("searchData", {}).get("ads", [])
         return ads
     except Exception as e:
-        print(f"  [LBC] Erreur : {e}")
+        print(f"  Erreur parsing ({nom}) : {e}")
         return []
 
 
@@ -352,7 +350,7 @@ def extraire_annonce_data(ad, nom_recherche, score=None):
     }
 
 
-def scan():
+async def scan():
     heure = datetime.now().hour
     if heure >= HEURE_FIN or heure < HEURE_DEBUT:
         print(f"[{datetime.now().strftime('%H:%M')}] Mode nuit — expert en pause.")
@@ -371,44 +369,53 @@ def scan():
     nouvelles_annonces    = []
     total_nouvelles       = 0
 
-    for r in recherches:
-        nom = r.get("nom", "Recherche")
-        print(f"  Scan : {nom}...", end=" ", flush=True)
-        try:
-            annonces = scraper_recherche(r)
-            valides  = [ad for ad in annonces if annonce_valide(ad, r)]
-            tous_prix = [
-                float(ad["price"][0]) for ad in valides
-                if ad.get("price") and ad["price"][0]
-            ]
+    try:
+        async with AsyncCamoufox(headless=True, humanize=True) as browser:
+            for r in recherches:
+                nom = r.get("nom", "Recherche")
+                url = construire_url(r)
+                print(f"  Scan : {nom}...", end=" ", flush=True)
+                try:
+                    page = await browser.new_page()
+                    annonces = await scraper_recherche(page, url, nom)
+                    await page.close()
 
-            nouvelles = 0
-            for ad in reversed(valides):
-                ad_id = str(ad.get("list_id", ""))
-                if not ad_id or ad_id in historique:
-                    continue
+                    valides   = [ad for ad in annonces if annonce_valide(ad, r)]
+                    tous_prix = [
+                        float(ad["price"][0]) for ad in valides
+                        if ad.get("price") and ad["price"][0]
+                    ]
 
-                prix  = ad.get("price", [None])[0] if ad.get("price") else None
-                score = calculer_score(prix, tous_prix) if prix else None
+                    nouvelles = 0
+                    for ad in reversed(valides):
+                        ad_id = str(ad.get("list_id", ""))
+                        if not ad_id or ad_id in historique:
+                            continue
 
-                _, msg = formater_annonce(ad, nom, score)
-                dest = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
-                envoyer_telegram(msg, dest)
-                historique.add(ad_id)
+                        prix  = ad.get("price", [None])[0] if ad.get("price") else None
+                        score = calculer_score(prix, tous_prix) if prix else None
 
-                if ad_id not in ids_existants:
-                    nouvelles_annonces.append(extraire_annonce_data(ad, nom, score))
-                    ids_existants.add(ad_id)
+                        _, msg = formater_annonce(ad, nom, score)
+                        dest = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
+                        envoyer_telegram(msg, dest)
+                        historique.add(ad_id)
 
-                nouvelles += 1
-                total_nouvelles += 1
+                        if ad_id not in ids_existants:
+                            nouvelles_annonces.append(extraire_annonce_data(ad, nom, score))
+                            ids_existants.add(ad_id)
 
-            print(f"{len(annonces)} scannées, {nouvelles} nouvelle(s)")
+                        nouvelles += 1
+                        total_nouvelles += 1
 
-        except Exception as e:
-            print(f"Erreur : {e}")
+                    print(f"{len(annonces)} scannées, {nouvelles} nouvelle(s)")
 
-        time.sleep(2)
+                except Exception as e:
+                    print(f"Erreur : {e}")
+
+                await asyncio.sleep(2)
+
+    except Exception as e:
+        print(f"  Erreur navigateur : {e}")
 
     sauvegarder_historique(historique)
 
@@ -424,11 +431,11 @@ def main():
     print(f"Intervalle : toutes les {INTERVALLE_MINUTES} min | Plage : {HEURE_DEBUT}h–{HEURE_FIN}h")
     print("Config chargée depuis GitHub à chaque scan.\n")
 
-    scan()
+    asyncio.run(scan())
 
     while True:
         time.sleep(INTERVALLE_MINUTES * 60)
-        scan()
+        asyncio.run(scan())
 
 
 if __name__ == "__main__":
