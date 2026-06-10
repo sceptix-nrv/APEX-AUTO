@@ -413,5 +413,40 @@
     "ts": "2026-06-10T10:36:55",
     "lvl": "WARN",
     "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:56",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213715488] 206 — 1150€ | score +36% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:56",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+ 1,4 75ch 1500..."
+  },
+  {
+    "ts": "2026-06-10T10:36:57",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:58",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213716246] 206+ 1,4 75ch 1500 — 1500€ | score +17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:58",
+    "lvl": "OK",
+    "msg": "23 alerte(s) envoyee(s) pour '206'"
+  },
+  {
+    "ts": "2026-06-10T10:36:58",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T10:37:00",
+    "lvl": "BOT",
+    "msg": "Pause anti-detection 55s avant prochaine session Chrome..."
   }
 ]
