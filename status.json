@@ -1,7 +1,7 @@
 {
-  "etat": "scan",
-  "label": "🔍 Scan en cours",
-  "color": "#00cfff",
-  "detail": "Peugeot 206",
-  "ts": "10/06 21:02:00"
+  "etat": "attente",
+  "label": "⏳ En attente",
+  "color": "#7e7fa8",
+  "detail": "Prochain scan dans 10min",
+  "ts": "10/06 21:02:22"
 }
