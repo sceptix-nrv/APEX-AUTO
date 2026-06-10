@@ -723,5 +723,15 @@
     "ts": "2026-06-10T20:09:54",
     "lvl": "BOT",
     "msg": "Chrome stealth 1332x935"
+  },
+  {
+    "ts": "2026-06-10T20:10:11",
+    "lvl": "BOT",
+    "msg": "Session établie (6.2s, scroll 239px)"
+  },
+  {
+    "ts": "2026-06-10T20:10:11",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4894_-0.772…"
   }
 ]
