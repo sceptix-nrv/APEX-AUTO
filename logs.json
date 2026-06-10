@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:55:19",
-    "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1366x912"
-  },
-  {
     "ts": "2026-06-10T17:55:24",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T18:47:43",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T18:47:47",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
