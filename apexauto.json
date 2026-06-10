@@ -1,30 +1,5 @@
 {
   "vehicules": [],
-  "recherches": [
-    {
-      "id": "mq7vilxegpgw6otyzh6",
-      "nom": "206",
-      "keywords": "206",
-      "prix_max": 3000,
-      "km_max": 200000,
-      "fuel": "",
-      "rayon": 100,
-      "ville": "nancy",
-      "destinataire": "steven",
-      "active": true
-    },
-    {
-      "id": "mq7vtj65m08bkqdrk2",
-      "nom": "207",
-      "keywords": "207",
-      "prix_max": 4000,
-      "km_max": 150000,
-      "fuel": "diesel",
-      "rayon": 100,
-      "ville": "nancy",
-      "destinataire": "steven",
-      "active": true
-    }
-  ],
+  "recherches": [],
   "initialized": true
 }
