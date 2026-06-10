@@ -65,44 +65,59 @@
     "msg": "Chargement config depuis GitHub..."
   },
   {
-    "ts": "2026-06-10T17:29:29",
+    "ts": "2026-06-10T17:29:33",
+    "lvl": "SYS",
+    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
+  },
+  {
+    "ts": "2026-06-10T17:29:34",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 17:29:34] ==="
+  },
+  {
+    "ts": "2026-06-10T17:29:34",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T17:29:35",
     "lvl": "SYS",
     "msg": "1 recherche(s) active(s) chargee(s)"
   },
   {
-    "ts": "2026-06-10T17:29:29",
+    "ts": "2026-06-10T17:29:35",
     "lvl": "SYS",
     "msg": "Chargement historique annonces vues..."
   },
   {
-    "ts": "2026-06-10T17:29:31",
+    "ts": "2026-06-10T17:29:37",
     "lvl": "SYS",
     "msg": "Historique : 0 annonces deja vues"
   },
   {
-    "ts": "2026-06-10T17:29:31",
+    "ts": "2026-06-10T17:29:37",
     "lvl": "SYS",
     "msg": "Chargement index annonces..."
   },
   {
-    "ts": "2026-06-10T17:29:32",
+    "ts": "2026-06-10T17:29:38",
     "lvl": "SYS",
     "msg": "Chargement base marche..."
   },
   {
-    "ts": "2026-06-10T17:29:33",
+    "ts": "2026-06-10T17:29:38",
     "lvl": "SYS",
     "msg": "Base chargee — 0 vues | 0 annonces | 0 entrees marche"
   },
   {
-    "ts": "2026-06-10T17:29:33",
+    "ts": "2026-06-10T17:29:38",
     "lvl": "SCAN",
     "msg": "--- Recherche [1/1] : 206 ---"
   },
   {
-    "ts": "2026-06-10T17:29:33",
+    "ts": "2026-06-10T17:29:38",
     "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1297x808"
+    "msg": "Lancement Chrome stealth — viewport 1273x922"
   },
   {
     "ts": "2026-06-10T17:29:39",
@@ -110,13 +125,58 @@
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
   },
   {
-    "ts": "2026-06-10T17:29:58",
+    "ts": "2026-06-10T17:29:54",
     "lvl": "BOT",
-    "msg": "Session etablie (7.8s, scroll 357px) — fingerprint OK"
+    "msg": "Session etablie (6.5s, scroll 201px) — fingerprint OK"
   },
   {
-    "ts": "2026-06-10T17:29:58",
+    "ts": "2026-06-10T17:29:54",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=206%20PEUGEOT&locations=Nancy..."
+  },
+  {
+    "ts": "2026-06-10T17:30:04",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T17:30:05",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T17:30:05",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 27 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T17:30:05",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 1€ | median 2990€ | max 4000€"
+  },
+  {
+    "ts": "2026-06-10T17:30:05",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Suzuki swift new 1.3 glx 5 portes..."
+  },
+  {
+    "ts": "2026-06-10T17:30:06",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le Peugeot 206, mais l'annonce concerne un Suzuki Swift."
+  },
+  {
+    "ts": "2026-06-10T17:30:06",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206+ 1.4 hdi 70cv..."
+  },
+  {
+    "ts": "2026-06-10T17:30:06",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 206+ 1.4 hdi 70cv — Le modèle recherché est le 206, mais l'annonce mentionne un 206+"
+  },
+  {
+    "ts": "2026-06-10T17:30:06",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206cc Roland garos..."
   }
 ]
