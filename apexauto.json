@@ -63,5 +63,5 @@
     }
   ],
   "initialized": true,
-  "force_scan": true
+  "force_scan": false
 }
