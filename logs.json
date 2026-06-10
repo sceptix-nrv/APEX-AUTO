@@ -1,175 +1,5 @@
 [
   {
-    "ts": "2026-06-10T15:39:56",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 2l HDI — "
-  },
-  {
-    "ts": "2026-06-10T15:39:57",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:39:57",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
-  },
-  {
-    "ts": "2026-06-10T15:39:57",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 2007 Peugeot 206 1.4 hdi — "
-  },
-  {
-    "ts": "2026-06-10T15:39:58",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213643613] 2007 Peugeot 206 1.4 hdi — 1500€ | score +17% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:39:58",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
-  },
-  {
-    "ts": "2026-06-10T15:39:59",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Peugeot206/Ford Ka /Fiesta/Chevrolet mat — Le titre mentionne plusieurs modèles différents"
-  },
-  {
-    "ts": "2026-06-10T15:39:59",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 + 1.4 hdi 70cv contrôle tech..."
-  },
-  {
-    "ts": "2026-06-10T15:39:59",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
-    "ts": "2026-06-10T15:40:10",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206 + 1.4 hdi 70cv contrôle tech"
-  },
-  {
-    "ts": "2026-06-10T15:40:11",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3205041448] Peugeot 206 + 1.4 hdi 70cv contrôle technique ok — 1690€ | score +6% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:40:11",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206+..."
-  },
-  {
-    "ts": "2026-06-10T15:40:11",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : 206+ — Le titre mentionne '206+' qui n'est pas exactement le modèle recherché"
-  },
-  {
-    "ts": "2026-06-10T15:40:11",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206..."
-  },
-  {
-    "ts": "2026-06-10T15:40:12",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
-    "ts": "2026-06-10T15:40:22",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 — "
-  },
-  {
-    "ts": "2026-06-10T15:40:23",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213715488] 206 — 1150€ | score +36% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:40:23",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 1.1 POP ART 3P..."
-  },
-  {
-    "ts": "2026-06-10T15:40:23",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206 1.1 POP ART 3P"
-  },
-  {
-    "ts": "2026-06-10T15:40:24",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3140645307] Peugeot 206 1.1 POP ART 3P — 2990€ | score -66% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:40:24",
-    "lvl": "OK",
-    "msg": "12 alerte(s) envoyee(s) pour '206'"
-  },
-  {
-    "ts": "2026-06-10T15:40:24",
-    "lvl": "BOT",
-    "msg": "Session Chrome fermee proprement"
-  },
-  {
-    "ts": "2026-06-10T15:40:27",
-    "lvl": "SYS",
-    "msg": "Reset detecte (GitHub=0 < memoire=15) — historique non ecrase"
-  },
-  {
-    "ts": "2026-06-10T15:40:27",
-    "lvl": "SYS",
-    "msg": "Sauvegarde annonces — 12 entrees"
-  },
-  {
-    "ts": "2026-06-10T15:40:28",
-    "lvl": "SYS",
-    "msg": "Sauvegarde marche — 15 entrees"
-  },
-  {
-    "ts": "2026-06-10T15:40:29",
-    "lvl": "SYS",
-    "msg": "Base marche mise a jour +15 entrees (15 total)"
-  },
-  {
-    "ts": "2026-06-10T15:40:29",
-    "lvl": "SYS",
-    "msg": "=== SCAN TERMINE — 12 nouvelle(s) | prochain cycle dans 10 min ==="
-  },
-  {
-    "ts": "2026-06-10T15:50:30",
-    "lvl": "SYS",
-    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 15:50:30] ==="
-  },
-  {
-    "ts": "2026-06-10T15:50:30",
-    "lvl": "SYS",
-    "msg": "Chargement config depuis GitHub..."
-  },
-  {
-    "ts": "2026-06-10T15:50:31",
-    "lvl": "SYS",
-    "msg": "1 recherche(s) active(s) chargee(s)"
-  },
-  {
-    "ts": "2026-06-10T15:50:31",
-    "lvl": "SYS",
-    "msg": "Chargement historique annonces vues..."
-  },
-  {
-    "ts": "2026-06-10T15:50:32",
-    "lvl": "SYS",
-    "msg": "Historique : 0 annonces deja vues"
-  },
-  {
-    "ts": "2026-06-10T15:50:32",
-    "lvl": "SYS",
-    "msg": "Chargement index annonces..."
-  },
-  {
-    "ts": "2026-06-10T15:50:33",
-    "lvl": "SYS",
-    "msg": "Chargement base marche..."
-  },
-  {
     "ts": "2026-06-10T15:50:34",
     "lvl": "SYS",
     "msg": "Base chargee — 0 vues | 12 annonces | 15 entrees marche"
@@ -1498,5 +1328,175 @@
     "ts": "2026-06-10T16:12:39",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T16:12:54",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.8s, scroll 328px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T16:12:54",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=GOLF%207R&locations=Nancy__48..."
+  },
+  {
+    "ts": "2026-06-10T16:13:00",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T16:13:01",
+    "lvl": "NET",
+    "msg": "Parsing OK — 18 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T16:13:01",
+    "lvl": "SCAN",
+    "msg": "18 brutes → 17 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T16:13:01",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 18990€ | median 27990€ | max 60000€"
+  },
+  {
+    "ts": "2026-06-10T16:13:01",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 6r..."
+  },
+  {
+    "ts": "2026-06-10T16:13:01",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Golf 6r — Le modèle recherché est Golf 7R, mais l'annonce correspond à un Golf 6r"
+  },
+  {
+    "ts": "2026-06-10T16:13:01",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 7r..."
+  },
+  {
+    "ts": "2026-06-10T16:13:02",
+    "lvl": "OK",
+    "msg": "IA OK : Golf 7r"
+  },
+  {
+    "ts": "2026-06-10T16:13:02",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3151869391] Golf 7r — 30500€ | score -9% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:02",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Volkswagen Golf 7R 2.0 Tsi 310cv DSG7 4M..."
+  },
+  {
+    "ts": "2026-06-10T16:13:03",
+    "lvl": "OK",
+    "msg": "IA OK : Volkswagen Golf 7R 2.0 Tsi 310cv DSG7 4M"
+  },
+  {
+    "ts": "2026-06-10T16:13:03",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3160603740] Volkswagen Golf 7R 2.0 Tsi 310cv DSG7 4Motion Camé — 32990€ | score -18% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:03",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 7r 1000cv..."
+  },
+  {
+    "ts": "2026-06-10T16:13:04",
+    "lvl": "OK",
+    "msg": "IA OK : Golf 7r 1000cv"
+  },
+  {
+    "ts": "2026-06-10T16:13:04",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3198383888] Golf 7r 1000cv — 60000€ | score -99% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:04",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 7r..."
+  },
+  {
+    "ts": "2026-06-10T16:13:05",
+    "lvl": "OK",
+    "msg": "IA OK : Golf 7r"
+  },
+  {
+    "ts": "2026-06-10T16:13:05",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3198870799] Golf 7r — 27990€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:05",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Volkswagen Golf 7R 2.0 TSI 300 BlueMotio..."
+  },
+  {
+    "ts": "2026-06-10T16:13:06",
+    "lvl": "OK",
+    "msg": "IA OK : Volkswagen Golf 7R 2.0 TSI 300 BlueMotio"
+  },
+  {
+    "ts": "2026-06-10T16:13:06",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3205360270] Volkswagen Golf 7R 2.0 TSI 300 BlueMotion Technolo — 24990€ | score +11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:06",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Volkswagen golf 7 r phase 2 310 cv full ..."
+  },
+  {
+    "ts": "2026-06-10T16:13:07",
+    "lvl": "OK",
+    "msg": "IA OK : Volkswagen golf 7 r phase 2 310 cv full "
+  },
+  {
+    "ts": "2026-06-10T16:13:07",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3207805126] Volkswagen golf 7 r phase 2 310 cv full options to — 27990€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:07",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 7R..."
+  },
+  {
+    "ts": "2026-06-10T16:13:08",
+    "lvl": "OK",
+    "msg": "IA OK : Golf 7R"
+  },
+  {
+    "ts": "2026-06-10T16:13:08",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3155893760] Golf 7R — 25999€ | score +7% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:08",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Golf 7R 300CV..."
+  },
+  {
+    "ts": "2026-06-10T16:13:09",
+    "lvl": "OK",
+    "msg": "IA OK : Golf 7R 300CV"
+  },
+  {
+    "ts": "2026-06-10T16:13:09",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3210045244] Golf 7R 300CV — 28000€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:13:09",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Volkswagen Golf 7r 2.0 TSI 310ch 4motion..."
+  },
+  {
+    "ts": "2026-06-10T16:13:10",
+    "lvl": "OK",
+    "msg": "IA OK : Volkswagen Golf 7r 2.0 TSI 310ch 4motion"
   }
 ]
