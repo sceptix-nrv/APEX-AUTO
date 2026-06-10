@@ -423,5 +423,20 @@
     "ts": "2026-06-10T11:58:57",
     "lvl": "BOT",
     "msg": "Pause anti-detection 74s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T12:00:12",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : 207 ---"
+  },
+  {
+    "ts": "2026-06-10T12:00:12",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1352x999"
+  },
+  {
+    "ts": "2026-06-10T12:00:18",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
