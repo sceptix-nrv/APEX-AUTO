@@ -1,20 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:35:09",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : 206+ — Le titre mentionne '206+' qui n'est pas exactement le modèle recherché '206'"
-  },
-  {
-    "ts": "2026-06-10T17:35:09",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 CC 1.6 16V SPORT..."
-  },
-  {
-    "ts": "2026-06-10T17:35:10",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
     "ts": "2026-06-10T17:35:21",
     "lvl": "OK",
     "msg": "IA OK : Peugeot 206 CC 1.6 16V SPORT"
@@ -1498,5 +1483,20 @@
     "ts": "2026-06-10T18:05:07",
     "lvl": "BOT",
     "msg": "Pause anti-detection 53s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T18:06:00",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : 207 ---"
+  },
+  {
+    "ts": "2026-06-10T18:06:00",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1390x968"
+  },
+  {
+    "ts": "2026-06-10T18:06:06",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
