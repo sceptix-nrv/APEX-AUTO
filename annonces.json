@@ -2,7 +2,7 @@
   {
     "id": "3173029848",
     "titre": "Peugeot 206+ 1.4 hdi 70cv",
-    "prix": 3990.0,
+    "prix": 3990,
     "km": 185985,
     "annee": "2009",
     "ville": "Saint-Avold",
@@ -20,7 +20,7 @@
   {
     "id": "3205967687",
     "titre": "206cc Roland garos",
-    "prix": 3200.0,
+    "prix": 3200,
     "km": 190000,
     "annee": "2005",
     "ville": "Verdun",
@@ -38,7 +38,7 @@
   {
     "id": "3213307024",
     "titre": "Peugeot 206",
-    "prix": 3000.0,
+    "prix": 3000,
     "km": 222000,
     "annee": "2007",
     "ville": "Dieulouard",
@@ -56,7 +56,7 @@
   {
     "id": "3213387238",
     "titre": "206 1.4 hdi",
-    "prix": 1800.0,
+    "prix": 1800,
     "km": 232000,
     "annee": "2003",
     "ville": "Forbach",
@@ -74,7 +74,7 @@
   {
     "id": "3213441470",
     "titre": "Peugeot 206",
-    "prix": 1800.0,
+    "prix": 1800,
     "km": 123000,
     "annee": "2004",
     "ville": "Forbach",
@@ -92,7 +92,7 @@
   {
     "id": "3213503832",
     "titre": "206.1.9d",
-    "prix": 2950.0,
+    "prix": 2950,
     "km": 170000,
     "annee": "2000",
     "ville": "Rigny-la-Salle",
@@ -110,7 +110,7 @@
   {
     "id": "3213506944",
     "titre": "Peugeot 206 3portes 1.4HDI Eco",
-    "prix": 1300.0,
+    "prix": 1300,
     "km": 221000,
     "annee": "2002",
     "ville": "Forbach",
@@ -128,7 +128,7 @@
   {
     "id": "3213539388",
     "titre": "206 1,9D 172 000 km",
-    "prix": 1000.0,
+    "prix": 1000,
     "km": 172000,
     "annee": "1999",
     "ville": "Erching",
@@ -146,7 +146,7 @@
   {
     "id": "3205818422",
     "titre": "Peugeot 206 Plus 1.4I 75CV / Garantie",
-    "prix": 3490.0,
+    "prix": 3490,
     "km": 123900,
     "annee": "2009",
     "ville": "Sarreguemines",
@@ -164,7 +164,7 @@
   {
     "id": "3140645307",
     "titre": "Peugeot 206 1.1 POP ART 3P",
-    "prix": 2990.0,
+    "prix": 2990,
     "km": 94391,
     "annee": "2005",
     "ville": "Florange",
@@ -182,7 +182,7 @@
   {
     "id": "3210292852",
     "titre": "Peugeot 206+ 1.1 60cv trendy",
-    "prix": 2650.0,
+    "prix": 2650,
     "km": 180000,
     "annee": "2010",
     "ville": "Freyming-Merlebach",
@@ -200,7 +200,7 @@
   {
     "id": "3213973256",
     "titre": "206 HDI 4 chevaux",
-    "prix": 4000.0,
+    "prix": 4000,
     "km": 114000,
     "annee": "2005",
     "ville": "Conflans-sur-Lanterne",
@@ -218,7 +218,7 @@
   {
     "id": "3212210452",
     "titre": "PEUGEOT 206 \\'FAIBLE KILOMETRAGE\\' - URBAN - 1.1i - GARANTIE 6 MOIS",
-    "prix": 3990.0,
+    "prix": 3990,
     "km": 100030,
     "annee": "2009",
     "ville": "Nancy",
@@ -236,7 +236,7 @@
   {
     "id": "3213991129",
     "titre": "Vend / échange 206 1.4 hdi édition Xbox 360",
-    "prix": 1.0,
+    "prix": 1,
     "km": 240000,
     "annee": "2007",
     "ville": "Mirecourt",
@@ -254,7 +254,7 @@
   {
     "id": "3212991869",
     "titre": "Peugeot 207Ct ok",
-    "prix": 1650.0,
+    "prix": 1650,
     "km": 290000,
     "annee": "2010",
     "ville": "Sarreguemines",
@@ -272,7 +272,7 @@
   {
     "id": "3213236821",
     "titre": "Peugeot 207 HDi",
-    "prix": 4250.0,
+    "prix": 4250,
     "km": 158000,
     "annee": "2009",
     "ville": "Saint-Avold",
@@ -290,7 +290,7 @@
   {
     "id": "3213227216",
     "titre": "Peugeot 207 1.6 92cv hdi premium",
-    "prix": 2800.0,
+    "prix": 2800,
     "km": 168000,
     "annee": "2011",
     "ville": "Forbach",
@@ -308,7 +308,7 @@
   {
     "id": "3213295220",
     "titre": "PEUGEOT 207 1.4 5cv 75ch 99317 KM GARANTIE 12 MOIS",
-    "prix": 5490.0,
+    "prix": 5490,
     "km": 99317,
     "annee": "2012",
     "ville": "Marlenheim",
@@ -316,7 +316,7 @@
     "recherche": "207",
     "score": -37,
     "date": "2026-06-10T18:06",
-    "statut": "nouvelle",
+    "statut": "vue",
     "ia_verdict": "OK",
     "ia_detail": "",
     "ia_avis": "Fonce, le rapport km/année est raisonnable pour un prix de 5490€",
@@ -326,7 +326,7 @@
   {
     "id": "3188025305",
     "titre": "Peugeot 207 essence 1.4 L - 75CV Année 2008 avec seulement 124 000 KM entretenu suivi clim",
-    "prix": 3490.0,
+    "prix": 3490,
     "km": 124000,
     "annee": "2008",
     "ville": "Sarreguemines",
@@ -344,7 +344,7 @@
   {
     "id": "3081229269",
     "titre": "Peugeot 207 CC 1.6 VTI 16V SPORT PACK",
-    "prix": 3990.0,
+    "prix": 3990,
     "km": 136502,
     "annee": "2007",
     "ville": "Cocheren",
@@ -362,7 +362,7 @@
   {
     "id": "3210661952",
     "titre": "Peugeot 207 1.4 HDi 68ch business",
-    "prix": 5990.0,
+    "prix": 5990,
     "km": 139000,
     "annee": "2011",
     "ville": "Vincey",
@@ -380,7 +380,7 @@
   {
     "id": "3213321578",
     "titre": "Peugeot 207 1.4 95Cv homologué Bioethanol",
-    "prix": 4000.0,
+    "prix": 4000,
     "km": 138000,
     "annee": "2008",
     "ville": "Metz",
