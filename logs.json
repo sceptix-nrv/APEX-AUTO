@@ -328,5 +328,50 @@
     "ts": "2026-06-10T19:44:26",
     "lvl": "SYS",
     "msg": "Analyse IA : Alfa Romeo 159 ti..."
+  },
+  {
+    "ts": "2026-06-10T19:44:27",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Alfa Romeo 159 ti — Le modèle recherché est 'passat' mais le titre mentionne 'Alfa Romeo 159 ti'"
+  },
+  {
+    "ts": "2026-06-10T19:44:27",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Audi A3 Sportback 1.9 TDI 105cv Attracti..."
+  },
+  {
+    "ts": "2026-06-10T19:44:28",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Audi A3 Sportback 1.9 TDI 105cv Attracti — Le modèle recherché est 'passat' mais le titre mentionne 'Audi A3 Sportback'"
+  },
+  {
+    "ts": "2026-06-10T19:44:28",
+    "lvl": "SYS",
+    "msg": "Analyse IA : VW Passat SW 2.0 TDI 140 Sport – Automat..."
+  },
+  {
+    "ts": "2026-06-10T19:44:28",
+    "lvl": "OK",
+    "msg": "IA OK : VW Passat SW 2.0 TDI 140 Sport – Automat"
+  },
+  {
+    "ts": "2026-06-10T19:44:28",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212718228] VW Passat SW 2.0 TDI 140 Sport – Automatique – CT  — 4800€ | score +36% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T19:44:28",
+    "lvl": "OK",
+    "msg": "1 alerte(s) envoyee(s) pour 'passat'"
+  },
+  {
+    "ts": "2026-06-10T19:44:29",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T19:44:31",
+    "lvl": "BOT",
+    "msg": "Pause anti-detection 52s avant prochaine session Chrome..."
   }
 ]
