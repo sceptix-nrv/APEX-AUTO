@@ -1303,5 +1303,35 @@
     "ts": "2026-06-10T11:11:43",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T11:11:54",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 1.6 hdi 90cv an. 2010 — "
+  },
+  {
+    "ts": "2026-06-10T11:11:55",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3209765373] Peugeot 207 1.6 hdi 90cv an. 2010 — 4500€ | score -12% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:11:55",
+    "lvl": "OK",
+    "msg": "22 alerte(s) envoyee(s) pour '207'"
+  },
+  {
+    "ts": "2026-06-10T11:11:55",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T11:11:59",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 22 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:12:00",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 62 entrees"
   }
 ]
