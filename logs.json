@@ -168,5 +168,25 @@
     "ts": "2026-06-10T11:55:01",
     "lvl": "NET",
     "msg": "Fetch description annonce 3213417921..."
+  },
+  {
+    "ts": "2026-06-10T11:55:17",
+    "lvl": "WARN",
+    "msg": "Aucune description trouvee pour 3213417921"
+  },
+  {
+    "ts": "2026-06-10T11:55:19",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Renault Twingo II GT 1.2 TCE 101 cv — Le modèle recherché est le 206, mais l'annonce concerne un Twingo II"
+  },
+  {
+    "ts": "2026-06-10T11:55:19",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T11:55:19",
+    "lvl": "NET",
+    "msg": "Fetch description annonce 3213441470..."
   }
 ]
