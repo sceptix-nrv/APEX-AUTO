@@ -48,5 +48,20 @@
     "ts": "2026-06-10T17:28:29",
     "lvl": "WARN",
     "msg": "Aucune recherche active trouvee dans la config. Arret."
+  },
+  {
+    "ts": "2026-06-10T17:29:28",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T17:29:28",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 17:29:28] ==="
+  },
+  {
+    "ts": "2026-06-10T17:29:28",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
   }
 ]
