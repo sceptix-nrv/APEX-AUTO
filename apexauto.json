@@ -27,5 +27,5 @@
     }
   ],
   "initialized": true,
-  "force_scan": false
+  "force_scan": true
 }
