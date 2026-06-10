@@ -47,7 +47,7 @@
       "rayon": 100,
       "ville": "nancy",
       "destinataire": "steven",
-      "active": false
+      "active": true
     }
   ],
   "initialized": true,
