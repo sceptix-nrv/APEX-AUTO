@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:13:08",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 7R 300CV..."
-  },
-  {
     "ts": "2026-06-10T16:13:09",
     "lvl": "OK",
     "msg": "IA OK : Golf 7R 300CV"
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T17:03:08",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1258x869"
+  },
+  {
+    "ts": "2026-06-10T17:03:14",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
