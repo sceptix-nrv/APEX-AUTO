@@ -1403,5 +1403,40 @@
     "ts": "2026-06-10T11:15:39",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T11:15:53",
+    "lvl": "BOT",
+    "msg": "Session etablie (5.9s, scroll 177px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T11:15:53",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=207&locations=Nancy__48.6954_..."
+  },
+  {
+    "ts": "2026-06-10T11:16:01",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T11:16:01",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T11:16:01",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 32 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T11:16:01",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 650€ | median 4000€ | max 8990€"
+  },
+  {
+    "ts": "2026-06-10T11:16:01",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Belle bmw 116i pack M 5 portes 179.800 k..."
   }
 ]
