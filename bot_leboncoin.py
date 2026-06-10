@@ -331,17 +331,24 @@ def _get_attrs(ad):
     return result
 
 
+KM_MAX_ESSENCE = 180_000   # essence au-delà = invendable
+
 def annonce_valide(ad, r):
     attrs = _get_attrs(ad)
     prix  = ad.get("price", [None])[0]
+    km    = attrs.get("mileage")
+    fuel  = attrs.get("fuel")
+
     if r.get("prix_max") and prix and float(prix) > r["prix_max"]:
         return False
-    km = attrs.get("mileage")
     if r.get("km_max") and km and int(km) > r["km_max"]:
         return False
-    fuel = attrs.get("fuel")
     if r.get("fuel") and r["fuel"] and fuel:
         if FUEL_LABELS.get(str(fuel), "") != r["fuel"]:
+            return False
+    # Règle globale : essence avec km > 180 000 → rejeté
+    if km and fuel and FUEL_LABELS.get(str(fuel), "") == "essence":
+        if int(km) > KM_MAX_ESSENCE:
             return False
     return True
 
