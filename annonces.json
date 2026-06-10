@@ -358,5 +358,41 @@
     "ia_avis": "Fonce, le rapport km/année est raisonnable pour un modèle de 2009",
     "ia_moteur": "Le moteur 1.4i 16V VTI est un moteur classique, pas de problème notoire connu",
     "ia_note": 7
+  },
+  {
+    "id": "3206516137",
+    "titre": "Mercedes A45S AMG",
+    "prix": 41999.0,
+    "km": 73700,
+    "annee": "2019",
+    "ville": "Thionville",
+    "lien": "https://www.leboncoin.fr/voitures/3206516137.htm",
+    "recherche": "A45S",
+    "score": 0,
+    "date": "2026-06-10T16:05",
+    "statut": "nouvelle",
+    "ia_verdict": "OK",
+    "ia_detail": "",
+    "ia_avis": "Fonce, le rapport km/année est raisonnable pour un modèle de 2019",
+    "ia_moteur": "Moteur AMG, puissant mais fragile, surveille les performances",
+    "ia_note": 8
+  },
+  {
+    "id": "3172611519",
+    "titre": "MERCEDES A 45 S EDITION ONE Mercedes-AMG 8G-DCT Speedshift 4Matic+ A45S",
+    "prix": 52000.0,
+    "km": 80000,
+    "annee": "2020",
+    "ville": "Nancy",
+    "lien": "https://www.leboncoin.fr/voitures/3172611519.htm",
+    "recherche": "A45S",
+    "score": -24,
+    "date": "2026-06-10T16:05",
+    "statut": "nouvelle",
+    "ia_verdict": "OK",
+    "ia_detail": "",
+    "ia_avis": "Fonce, le rapport qualité/prix est excellent pour un modèle de 2020 avec 80 000 km",
+    "ia_moteur": "Moteur AMG 8G-DCT Speedshift 4Matic+, fiabilité inconnue sans plus d'informations",
+    "ia_note": 8
   }
 ]
