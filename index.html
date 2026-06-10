@@ -203,6 +203,31 @@
   .token-hint { font-size: 0.75rem; color: var(--muted); margin-top: 4px; text-align: left; }
   .token-hint a { color: var(--accent); }
 
+  /* ANNONCES */
+  .annonces-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; align-items: center; }
+  .filter-chip { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: none; color: var(--muted); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+  .filter-chip:hover { border-color: var(--border2); color: var(--text); }
+  .filter-chip.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+  .annonce-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.15s; }
+  .annonce-card:hover { border-color: var(--border2); }
+  .annonce-card.vue { opacity: 0.6; }
+  .annonce-card.ignoree { opacity: 0.35; }
+  .annonce-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 10px; }
+  .annonce-titre { font-weight: 600; font-size: 0.9375rem; flex: 1; }
+  .annonce-prix { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
+  .annonce-meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.8125rem; color: var(--muted); margin-bottom: 10px; }
+  .annonce-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); gap: 8px; flex-wrap: wrap; }
+  .annonce-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  .score-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+  .score-excellent { background: var(--green-dim); color: var(--green); }
+  .score-bon { background: var(--blue-dim); color: var(--blue); }
+  .score-correct { background: var(--orange-dim); color: var(--orange); }
+  .score-sur { background: var(--red-dim); color: var(--red); }
+  .score-neutre { background: var(--surface3); color: var(--muted); }
+  .annonces-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+  .annonce-stat-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 5px 14px; font-size: 0.8125rem; }
+  .expert-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+
   @media (max-width: 700px) {
     .form-grid { grid-template-columns: 1fr; }
     .detail-grid { grid-template-columns: 1fr; }
@@ -237,6 +262,7 @@
     <button class="nav-tab active" onclick="showPage('dashboard')">Dashboard</button>
     <button class="nav-tab" onclick="showPage('vehicules')">Véhicules</button>
     <button class="nav-tab" onclick="showPage('historique')">Historique</button>
+    <button class="nav-tab" onclick="showPage('annonces')">Annonces</button>
     <button class="nav-tab" onclick="showPage('bot')">Expert</button>
   </div>
   <button class="nav-sync" onclick="forceSave()" title="Synchronisation GitHub">
@@ -325,6 +351,20 @@
   <div id="detail-content"></div>
 </div>
 
+<!-- ANNONCES -->
+<div id="page-annonces" class="page">
+  <div class="section-header" style="margin-bottom:1rem;">
+    <div>
+      <div class="page-title">Annonces détectées</div>
+      <div class="page-sub">Toutes les annonces trouvées par l'expert</div>
+    </div>
+    <button class="btn btn-ghost btn-sm" onclick="ghLoadAnnonces().then(renderAnnonces)">↻ Actualiser</button>
+  </div>
+  <div class="annonces-stats" id="annonces-stats"></div>
+  <div class="annonces-filters" id="annonces-filters"></div>
+  <div class="vehicles-grid" id="annonces-grid"></div>
+</div>
+
 <!-- BOT -->
 <div id="page-bot" class="page">
   <div class="section-header" style="margin-bottom:1.5rem;">
@@ -334,6 +374,7 @@
     </div>
     <button class="btn btn-primary" onclick="openBotModal()">＋ Ajouter une recherche</button>
   </div>
+  <div class="expert-stats" id="expert-stats"></div>
   <div class="bot-grid" id="bot-grid"></div>
 </div>
 
@@ -519,7 +560,7 @@ async function startApp() {
     data.recherches = [{ id: uid(), nom: 'Peugeot 206 Nancy', keywords: '206', prix_max: 3000, km_max: 150000, fuel: 'diesel', rayon: 100, active: true }];
     await ghSave();
   }
-  renderDashboard(); renderVehicules(); renderBot();
+  renderDashboard(); renderVehicules(); renderBot(); ghLoadAnnonces();
 }
 if (ghToken) { startApp(); } else { document.getElementById('setup-overlay').classList.remove('hidden'); }
 
@@ -527,12 +568,13 @@ function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-' + name).classList.add('active');
-  const tabs = { dashboard: 0, vehicules: 1, historique: 2, bot: 3 };
+  const tabs = { dashboard: 0, vehicules: 1, historique: 2, annonces: 3, bot: 4 };
   if (tabs[name] !== undefined) document.querySelectorAll('.nav-tab')[tabs[name]].classList.add('active');
   if (name === 'dashboard') renderDashboard();
   if (name === 'vehicules') renderVehicules();
   if (name === 'historique') renderHistorique();
-  if (name === 'bot') renderBot();
+  if (name === 'annonces') { if (!annoncesData.length) ghLoadAnnonces().then(renderAnnonces); else renderAnnonces(); }
+  if (name === 'bot') { renderBot(); renderExpertStats(); }
 }
 
 function totalInvesti(v) { return Number(v.achat) + (v.depenses||[]).reduce((s,d)=>s+Number(d.montant),0); }
@@ -771,6 +813,133 @@ function deleteBotRecherche(id) {
 function toggleBotRecherche(id, checked) {
   const r = (data.recherches||[]).find(x=>x.id===id);
   if (r) { r.active = checked; save(); renderBot(); }
+}
+
+// ANNONCES
+let annoncesData = [];
+let ghAnnoncesSha = null;
+let annoncesFilter = 'toutes';
+let annoncesRechercheFilter = '';
+
+async function ghLoadAnnonces() {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/annonces.json`, {
+      headers: { Authorization: `token ${ghToken}` }
+    });
+    if (res.status === 404) { annoncesData = []; return; }
+    if (!res.ok) return;
+    const json = await res.json();
+    ghAnnoncesSha = json.sha;
+    annoncesData = JSON.parse(atob(json.content.replace(/\n/g, '')));
+  } catch { annoncesData = []; }
+}
+
+async function ghSaveAnnonces() {
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(annoncesData, null, 2))));
+  const body = { message: '[Interface] Statut annonce', content, ...(ghAnnoncesSha ? { sha: ghAnnoncesSha } : {}) };
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/annonces.json`, {
+      method: 'PUT',
+      headers: { Authorization: `token ${ghToken}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (res.ok) { const j = await res.json(); ghAnnoncesSha = j.content.sha; }
+  } catch {}
+}
+
+function scoreInfo(score) {
+  if (score === null || score === undefined) return { cls: 'score-neutre', label: 'Nouveau' };
+  if (score >= 20) return { cls: 'score-excellent', label: `🟢 +${score}% vs marché` };
+  if (score >= 10) return { cls: 'score-bon',       label: `🔵 +${score}% vs marché` };
+  if (score >= 0)  return { cls: 'score-correct',   label: `🟠 +${score}% vs marché` };
+  return { cls: 'score-sur', label: `🔴 ${score}% vs marché` };
+}
+
+function renderAnnonces() {
+  const total = annoncesData.length;
+  const nouvelles = annoncesData.filter(a => a.statut === 'nouvelle').length;
+  const interessantes = annoncesData.filter(a => a.statut === 'interessante').length;
+  const bonnes = annoncesData.filter(a => (a.score ?? -999) >= 20).length;
+
+  document.getElementById('annonces-stats').innerHTML = `
+    <div class="annonce-stat-pill">Total <strong>${total}</strong></div>
+    <div class="annonce-stat-pill">Nouvelles <strong style="color:var(--green);">${nouvelles}</strong></div>
+    <div class="annonce-stat-pill">Intéressantes <strong style="color:var(--blue);">${interessantes}</strong></div>
+    <div class="annonce-stat-pill">Excellentes affaires <strong style="color:var(--green);">${bonnes}</strong></div>`;
+
+  const recherches = [...new Set(annoncesData.map(a => a.recherche).filter(Boolean))];
+  document.getElementById('annonces-filters').innerHTML =
+    ['toutes','nouvelle','interessante','vue','ignoree'].map(f =>
+      `<button class="filter-chip ${annoncesFilter===f?'active':''}" onclick="setAnnonceFilter('${f}')">${
+        {toutes:'Toutes',nouvelle:'Nouvelles',interessante:'Intéressantes',vue:'Vues',ignoree:'Ignorées'}[f]
+      }</button>`).join('') +
+    `<select style="width:auto;padding:5px 10px;font-size:0.8125rem;" onchange="annoncesRechercheFilter=this.value;renderAnnonces()">
+      <option value="">Toutes les recherches</option>
+      ${recherches.map(r=>`<option value="${esc(r)}"${annoncesRechercheFilter===r?' selected':''}>${esc(r)}</option>`).join('')}
+    </select>`;
+
+  let filtered = [...annoncesData].reverse();
+  if (annoncesFilter !== 'toutes') filtered = filtered.filter(a => a.statut === annoncesFilter);
+  if (annoncesRechercheFilter) filtered = filtered.filter(a => a.recherche === annoncesRechercheFilter);
+
+  const grid = document.getElementById('annonces-grid');
+  if (!filtered.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;" class="empty"><div class="empty-icon">🔍</div><div class="empty-text">Aucune annonce trouvée</div></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(a => {
+    const si = scoreInfo(a.score);
+    const dateStr = a.date ? new Date(a.date).toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '';
+    return `<div class="annonce-card ${a.statut==='ignoree'?'ignoree':a.statut==='vue'?'vue':''}">
+      <div class="annonce-header">
+        <div class="annonce-titre">${esc(a.titre)}</div>
+        <div class="annonce-prix">${a.prix ? fmt(a.prix) : 'N/C'}</div>
+      </div>
+      <div class="annonce-meta">
+        ${a.annee ? `<span>📅 ${esc(a.annee)}</span>` : ''}
+        ${a.km ? `<span>🛣️ ${fmtN(a.km)} km</span>` : ''}
+        ${a.ville ? `<span>📍 ${esc(a.ville)}</span>` : ''}
+        ${a.recherche ? `<span>🔍 ${esc(a.recherche)}</span>` : ''}
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+        <span class="score-badge ${si.cls}">${si.label}</span>
+        <span style="font-size:0.75rem;color:var(--muted);">${dateStr}</span>
+      </div>
+      <div class="annonce-footer">
+        <div class="annonce-actions">
+          ${a.statut!=='interessante'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','interessante')">⭐ Intéressante</button>`:''}
+          ${a.statut!=='vue'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','vue')">👁 Vue</button>`:''}
+          ${a.statut!=='ignoree'?`<button class="btn btn-danger btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','ignoree')">✕ Ignorer</button>`:''}
+        </div>
+        <a href="${esc(a.lien)}" target="_blank" class="btn btn-primary btn-sm">Voir →</a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setAnnonceFilter(f) { annoncesFilter = f; renderAnnonces(); }
+
+async function setAnnonceStatut(id, statut) {
+  const a = annoncesData.find(x => x.id === id);
+  if (!a) return;
+  a.statut = statut;
+  renderAnnonces();
+  await ghSaveAnnonces();
+  toast('Statut mis à jour ✓');
+}
+
+function renderExpertStats() {
+  const recherches = data.recherches || [];
+  const total = annoncesData.length;
+  const today = new Date().toISOString().slice(0, 10);
+  const todayCount = annoncesData.filter(a => a.date && a.date.startsWith(today)).length;
+  const bonnes = annoncesData.filter(a => (a.score ?? -999) >= 20).length;
+  document.getElementById('expert-stats').innerHTML = `
+    <div class="stat-card"><div class="stat-label">Recherches actives</div><div class="stat-value accent">${recherches.filter(r=>r.active!==false).length}</div></div>
+    <div class="stat-card"><div class="stat-label">Annonces totales</div><div class="stat-value blue">${total}</div></div>
+    <div class="stat-card"><div class="stat-label">Détectées aujourd'hui</div><div class="stat-value orange">${todayCount}</div></div>
+    <div class="stat-card"><div class="stat-label">Excellentes affaires</div><div class="stat-value green">${bonnes}</div></div>`;
 }
 </script>
 </body>
