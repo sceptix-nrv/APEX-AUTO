@@ -173,5 +173,70 @@
     "ts": "2026-06-10T11:36:49",
     "lvl": "SYS",
     "msg": "Analyse IA : 206 1,9D 172 000 km..."
+  },
+  {
+    "ts": "2026-06-10T11:36:50",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
+  },
+  {
+    "ts": "2026-06-10T11:36:51",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +60% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:36:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo faible kilométrage contrô..."
+  },
+  {
+    "ts": "2026-06-10T11:36:53",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Renault Twingo faible kilométrage contrô — Le modèle recherché est le 206, mais l'annonce concerne un Twingo."
+  },
+  {
+    "ts": "2026-06-10T11:36:53",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
+  },
+  {
+    "ts": "2026-06-10T11:36:54",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot206/Ford Ka /Fiesta/Chevrolet mat — Le titre mentionne plusieurs modèles différents, pas seulement le 206"
+  },
+  {
+    "ts": "2026-06-10T11:36:54",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+ 1,4 75ch 1500..."
+  },
+  {
+    "ts": "2026-06-10T11:36:55",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206+ 1,4 75ch 1500 — "
+  },
+  {
+    "ts": "2026-06-10T11:36:56",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213716246] 206+ 1,4 75ch 1500 — 1500€ | score +40% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:36:56",
+    "lvl": "OK",
+    "msg": "6 alerte(s) envoyee(s) pour '206'"
+  },
+  {
+    "ts": "2026-06-10T11:36:56",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T11:37:00",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 6 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:37:01",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 6 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
