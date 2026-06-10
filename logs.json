@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:30:12",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206+ 1.4 hdi 70cv..."
-  },
-  {
     "ts": "2026-06-10T17:30:13",
     "lvl": "WARN",
     "msg": "IA ATTENTION : Peugeot 206+ 1.4 hdi 70cv — "
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T17:56:51",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1372x970"
+  },
+  {
+    "ts": "2026-06-10T17:56:57",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
