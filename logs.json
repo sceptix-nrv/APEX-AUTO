@@ -1333,5 +1333,15 @@
     "ts": "2026-06-10T11:12:00",
     "lvl": "SYS",
     "msg": "Sauvegarde marche — 62 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:12:02",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +27 entrees (62 total)"
+  },
+  {
+    "ts": "2026-06-10T11:12:02",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 22 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
