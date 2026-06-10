@@ -1,25 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:34:32",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
-  },
-  {
-    "ts": "2026-06-10T17:34:33",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +57% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:34:33",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1,9D 172 000 km..."
-  },
-  {
-    "ts": "2026-06-10T17:34:34",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
-  },
-  {
     "ts": "2026-06-10T17:34:35",
     "lvl": "OK",
     "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +67% → Telegram envoye"
@@ -1498,5 +1478,25 @@
     "ts": "2026-06-10T18:02:56",
     "lvl": "BOT",
     "msg": "Pause anti-detection 80s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T18:04:16",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : 207 ---"
+  },
+  {
+    "ts": "2026-06-10T18:04:16",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1252x880"
+  },
+  {
+    "ts": "2026-06-10T18:04:16",
+    "lvl": "ERR",
+    "msg": "Exception sur '207' : <urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "ts": "2026-06-10T18:04:16",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
