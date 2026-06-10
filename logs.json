@@ -763,5 +763,25 @@
     "ts": "2026-06-10T20:11:04",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy__48.6954_…"
+  },
+  {
+    "ts": "2026-06-10T20:11:15",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonces brutes"
+  },
+  {
+    "ts": "2026-06-10T20:11:15",
+    "lvl": "BOT",
+    "msg": "Chrome fermé"
+  },
+  {
+    "ts": "2026-06-10T20:11:17",
+    "lvl": "SYS",
+    "msg": "[JOUR] Scan terminé — 0 nouvelle (total 2)"
+  },
+  {
+    "ts": "2026-06-10T20:11:19",
+    "lvl": "SYS",
+    "msg": "Attente 10min"
   }
 ]
