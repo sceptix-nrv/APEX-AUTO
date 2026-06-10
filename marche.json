@@ -1042,5 +1042,41 @@
     "cp": "57300",
     "recherche": "407",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3213981460",
+    "titre": "Citroen C3 commercial utilitaire",
+    "prix": 1300.0,
+    "km": 255000,
+    "annee": 2014,
+    "carburant": "diesel",
+    "ville": "Moulins-lès-Metz",
+    "cp": "57160",
+    "recherche": "C3",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213916619",
+    "titre": "Vente Citroën c3",
+    "prix": 3500.0,
+    "km": 133000,
+    "annee": 2010,
+    "carburant": "essence",
+    "ville": "Bouxwiller",
+    "cp": "67330",
+    "recherche": "C3",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213904087",
+    "titre": "Citroen C3 1.6 hdi 90 exclusive",
+    "prix": 2500.0,
+    "km": 245000,
+    "annee": 2008,
+    "carburant": "diesel",
+    "ville": "Ligny-en-Barrois",
+    "cp": "55500",
+    "recherche": "C3",
+    "date": "2026-06-10"
   }
 ]
