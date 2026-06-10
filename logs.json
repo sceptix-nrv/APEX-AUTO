@@ -638,5 +638,140 @@
     "ts": "2026-06-10T10:44:15",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=206&locations=Nancy__48.6954_..."
+  },
+  {
+    "ts": "2026-06-10T10:44:22",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T10:44:22",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T10:44:22",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 22 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T10:44:22",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 650€ | median 1800€ | max 3000€"
+  },
+  {
+    "ts": "2026-06-10T10:44:22",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 🚀 opel astra gtc 1.9 cdti 120 cosmo – co..."
+  },
+  {
+    "ts": "2026-06-10T10:44:23",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : 🚀 opel astra gtc 1.9 cdti 120 cosmo – co — Le modèle recherché est 206, mais l'annonce concerne un Opel Astra GTC"
+  },
+  {
+    "ts": "2026-06-10T10:44:24",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3197282595] Suzuki swift new 1.3 glx 5 portes — 2990€ | score -66% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:25",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score -67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:25",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1.4i..."
+  },
+  {
+    "ts": "2026-06-10T10:44:26",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 1.4i"
+  },
+  {
+    "ts": "2026-06-10T10:44:26",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213322986] Peugeot 206 1.4i — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:26",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1,4 essence de 2001..."
+  },
+  {
+    "ts": "2026-06-10T10:44:27",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 1,4 essence de 2001"
+  },
+  {
+    "ts": "2026-06-10T10:44:27",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213324581] Peugeot 206 1,4 essence de 2001 — 700€ | score +61% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:27",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T10:44:28",
+    "lvl": "OK",
+    "msg": "IA OK : 206 1.4 hdi"
+  },
+  {
+    "ts": "2026-06-10T10:44:28",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:28",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Clio 3 1l2 tce..."
+  },
+  {
+    "ts": "2026-06-10T10:44:29",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Clio 3 1l2 tce — Le modèle recherché est 206, mais l'annonce concerne un Clio 3"
+  },
+  {
+    "ts": "2026-06-10T10:44:30",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213409974] 206+ ct ok pack clim — 2000€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:33",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213417921] Renault Twingo II GT 1.2 TCE 101 cv — 2990€ | score -66% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:34",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3207257169] Peugeot 206 1.6 110 xt entretien a jour — 2890€ | score -61% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:34",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T10:44:34",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T10:44:38",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:38",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:44:38",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
   }
 ]
