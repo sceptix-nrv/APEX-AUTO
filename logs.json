@@ -1,50 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:10:46",
-    "lvl": "SYS",
-    "msg": "Chargement config depuis GitHub..."
-  },
-  {
-    "ts": "2026-06-10T16:10:46",
-    "lvl": "SYS",
-    "msg": "1 recherche(s) active(s) chargee(s)"
-  },
-  {
-    "ts": "2026-06-10T16:10:46",
-    "lvl": "SYS",
-    "msg": "Chargement historique annonces vues..."
-  },
-  {
-    "ts": "2026-06-10T16:10:47",
-    "lvl": "SYS",
-    "msg": "Historique : 0 annonces deja vues"
-  },
-  {
-    "ts": "2026-06-10T16:10:47",
-    "lvl": "SYS",
-    "msg": "Chargement index annonces..."
-  },
-  {
-    "ts": "2026-06-10T16:10:48",
-    "lvl": "SYS",
-    "msg": "Chargement base marche..."
-  },
-  {
-    "ts": "2026-06-10T16:10:48",
-    "lvl": "SYS",
-    "msg": "Base chargee — 0 vues | 22 annonces | 32 entrees marche"
-  },
-  {
-    "ts": "2026-06-10T16:10:48",
-    "lvl": "SCAN",
-    "msg": "--- Recherche [1/1] : A45S ---"
-  },
-  {
-    "ts": "2026-06-10T16:10:48",
-    "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1305x900"
-  },
-  {
     "ts": "2026-06-10T16:10:54",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
@@ -1498,5 +1453,50 @@
     "ts": "2026-06-10T16:54:16",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T16:54:28",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 SW 1.4i 16V VTI 95Cv Urban M"
+  },
+  {
+    "ts": "2026-06-10T16:54:30",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213874520] Peugeot 207 SW 1.4i 16V VTI 95Cv Urban Move — 4000€ | score +11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:54:30",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Vend 207 cc Roland garros..."
+  },
+  {
+    "ts": "2026-06-10T16:54:32",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Vend 207 cc Roland garros — Le modèle recherché est le 206, mais l'annonce concerne le 207"
+  },
+  {
+    "ts": "2026-06-10T16:54:32",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 CC ROLAND GARROS 16V 1L6 VTI..."
+  },
+  {
+    "ts": "2026-06-10T16:54:34",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 CC ROLAND GARROS 16V 1L6 VTI"
+  },
+  {
+    "ts": "2026-06-10T16:54:34",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3192499722] Peugeot 207 CC ROLAND GARROS 16V 1L6 VTI 120 CV CA — 6500€ | score -44% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:54:34",
+    "lvl": "OK",
+    "msg": "17 alerte(s) envoyee(s) pour '208'"
+  },
+  {
+    "ts": "2026-06-10T16:54:35",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
   }
 ]
