@@ -486,6 +486,12 @@ function uid() { return Date.now().toString(36) + Math.random().toString(36).sli
 function esc(str) {
   return String(str ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
+function decodeHtml(str) {
+  const el = document.createElement('textarea');
+  el.innerHTML = String(str ?? '');
+  return el.value;
+}
+function safe(str) { return esc(decodeHtml(str)); }
 function fmt(n)    { return Number(n).toLocaleString('fr-FR') + ' €'; }
 function fmtN(n)   { return Number(n).toLocaleString('fr-FR'); }
 function fmtDate(d){ if (!d) return '—'; const [y,m,j] = d.split('-'); return `${j}/${m}/${y}`; }
@@ -889,18 +895,19 @@ function renderAnnonces() {
   }
 
   grid.innerHTML = filtered.map(a => {
+    const statut = a.statut || 'nouvelle';
     const si = scoreInfo(a.score);
     const dateStr = a.date ? new Date(a.date).toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '';
-    return `<div class="annonce-card ${a.statut==='ignoree'?'ignoree':a.statut==='vue'?'vue':''}">
+    return `<div class="annonce-card ${statut==='ignoree'?'ignoree':statut==='vue'?'vue':''}">
       <div class="annonce-header">
-        <div class="annonce-titre">${esc(a.titre)}</div>
+        <div class="annonce-titre">${safe(a.titre)}</div>
         <div class="annonce-prix">${a.prix ? fmt(a.prix) : 'N/C'}</div>
       </div>
       <div class="annonce-meta">
-        ${a.annee ? `<span>📅 ${esc(a.annee)}</span>` : ''}
+        ${a.annee ? `<span>📅 ${safe(a.annee)}</span>` : ''}
         ${a.km ? `<span>🛣️ ${fmtN(a.km)} km</span>` : ''}
-        ${a.ville ? `<span>📍 ${esc(a.ville)}</span>` : ''}
-        ${a.recherche ? `<span>🔍 ${esc(a.recherche)}</span>` : ''}
+        ${a.ville ? `<span>📍 ${safe(a.ville)}</span>` : ''}
+        ${a.recherche ? `<span>🔍 ${safe(a.recherche)}</span>` : ''}
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
         <span class="score-badge ${si.cls}">${si.label}</span>
@@ -908,9 +915,9 @@ function renderAnnonces() {
       </div>
       <div class="annonce-footer">
         <div class="annonce-actions">
-          ${a.statut!=='interessante'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','interessante')">⭐ Intéressante</button>`:''}
-          ${a.statut!=='vue'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','vue')">👁 Vue</button>`:''}
-          ${a.statut!=='ignoree'?`<button class="btn btn-danger btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','ignoree')">✕ Ignorer</button>`:''}
+          ${statut!=='interessante'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','interessante')">⭐ Intéressante</button>`:''}
+          ${statut!=='vue'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','vue')">👁 Vue</button>`:''}
+          ${statut!=='ignoree'?`<button class="btn btn-danger btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','ignoree')">✕ Ignorer</button>`:''}
         </div>
         <a href="${esc(a.lien)}" target="_blank" class="btn btn-primary btn-sm">Voir →</a>
       </div>
