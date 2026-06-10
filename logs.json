@@ -1,25 +1,5 @@
 [
   {
-    "ts": "2026-06-10T10:58:39",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le 206, mais l'annonce concerne un Suzuki Swift."
-  },
-  {
-    "ts": "2026-06-10T10:58:39",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206..."
-  },
-  {
-    "ts": "2026-06-10T10:58:40",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206"
-  },
-  {
-    "ts": "2026-06-10T10:58:41",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score -67% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T10:58:41",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot 206 1.4i..."
@@ -1498,5 +1478,25 @@
     "ts": "2026-06-10T11:18:06",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T11:18:10",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 28 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:18:12",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 69 entrees"
+  },
+  {
+    "ts": "2026-06-10T11:18:14",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +7 entrees (69 total)"
+  },
+  {
+    "ts": "2026-06-10T11:18:14",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 6 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
