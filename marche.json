@@ -1078,5 +1078,65 @@
     "cp": "55500",
     "recherche": "C3",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3214000494",
+    "titre": "C4 Picasso",
+    "prix": 600.0,
+    "km": 175000,
+    "annee": 2010,
+    "carburant": "diesel",
+    "ville": "La Bresse",
+    "cp": "88250",
+    "recherche": "C4",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213963634",
+    "titre": "C4 Picasso",
+    "prix": 4000.0,
+    "km": 118000,
+    "annee": 2015,
+    "carburant": "essence",
+    "ville": "Morfontaine",
+    "cp": "54920",
+    "recherche": "C4",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213912404",
+    "titre": "Citroën C4 1.6 HDI",
+    "prix": 1450.0,
+    "km": 320000,
+    "annee": 2011,
+    "carburant": "diesel",
+    "ville": "Thionville",
+    "cp": "57100",
+    "recherche": "C4",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213862571",
+    "titre": "CITROËN C4 1.6 VTI 120 cv CT ok entretien complet",
+    "prix": 3490.0,
+    "km": 156900,
+    "annee": 2013,
+    "carburant": "essence",
+    "ville": "Phalsbourg",
+    "cp": "57370",
+    "recherche": "C4",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213763366",
+    "titre": "Citroen c4 II PHASE2 1.2essence 131ch boite mecanique 6vitesse. Edition S&S MILLENIUM",
+    "prix": 3990.0,
+    "km": 147000,
+    "annee": 2015,
+    "carburant": "essence",
+    "ville": "Nancy",
+    "cp": "54000",
+    "recherche": "C4",
+    "date": "2026-06-10"
   }
 ]
