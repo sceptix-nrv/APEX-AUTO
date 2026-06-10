@@ -1393,5 +1393,10 @@
     "ts": "2026-06-10T16:09:21",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 2 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T16:09:34",
+    "lvl": "WARN",
+    "msg": "Erreur check force_scan : 'apexauto'"
   }
 ]
