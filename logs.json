@@ -1,40 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:34:22",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3205967687] 206cc Roland garos — 3200€ | score -7% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:34:22",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206..."
-  },
-  {
-    "ts": "2026-06-10T17:34:23",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 — "
-  },
-  {
-    "ts": "2026-06-10T17:34:24",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:34:24",
-    "lvl": "SYS",
-    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
-  },
-  {
-    "ts": "2026-06-10T17:34:25",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est un Peugeot 206, mais l'annonce concerne un Renault Twingo."
-  },
-  {
-    "ts": "2026-06-10T17:34:25",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1.4 hdi..."
-  },
-  {
     "ts": "2026-06-10T17:34:26",
     "lvl": "WARN",
     "msg": "IA ATTENTION : 206 1.4 hdi — "
@@ -1498,5 +1463,40 @@
     "ts": "2026-06-10T18:02:18",
     "lvl": "SYS",
     "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T18:02:19",
+    "lvl": "SYS",
+    "msg": "Historique : 27 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T18:02:19",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T18:02:20",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T18:02:21",
+    "lvl": "SYS",
+    "msg": "Base chargee — 27 vues | 14 annonces | 27 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T18:02:21",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : 206 ---"
+  },
+  {
+    "ts": "2026-06-10T18:02:21",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1212x929"
+  },
+  {
+    "ts": "2026-06-10T18:02:27",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
