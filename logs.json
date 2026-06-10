@@ -108,5 +108,25 @@
     "ts": "2026-06-10T20:53:25",
     "lvl": "BOT",
     "msg": "Refresh cookie DataDome via UC…"
+  },
+  {
+    "ts": "2026-06-10T20:53:59",
+    "lvl": "BOT",
+    "msg": "UC cookies récupérés : ['experiment_visitor_id', '_pctx', '_clck', 'cnfdVisitorId', '__Secure-Install', 'euconsent-v2', 'didomi_token', 'pa_privacy', 'FPLC', '__gpi', '__eoi', '_ga', '_crcl3b62c763', 'FPAU', 'FPID', '_uetsid', '_uetvid', 'datadome', '_pcid', '__gads', '_lr_sampling_rate', '_clsk', '_ga_Z707449XJ2']"
+  },
+  {
+    "ts": "2026-06-10T20:54:01",
+    "lvl": "BOT",
+    "msg": "Cookie DataDome valide jusqu'à 21:49"
+  },
+  {
+    "ts": "2026-06-10T20:54:02",
+    "lvl": "NET",
+    "msg": "HTML OK — 35 annonces brutes (page 1)"
+  },
+  {
+    "ts": "2026-06-10T20:54:05",
+    "lvl": "OK",
+    "msg": "[JOUR] Nouvelle : Peugeot 206+ 1.4 HDi Basis CT OK — 4899.0€"
   }
 ]
