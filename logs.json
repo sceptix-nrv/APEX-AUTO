@@ -1,25 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:13:50",
-    "lvl": "OK",
-    "msg": "15 alerte(s) envoyee(s) pour '7R'"
-  },
-  {
-    "ts": "2026-06-10T16:13:50",
-    "lvl": "BOT",
-    "msg": "Session Chrome fermee proprement"
-  },
-  {
-    "ts": "2026-06-10T16:13:52",
-    "lvl": "SYS",
-    "msg": "Reset detecte (GitHub=0 < memoire=17) — historique non ecrase"
-  },
-  {
-    "ts": "2026-06-10T16:13:52",
-    "lvl": "SYS",
-    "msg": "Sauvegarde annonces — 37 entrees"
-  },
-  {
     "ts": "2026-06-10T16:13:54",
     "lvl": "SYS",
     "msg": "Sauvegarde marche — 49 entrees"
@@ -1498,5 +1478,25 @@
     "ts": "2026-06-10T17:04:31",
     "lvl": "SYS",
     "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T17:04:31",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 65 annonces | 90 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T17:04:31",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : C3 ---"
+  },
+  {
+    "ts": "2026-06-10T17:04:31",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1398x954"
+  },
+  {
+    "ts": "2026-06-10T17:04:37",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
