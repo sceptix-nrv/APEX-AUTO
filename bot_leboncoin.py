@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 
 import requests
+from curl_cffi import requests as cf
 
 # CONFIG TELEGRAM
 TELEGRAM_TOKEN = "8631165512:AAFtYjnanMCsF_SCwXd_8VEeNX31xM9x5UY"
@@ -41,9 +42,7 @@ FUEL_LABELS = {"2": "diesel", "1": "essence", "3": "electrique", "5": "hybride"}
 
 annonces_sha = None
 
-# Headers qui imitent l'app mobile LeBonCoin
 LBC_HEADERS = {
-    "User-Agent": "LeBonCoin/8.0 (Android)",
     "Accept": "application/json, text/plain, */*",
     "api_key": "ba0c2dad52b3585c9a5b232ed1522a29",
     "Content-Type": "application/json",
@@ -186,10 +185,11 @@ def construire_payload(r):
 def scraper_recherche(r):
     payload = construire_payload(r)
     try:
-        res = requests.post(
+        res = cf.post(
             "https://api.leboncoin.fr/finder/search",
             headers=LBC_HEADERS,
             json=payload,
+            impersonate="chrome120",
             timeout=15,
         )
         if res.status_code != 200:
