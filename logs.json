@@ -1,25 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:10",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206.1.9d..."
-  },
-  {
-    "ts": "2026-06-10T17:56:11",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206.1.9d — "
-  },
-  {
-    "ts": "2026-06-10T17:56:12",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score +1% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:56:12",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
-  },
-  {
     "ts": "2026-06-10T17:56:13",
     "lvl": "WARN",
     "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
@@ -1498,5 +1478,25 @@
     "ts": "2026-06-10T18:56:16",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy..."
+  },
+  {
+    "ts": "2026-06-10T18:56:37",
+    "lvl": "WARN",
+    "msg": "Timeout sur 'Peugeot 206' — DataDome probable, dump HTML sauvegarde"
+  },
+  {
+    "ts": "2026-06-10T18:56:37",
+    "lvl": "SCAN",
+    "msg": "0 brutes → 0 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T18:56:37",
+    "lvl": "SCAN",
+    "msg": "Aucune nouvelle annonce — 0 deja connues"
+  },
+  {
+    "ts": "2026-06-10T18:56:38",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
   }
 ]
