@@ -742,5 +742,89 @@
     "cp": "57200",
     "recherche": "207",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3208455112",
+    "titre": "Belle bmw 116i pack M 5 portes 179.800 km gps radar Sièges chauffants",
+    "prix": 6490.0,
+    "km": 179800,
+    "annee": 2010,
+    "carburant": "essence",
+    "ville": "Metz",
+    "cp": "57000",
+    "recherche": "207",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213755318",
+    "titre": "Peugeot 308 GTi (Phase 2) 1.6 THP 16V 200 cv",
+    "prix": 6990.0,
+    "km": 148600,
+    "annee": 2012,
+    "carburant": "essence",
+    "ville": "Mirecourt",
+    "cp": "88500",
+    "recherche": "308",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3105388051",
+    "titre": "Peugeot 308 CC 2.0 HDI 163CV - Financement à partir de 105e/Mois",
+    "prix": 6890.0,
+    "km": 254000,
+    "annee": 2014,
+    "carburant": "diesel",
+    "ville": "Ham-sous-Varsberg",
+    "cp": "57880",
+    "recherche": "308",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213733151",
+    "titre": "Peugeot 308 1.6 HDi Sport",
+    "prix": 3500.0,
+    "km": 166597,
+    "annee": 2009,
+    "carburant": "diesel",
+    "ville": "Jarny",
+    "cp": "54800",
+    "recherche": "308",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3074480766",
+    "titre": "Peugeot 308 1.6 BlueHDI 100 cv Active Business",
+    "prix": 7990.0,
+    "km": 172000,
+    "annee": 2016,
+    "carburant": "diesel",
+    "ville": "Bruyères",
+    "cp": "88600",
+    "recherche": "308",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213660657",
+    "titre": "Peugeot 308 1.2 130CH ALLURE S&S 5P",
+    "prix": 5490.0,
+    "km": 143630,
+    "annee": 2015,
+    "carburant": "essence",
+    "ville": "Saint-Nabord",
+    "cp": "88200",
+    "recherche": "308",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213659606",
+    "titre": "308 hdi",
+    "prix": 7699.0,
+    "km": 142000,
+    "annee": 2015,
+    "carburant": "diesel",
+    "ville": "Boulay-Moselle",
+    "cp": "57220",
+    "recherche": "308",
+    "date": "2026-06-10"
   }
 ]
