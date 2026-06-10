@@ -1,65 +1,5 @@
 [
   {
-    "ts": "2026-06-10T15:36:29",
-    "lvl": "BOT",
-    "msg": "Session Chrome fermee proprement"
-  },
-  {
-    "ts": "2026-06-10T15:36:33",
-    "lvl": "SYS",
-    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
-  },
-  {
-    "ts": "2026-06-10T15:39:19",
-    "lvl": "SYS",
-    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
-  },
-  {
-    "ts": "2026-06-10T15:39:19",
-    "lvl": "SYS",
-    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 15:39:19] ==="
-  },
-  {
-    "ts": "2026-06-10T15:39:19",
-    "lvl": "SYS",
-    "msg": "Chargement config depuis GitHub..."
-  },
-  {
-    "ts": "2026-06-10T15:39:19",
-    "lvl": "SYS",
-    "msg": "1 recherche(s) active(s) chargee(s)"
-  },
-  {
-    "ts": "2026-06-10T15:39:19",
-    "lvl": "SYS",
-    "msg": "Chargement historique annonces vues..."
-  },
-  {
-    "ts": "2026-06-10T15:39:20",
-    "lvl": "SYS",
-    "msg": "Historique : 0 annonces deja vues"
-  },
-  {
-    "ts": "2026-06-10T15:39:20",
-    "lvl": "SYS",
-    "msg": "Chargement index annonces..."
-  },
-  {
-    "ts": "2026-06-10T15:39:20",
-    "lvl": "SYS",
-    "msg": "Chargement base marche..."
-  },
-  {
-    "ts": "2026-06-10T15:39:21",
-    "lvl": "SYS",
-    "msg": "Base chargee — 0 vues | 0 annonces | 0 entrees marche"
-  },
-  {
-    "ts": "2026-06-10T15:39:21",
-    "lvl": "SCAN",
-    "msg": "--- Recherche [1/1] : 206 ---"
-  },
-  {
     "ts": "2026-06-10T15:39:21",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1315x942"
@@ -1498,5 +1438,65 @@
     "ts": "2026-06-10T16:11:25",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 2 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T16:11:39",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T16:11:39",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 16:11:39] ==="
+  },
+  {
+    "ts": "2026-06-10T16:11:39",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T16:11:39",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T16:11:39",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T16:11:40",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T16:11:40",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T16:11:41",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T16:11:41",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 22 annonces | 32 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T16:11:41",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : A45S ---"
+  },
+  {
+    "ts": "2026-06-10T16:11:41",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1228x905"
+  },
+  {
+    "ts": "2026-06-10T16:11:47",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
