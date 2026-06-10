@@ -622,5 +622,17 @@
     "cp": "57490",
     "recherche": "206",
     "date": "2026-06-10"
+  },
+  {
+    "id": "2625078704",
+    "titre": "Peugeot 206 CC 1.6 16V SPORT",
+    "prix": 3990.0,
+    "km": 119500,
+    "annee": 2006,
+    "carburant": "essence",
+    "ville": "Seingbouse",
+    "cp": "57455",
+    "recherche": "206",
+    "date": "2026-06-10"
   }
 ]
