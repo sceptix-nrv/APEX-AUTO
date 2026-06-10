@@ -1,125 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:11:39",
-    "lvl": "SYS",
-    "msg": "Chargement historique annonces vues..."
-  },
-  {
-    "ts": "2026-06-10T16:11:40",
-    "lvl": "SYS",
-    "msg": "Historique : 0 annonces deja vues"
-  },
-  {
-    "ts": "2026-06-10T16:11:40",
-    "lvl": "SYS",
-    "msg": "Chargement index annonces..."
-  },
-  {
-    "ts": "2026-06-10T16:11:41",
-    "lvl": "SYS",
-    "msg": "Chargement base marche..."
-  },
-  {
-    "ts": "2026-06-10T16:11:41",
-    "lvl": "SYS",
-    "msg": "Base chargee — 0 vues | 22 annonces | 32 entrees marche"
-  },
-  {
-    "ts": "2026-06-10T16:11:41",
-    "lvl": "SCAN",
-    "msg": "--- Recherche [1/1] : A45S ---"
-  },
-  {
-    "ts": "2026-06-10T16:11:41",
-    "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1228x905"
-  },
-  {
-    "ts": "2026-06-10T16:11:47",
-    "lvl": "BOT",
-    "msg": "Navigation homepage LeBonCoin — etablissement session..."
-  },
-  {
-    "ts": "2026-06-10T16:12:05",
-    "lvl": "BOT",
-    "msg": "Session etablie (7.5s, scroll 368px) — fingerprint OK"
-  },
-  {
-    "ts": "2026-06-10T16:12:05",
-    "lvl": "NET",
-    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=A45S&locations=Nancy__48.6954..."
-  },
-  {
-    "ts": "2026-06-10T16:12:12",
-    "lvl": "NET",
-    "msg": "Page chargee — extraction __NEXT_DATA__"
-  },
-  {
-    "ts": "2026-06-10T16:12:12",
-    "lvl": "NET",
-    "msg": "Parsing OK — 7 annonce(s) brute(s) recues"
-  },
-  {
-    "ts": "2026-06-10T16:12:12",
-    "lvl": "SCAN",
-    "msg": "7 brutes → 4 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T16:12:12",
-    "lvl": "SCAN",
-    "msg": "Prix marche : min 11990€ | median 41999€ | max 52000€"
-  },
-  {
-    "ts": "2026-06-10T16:12:12",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 8r..."
-  },
-  {
-    "ts": "2026-06-10T16:12:13",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Golf 8r — Le modèle recherché est A45S, mais le titre mentionne Golf 8r"
-  },
-  {
-    "ts": "2026-06-10T16:12:13",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Mercedes A200d kit a45s..."
-  },
-  {
-    "ts": "2026-06-10T16:12:14",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Mercedes A200d kit a45s — Le modèle recherché est A45S, mais l'annonce mentionne un A200d"
-  },
-  {
-    "ts": "2026-06-10T16:12:14",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Mercedes A45S AMG..."
-  },
-  {
-    "ts": "2026-06-10T16:12:14",
-    "lvl": "OK",
-    "msg": "IA OK : Mercedes A45S AMG"
-  },
-  {
-    "ts": "2026-06-10T16:12:15",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3206516137] Mercedes A45S AMG — 41999€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:12:15",
-    "lvl": "SYS",
-    "msg": "Analyse IA : MERCEDES A 45 S EDITION ONE Mercedes-AMG..."
-  },
-  {
-    "ts": "2026-06-10T16:12:15",
-    "lvl": "OK",
-    "msg": "IA OK : MERCEDES A 45 S EDITION ONE Mercedes-AMG"
-  },
-  {
-    "ts": "2026-06-10T16:12:16",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3172611519] MERCEDES A 45 S EDITION ONE Mercedes-AMG 8G-DCT Sp — 52000€ | score -24% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T16:12:16",
     "lvl": "OK",
     "msg": "2 alerte(s) envoyee(s) pour 'A45S'"
@@ -1498,5 +1378,125 @@
     "ts": "2026-06-10T16:56:25",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot 407..."
+  },
+  {
+    "ts": "2026-06-10T16:56:26",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 407 — "
+  },
+  {
+    "ts": "2026-06-10T16:56:27",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212350383] Peugeot 407 — 2800€ | score +6% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:56:27",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Volvo C30 1.6 D 110CH DRIVE KINETIC..."
+  },
+  {
+    "ts": "2026-06-10T16:56:28",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Volvo C30 1.6 D 110CH DRIVE KINETIC — Le modèle recherché est le 407, mais l'annonce concerne un Volvo C30"
+  },
+  {
+    "ts": "2026-06-10T16:56:28",
+    "lvl": "SYS",
+    "msg": "Analyse IA : A VENDRE 407 HDI Année 2006..."
+  },
+  {
+    "ts": "2026-06-10T16:56:29",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : A VENDRE 407 HDI Année 2006 — "
+  },
+  {
+    "ts": "2026-06-10T16:56:30",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212568802] A VENDRE 407 HDI Année 2006 — 1700€ | score +43% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:56:30",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 407 2L hdi 136cv CT OK..."
+  },
+  {
+    "ts": "2026-06-10T16:56:31",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 407 2L hdi 136cv CT OK"
+  },
+  {
+    "ts": "2026-06-10T16:56:32",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212748240] Peugeot 407 2L hdi 136cv CT OK — 2850€ | score +5% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:56:32",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 407 coupé 2.7L V6 HDI 204cv..."
+  },
+  {
+    "ts": "2026-06-10T16:56:33",
+    "lvl": "OK",
+    "msg": "IA OK : 407 coupé 2.7L V6 HDI 204cv"
+  },
+  {
+    "ts": "2026-06-10T16:56:34",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212969744] 407 coupé 2.7L V6 HDI 204cv — 6990€ | score -99% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:56:34",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 407 COUPE 2.7 HDi 204 CV Feline ..."
+  },
+  {
+    "ts": "2026-06-10T16:56:36",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 407 COUPE 2.7 HDi 204 CV Feline "
+  },
+  {
+    "ts": "2026-06-10T16:56:38",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3209043905] Peugeot 407 COUPE 2.7 HDi 204 CV Feline 1ere main — 6990€ | score -99% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:56:38",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Voiture 407 1.6 hdi..."
+  },
+  {
+    "ts": "2026-06-10T16:56:40",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Voiture 407 1.6 hdi — "
+  },
+  {
+    "ts": "2026-06-10T16:56:41",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213164732] Voiture 407 1.6 hdi — 2300€ | score +23% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:56:41",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 407 SW.136ch..."
+  },
+  {
+    "ts": "2026-06-10T16:56:42",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : 407 SW.136ch — Le modèle recherché est '407' mais l'annonce mentionne '407 SW'"
+  },
+  {
+    "ts": "2026-06-10T16:56:42",
+    "lvl": "SYS",
+    "msg": "Analyse IA : PEUGEOT 407 1.6 HDI 110 BLACK SILVER EDI..."
+  },
+  {
+    "ts": "2026-06-10T16:56:43",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : PEUGEOT 407 1.6 HDI 110 BLACK SILVER EDI — Le modèle recherché est le 206, mais l'annonce concerne le 407"
+  },
+  {
+    "ts": "2026-06-10T16:56:43",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 407sw 1,6hdi..."
   }
 ]
