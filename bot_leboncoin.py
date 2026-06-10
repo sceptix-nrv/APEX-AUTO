@@ -2,6 +2,7 @@
 import base64
 import json
 import os
+import random
 import time
 from datetime import datetime
 
@@ -31,7 +32,7 @@ GH_FILE_ANNONCES = "annonces.json"
 GH_FILE_MARCHE   = "marche.json"
 
 # ── CONFIG BOT ────────────────────────────────────────────────────────────────
-INTERVALLE_MINUTES = 1
+INTERVALLE_MINUTES = 10
 HEURE_DEBUT        = 0
 HEURE_FIN          = 24
 FICHIER_HISTORIQUE = "annonces_vues.json"
@@ -171,7 +172,11 @@ def scraper_url(driver, url, nom):
                 "return !!document.getElementById('__NEXT_DATA__')"
             )
         )
-        time.sleep(1)
+        # Scroll humain sur la page de résultats
+        time.sleep(random.uniform(1.5, 3))
+        driver.execute_script("window.scrollTo({top: random.randint(200,600), behavior: 'smooth'})"
+                              .replace("random.randint(200,600)", str(random.randint(200, 600))))
+        time.sleep(random.uniform(1, 2))
     except Exception:
         with open("debug_lbc.html", "w", encoding="utf-8") as f:
             f.write(driver.page_source)
@@ -354,7 +359,12 @@ def scan():
         # Visite homepage pour établir la session DataDome
         print("  Session LeBonCoin...", end=" ", flush=True)
         driver.get("https://www.leboncoin.fr")
-        time.sleep(4)
+        time.sleep(6)
+        # Scroll léger pour simuler une lecture humaine
+        driver.execute_script("window.scrollTo({top: 300, behavior: 'smooth'})")
+        time.sleep(2)
+        driver.execute_script("window.scrollTo({top: 0, behavior: 'smooth'})")
+        time.sleep(2)
         print("OK")
 
         for r in recherches:
@@ -395,7 +405,8 @@ def scan():
             except Exception as e:
                 print(f"Erreur : {e}")
 
-            time.sleep(3)
+            # Pause humaine entre chaque recherche
+            time.sleep(random.uniform(15, 25))
 
     except Exception as e:
         print(f"  Erreur navigateur : {e}")
