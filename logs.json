@@ -408,5 +408,10 @@
     "ts": "2026-06-10T11:00:14",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1233x914"
+  },
+  {
+    "ts": "2026-06-10T11:00:20",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
