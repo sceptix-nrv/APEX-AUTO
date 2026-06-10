@@ -1042,5 +1042,29 @@
     "cp": "88200",
     "recherche": "308",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3213712526",
+    "titre": "Renault Clio 2 campus 1.2 60 cv",
+    "prix": 2699.0,
+    "km": 170000,
+    "annee": 2004,
+    "carburant": "essence",
+    "ville": "Florange",
+    "cp": "57190",
+    "recherche": "CLIO 2",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3213636520",
+    "titre": "Renault Clio 3 1.2 TCe 2009 – Faible kilométrage – Très bon état",
+    "prix": 4000.0,
+    "km": 76300,
+    "annee": 2009,
+    "carburant": "essence",
+    "ville": "Metz",
+    "cp": "57000",
+    "recherche": "CLIO 2",
+    "date": "2026-06-10"
   }
 ]
