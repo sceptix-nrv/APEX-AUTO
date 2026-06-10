@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "ts": "2026-06-10T20:50:47",
+    "lvl": "SYS",
+    "msg": "── Cycle jour #1  [20:50] ──────────────"
+  },
+  {
+    "ts": "2026-06-10T20:50:50",
+    "lvl": "SYS",
+    "msg": "Force scan demandé depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T20:50:50",
+    "lvl": "SYS",
+    "msg": "─── Scan jour ─────────────────────────────"
+  },
+  {
+    "ts": "2026-06-10T20:50:53",
+    "lvl": "SYS",
+    "msg": "Vues locales chargées : 0 IDs"
+  },
+  {
+    "ts": "2026-06-10T20:50:53",
+    "lvl": "SYS",
+    "msg": "Chargement config GitHub…"
+  },
+  {
+    "ts": "2026-06-10T20:50:53",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s)"
+  },
+  {
+    "ts": "2026-06-10T20:50:54",
+    "lvl": "SCAN",
+    "msg": "[JOUR] Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T20:50:55",
+    "lvl": "BOT",
+    "msg": "Scrape 'Peugeot 206' p.1 — cookie valide: False"
+  },
+  {
+    "ts": "2026-06-10T20:50:55",
+    "lvl": "BOT",
+    "msg": "Refresh cookie DataDome via UC…"
+  }
+]
