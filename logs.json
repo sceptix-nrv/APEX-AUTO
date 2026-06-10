@@ -203,5 +203,65 @@
     "ts": "2026-06-10T19:43:13",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 1 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T19:43:27",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T19:43:27",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 19:43:27] ==="
+  },
+  {
+    "ts": "2026-06-10T19:43:27",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T19:43:28",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T19:43:28",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T19:43:29",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T19:43:29",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T19:43:30",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T19:43:31",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 1 annonces | 7 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T19:43:31",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : passat ---"
+  },
+  {
+    "ts": "2026-06-10T19:43:31",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1387x822"
+  },
+  {
+    "ts": "2026-06-10T19:43:37",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
