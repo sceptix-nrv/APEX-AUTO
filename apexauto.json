@@ -1,18 +1,5 @@
 {
   "vehicules": [],
-  "recherches": [
-    {
-      "id": "mq7s21vt2b0ri09wlbo",
-      "nom": "308",
-      "keywords": "308",
-      "prix_max": 9000,
-      "km_max": null,
-      "fuel": "",
-      "rayon": 100,
-      "ville": "nancy",
-      "destinataire": "steven",
-      "active": true
-    }
-  ],
+  "recherches": [],
   "initialized": true
 }
