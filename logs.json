@@ -598,5 +598,15 @@
     "ts": "2026-06-10T19:47:37",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T19:47:49",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.0s, scroll 254px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T19:47:49",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4..."
   }
 ]
