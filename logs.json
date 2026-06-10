@@ -193,5 +193,25 @@
     "ts": "2026-06-10T17:30:27",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 20s (2/3)"
+  },
+  {
+    "ts": "2026-06-10T17:30:48",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 — "
+  },
+  {
+    "ts": "2026-06-10T17:30:49",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:30:49",
+    "lvl": "SYS",
+    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
+  },
+  {
+    "ts": "2026-06-10T17:30:50",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
