@@ -5,8 +5,10 @@ import time
 from datetime import datetime
 
 import asyncio
-import nodriver as uc
+import json as _json
 import requests
+import undetected_chromedriver as uc
+from selenium.webdriver.support.ui import WebDriverWait
 
 # CONFIG TELEGRAM
 TELEGRAM_TOKEN = "8631165512:AAFtYjnanMCsF_SCwXd_8VEeNX31xM9x5UY"
@@ -257,23 +259,24 @@ def construire_url(r):
     return "https://www.leboncoin.fr/recherche?" + "&".join(params)
 
 
-async def scraper_recherche(page, url, nom):
+def scraper_recherche(driver, url, nom):
     try:
-        await asyncio.sleep(5)
-        raw = await page.evaluate("""
-            () => {
-                const el = document.getElementById('__NEXT_DATA__');
-                if (!el) return null;
-                try { return JSON.parse(el.textContent); }
-                catch { return null; }
-            }
-        """)
-        if not raw:
-            html = await page.get_content()
-            with open("debug_lbc.html", "w", encoding="utf-8") as f:
-                f.write(html)
-            print(f"  [WARN] __NEXT_DATA__ introuvable — voir debug_lbc.html")
-            return []
+        driver.get(url)
+        WebDriverWait(driver, 15).until(
+            lambda d: d.execute_script("return !!document.getElementById('__NEXT_DATA__')")
+        )
+        time.sleep(2)
+    except Exception as e:
+        html = driver.page_source
+        with open("debug_lbc.html", "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"  [WARN] timeout/erreur — voir debug_lbc.html : {e}")
+        return []
+
+    try:
+        raw = driver.execute_script(
+            "return JSON.parse(document.getElementById('__NEXT_DATA__').textContent)"
+        )
         props = raw.get("props", {}).get("pageProps", {})
         ads = props.get("searchData", {}).get("ads", [])
         if not ads:
@@ -399,7 +402,7 @@ def extraire_annonce_data(ad, nom_recherche, score=None):
     }
 
 
-async def scan():
+def scan():
     heure = datetime.now().hour
     if heure >= HEURE_FIN or heure < HEURE_DEBUT:
         print(f"[{datetime.now().strftime('%H:%M')}] Mode nuit — expert en pause.")
@@ -421,60 +424,67 @@ async def scan():
     nouvelles_marche      = []
     total_nouvelles       = 0
 
+    driver = None
     try:
-        browser = await uc.start(headless=False)
+        options = uc.ChromeOptions()
+        options.add_argument("--window-size=1280,900")
+        driver = uc.Chrome(options=options, headless=False)
+
         for r in recherches:
             nom = r.get("nom", "Recherche")
             url = construire_url(r)
             print(f"  Scan : {nom}...", end=" ", flush=True)
             try:
-                page = await browser.get(url)
-                annonces = await scraper_recherche(page, url, nom)
+                annonces = scraper_recherche(driver, url, nom)
 
-                    valides   = [ad for ad in annonces if annonce_valide(ad, r)]
-                    tous_prix = [
-                        float(ad["price"][0]) for ad in valides
-                        if ad.get("price") and ad["price"][0]
-                    ]
+                valides   = [ad for ad in annonces if annonce_valide(ad, r)]
+                tous_prix = [
+                    float(ad["price"][0]) for ad in valides
+                    if ad.get("price") and ad["price"][0]
+                ]
 
-                    # Alimenter marche.json avec toutes les annonces valides
-                    for ad in valides:
-                        ad_id = str(ad.get("list_id", ""))
-                        if ad_id and ad_id not in ids_marche:
-                            nouvelles_marche.append(extraire_donnee_marche(ad, nom))
-                            ids_marche.add(ad_id)
+                for ad in valides:
+                    ad_id = str(ad.get("list_id", ""))
+                    if ad_id and ad_id not in ids_marche:
+                        nouvelles_marche.append(extraire_donnee_marche(ad, nom))
+                        ids_marche.add(ad_id)
 
-                    nouvelles = 0
-                    for ad in reversed(valides):
-                        ad_id = str(ad.get("list_id", ""))
-                        if not ad_id or ad_id in historique:
-                            continue
+                nouvelles = 0
+                for ad in reversed(valides):
+                    ad_id = str(ad.get("list_id", ""))
+                    if not ad_id or ad_id in historique:
+                        continue
 
-                        prix  = ad.get("price", [None])[0] if ad.get("price") else None
-                        score = calculer_score(prix, tous_prix) if prix else None
+                    prix  = ad.get("price", [None])[0] if ad.get("price") else None
+                    score = calculer_score(prix, tous_prix) if prix else None
 
-                        _, msg = formater_annonce(ad, nom, score)
-                        dest = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
-                        envoyer_telegram(msg, dest)
-                        historique.add(ad_id)
+                    _, msg = formater_annonce(ad, nom, score)
+                    dest = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
+                    envoyer_telegram(msg, dest)
+                    historique.add(ad_id)
 
-                        if ad_id not in ids_existants:
-                            nouvelles_annonces.append(extraire_annonce_data(ad, nom, score))
-                            ids_existants.add(ad_id)
+                    if ad_id not in ids_existants:
+                        nouvelles_annonces.append(extraire_annonce_data(ad, nom, score))
+                        ids_existants.add(ad_id)
 
-                        nouvelles += 1
-                        total_nouvelles += 1
+                    nouvelles += 1
+                    total_nouvelles += 1
 
-                    print(f"{len(annonces)} scannées, {nouvelles} nouvelle(s)")
+                print(f"{len(annonces)} scannées, {nouvelles} nouvelle(s)")
 
-                except Exception as e:
-                    print(f"Erreur : {e}")
+            except Exception as e:
+                print(f"Erreur : {e}")
 
-                await asyncio.sleep(3)
+            time.sleep(3)
 
-        browser.stop()
     except Exception as e:
         print(f"  Erreur navigateur : {e}")
+    finally:
+        if driver:
+            try:
+                driver.quit()
+            except Exception:
+                pass
 
     sauvegarder_historique(historique)
 
@@ -495,11 +505,11 @@ def main():
     print(f"Intervalle : toutes les {INTERVALLE_MINUTES} min | Plage : {HEURE_DEBUT}h–{HEURE_FIN}h")
     print("Config chargée depuis GitHub à chaque scan.\n")
 
-    asyncio.run(scan())
+    scan()
 
     while True:
         time.sleep(INTERVALLE_MINUTES * 60)
-        asyncio.run(scan())
+        scan()
 
 
 if __name__ == "__main__":
