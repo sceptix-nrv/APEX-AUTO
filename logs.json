@@ -183,5 +183,95 @@
     "ts": "2026-06-10T10:36:21",
     "lvl": "SYS",
     "msg": "Analyse IA : 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T10:36:22",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:23",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:23",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Clio 3 1l2 tce..."
+  },
+  {
+    "ts": "2026-06-10T10:36:24",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:25",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213396900] Clio 3 1l2 tce — 650€ | score +64% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:25",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+ ct ok pack clim..."
+  },
+  {
+    "ts": "2026-06-10T10:36:26",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:30",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213409974] 206+ ct ok pack clim — 2000€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:30",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo II GT 1.2 TCE 101 cv..."
+  },
+  {
+    "ts": "2026-06-10T10:36:31",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:31",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213417921] Renault Twingo II GT 1.2 TCE 101 cv — 2990€ | score -66% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:31",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1.6 110 xt entretien a jour..."
+  },
+  {
+    "ts": "2026-06-10T10:36:32",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:33",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3207257169] Peugeot 206 1.6 110 xt entretien a jour — 2890€ | score -61% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:33",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T10:36:34",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:38",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:38",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206.1.9d..."
   }
 ]
