@@ -1,18 +1,5 @@
 {
   "vehicules": [],
-  "recherches": [
-    {
-      "id": "mq7mq90w4wu7vkwicoo",
-      "nom": "206",
-      "keywords": "206",
-      "prix_max": 10000,
-      "km_max": null,
-      "fuel": "",
-      "rayon": 100,
-      "ville": "nancy",
-      "destinataire": "steven",
-      "active": true
-    }
-  ],
+  "recherches": [],
   "initialized": true
 }
