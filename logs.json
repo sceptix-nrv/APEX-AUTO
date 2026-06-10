@@ -748,5 +748,15 @@
     "ts": "2026-06-10T15:51:41",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T15:51:44",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=15) — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T15:51:44",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 12 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
