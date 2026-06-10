@@ -50,5 +50,6 @@
       "active": true
     }
   ],
-  "initialized": true
+  "initialized": true,
+  "force_scan": true
 }
