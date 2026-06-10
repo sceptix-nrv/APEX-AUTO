@@ -1,50 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:13:02",
-    "lvl": "OK",
-    "msg": "IA OK : Golf 7r"
-  },
-  {
-    "ts": "2026-06-10T16:13:02",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3151869391] Golf 7r — 30500€ | score -9% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:02",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Volkswagen Golf 7R 2.0 Tsi 310cv DSG7 4M..."
-  },
-  {
-    "ts": "2026-06-10T16:13:03",
-    "lvl": "OK",
-    "msg": "IA OK : Volkswagen Golf 7R 2.0 Tsi 310cv DSG7 4M"
-  },
-  {
-    "ts": "2026-06-10T16:13:03",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3160603740] Volkswagen Golf 7R 2.0 Tsi 310cv DSG7 4Motion Camé — 32990€ | score -18% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:03",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 7r 1000cv..."
-  },
-  {
-    "ts": "2026-06-10T16:13:04",
-    "lvl": "OK",
-    "msg": "IA OK : Golf 7r 1000cv"
-  },
-  {
-    "ts": "2026-06-10T16:13:04",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3198383888] Golf 7r 1000cv — 60000€ | score -99% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:04",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 7r..."
-  },
-  {
     "ts": "2026-06-10T16:13:05",
     "lvl": "OK",
     "msg": "IA OK : Golf 7r"
@@ -1498,5 +1453,50 @@
     "ts": "2026-06-10T16:57:41",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T16:57:52",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 407 1.6 HDI110 PREMIUM PACK FAP"
+  },
+  {
+    "ts": "2026-06-10T16:57:53",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3211839157] Peugeot 407 1.6 HDI110 PREMIUM PACK FAP — 4990€ | score -67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:57:53",
+    "lvl": "OK",
+    "msg": "13 alerte(s) envoyee(s) pour '407'"
+  },
+  {
+    "ts": "2026-06-10T16:57:53",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T16:57:56",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=44) — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T16:57:56",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 64 entrees"
+  },
+  {
+    "ts": "2026-06-10T16:57:58",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 87 entrees"
+  },
+  {
+    "ts": "2026-06-10T16:58:00",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +24 entrees (87 total)"
+  },
+  {
+    "ts": "2026-06-10T16:58:00",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 30 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
