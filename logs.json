@@ -1,105 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:13:09",
-    "lvl": "OK",
-    "msg": "IA OK : Golf 7R 300CV"
-  },
-  {
-    "ts": "2026-06-10T16:13:09",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3210045244] Golf 7R 300CV — 28000€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:09",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Volkswagen Golf 7r 2.0 TSI 310ch 4motion..."
-  },
-  {
-    "ts": "2026-06-10T16:13:10",
-    "lvl": "OK",
-    "msg": "IA OK : Volkswagen Golf 7r 2.0 TSI 310ch 4motion"
-  },
-  {
-    "ts": "2026-06-10T16:13:10",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3192751136] Volkswagen Golf 7r 2.0 TSI 310ch 4motion — 28500€ | score -2% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:10",
-    "lvl": "SYS",
-    "msg": "Analyse IA : GOLF 7R phase 2 7.5R..."
-  },
-  {
-    "ts": "2026-06-10T16:13:11",
-    "lvl": "OK",
-    "msg": "IA OK : GOLF 7R phase 2 7.5R"
-  },
-  {
-    "ts": "2026-06-10T16:13:12",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3210457215] GOLF 7R phase 2 7.5R — 33990€ | score -21% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:12",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Volksvagen golf 7R..."
-  },
-  {
-    "ts": "2026-06-10T16:13:12",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
-    "ts": "2026-06-10T16:13:23",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Volksvagen golf 7R — "
-  },
-  {
-    "ts": "2026-06-10T16:13:23",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3210583193] Volksvagen golf 7R — 21000€ | score +25% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:23",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Porsche Cayenne S V8 400..."
-  },
-  {
-    "ts": "2026-06-10T16:13:24",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Porsche Cayenne S V8 400 — Le modèle recherché est un Golf 7R, mais l'annonce concerne une Porsche Cayenne S V8 400"
-  },
-  {
-    "ts": "2026-06-10T16:13:24",
-    "lvl": "SYS",
-    "msg": "Analyse IA : VOLKSWAGEN GOLF 7R R 2.0 TSI 310 4Motion..."
-  },
-  {
-    "ts": "2026-06-10T16:13:25",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
-    "ts": "2026-06-10T16:13:36",
-    "lvl": "OK",
-    "msg": "IA OK : VOLKSWAGEN GOLF 7R R 2.0 TSI 310 4Motion"
-  },
-  {
-    "ts": "2026-06-10T16:13:36",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3127548157] VOLKSWAGEN GOLF 7R R 2.0 TSI 310 4Motion 4 motion  — 18990€ | score +32% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:13:36",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 7r..."
-  },
-  {
-    "ts": "2026-06-10T16:13:37",
-    "lvl": "OK",
-    "msg": "IA OK : Golf 7r"
-  },
-  {
     "ts": "2026-06-10T16:13:37",
     "lvl": "OK",
     "msg": "NOUVELLE : [3212413589] Golf 7r — 29950€ | score -7% → Telegram envoye"
@@ -1498,5 +1398,105 @@
     "ts": "2026-06-10T17:03:14",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T17:03:26",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.7s, scroll 321px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T17:03:26",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=CITROEN%20C3&locations=Nancy_..."
+  },
+  {
+    "ts": "2026-06-10T17:03:32",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T17:03:32",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T17:03:32",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 3 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T17:03:32",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 1300€ | median 2500€ | max 3500€"
+  },
+  {
+    "ts": "2026-06-10T17:03:32",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Citroen C3 1.6 hdi 90 exclusive..."
+  },
+  {
+    "ts": "2026-06-10T17:03:34",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Citroen C3 1.6 hdi 90 exclusive — Le modèle recherché est le CITROEN C3, mais l'annonce mentionne un modèle spécifique (C3 1.6 hdi 90 exclusive)"
+  },
+  {
+    "ts": "2026-06-10T17:03:34",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Vente Citroën c3..."
+  },
+  {
+    "ts": "2026-06-10T17:03:34",
+    "lvl": "OK",
+    "msg": "IA OK : Vente Citroën c3"
+  },
+  {
+    "ts": "2026-06-10T17:03:35",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213916619] Vente Citroën c3 — 3500€ | score -40% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:03:35",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Citroen C3 commercial utilitaire..."
+  },
+  {
+    "ts": "2026-06-10T17:03:36",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Citroen C3 commercial utilitaire — Le modèle recherché est 'C3' mais l'annonce mentionne 'commercial utilitaire'"
+  },
+  {
+    "ts": "2026-06-10T17:03:36",
+    "lvl": "OK",
+    "msg": "1 alerte(s) envoyee(s) pour 'C3'"
+  },
+  {
+    "ts": "2026-06-10T17:03:36",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T17:03:39",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=3) — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T17:03:39",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 65 entrees"
+  },
+  {
+    "ts": "2026-06-10T17:03:40",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 90 entrees"
+  },
+  {
+    "ts": "2026-06-10T17:03:42",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +3 entrees (90 total)"
+  },
+  {
+    "ts": "2026-06-10T17:03:42",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 1 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
