@@ -1398,5 +1398,15 @@
     "ts": "2026-06-10T16:09:34",
     "lvl": "WARN",
     "msg": "Erreur check force_scan : 'apexauto'"
+  },
+  {
+    "ts": "2026-06-10T16:09:45",
+    "lvl": "WARN",
+    "msg": "Erreur check force_scan : 'apexauto'"
+  },
+  {
+    "ts": "2026-06-10T16:09:56",
+    "lvl": "WARN",
+    "msg": "Erreur check force_scan : 'apexauto'"
   }
 ]
