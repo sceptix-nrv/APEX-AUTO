@@ -394,5 +394,23 @@
     "ia_avis": "Intéressant, mais le rapport km/année est élevé (138 000 km en 14 ans)",
     "ia_moteur": "Le moteur 1.4 est généralement fiable et économique",
     "ia_note": 6
+  },
+  {
+    "id": "3212718228",
+    "titre": "VW Passat SW 2.0 TDI 140 Sport – Automatique – CT OK",
+    "prix": 4800.0,
+    "km": 175289,
+    "annee": "2005",
+    "ville": "Bayonne",
+    "lien": "https://www.leboncoin.fr/voitures/3212718228.htm",
+    "recherche": "passat",
+    "score": 36,
+    "date": "2026-06-10T18:15",
+    "statut": "nouvelle",
+    "ia_verdict": "OK",
+    "ia_detail": "",
+    "ia_avis": "Fonce, le rapport qualité/prix est intéressant pour un Passat de 2005 avec 175 289 km.",
+    "ia_moteur": "Le 2.0 TDI 140 est un moteur diesel fiable et économique",
+    "ia_note": 7
   }
 ]
