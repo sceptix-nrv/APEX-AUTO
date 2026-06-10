@@ -173,5 +173,35 @@
     "ts": "2026-06-10T19:43:07",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T19:43:10",
+    "lvl": "SYS",
+    "msg": "Reset detecte pendant le cycle — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T19:43:10",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 1 entrees"
+  },
+  {
+    "ts": "2026-06-10T19:43:12",
+    "lvl": "SYS",
+    "msg": "Annonces sauvegardees — 1 total"
+  },
+  {
+    "ts": "2026-06-10T19:43:12",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 7 entrees"
+  },
+  {
+    "ts": "2026-06-10T19:43:13",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +7 entrees (7 total)"
+  },
+  {
+    "ts": "2026-06-10T19:43:13",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 1 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
