@@ -733,5 +733,25 @@
     "ts": "2026-06-10T20:10:11",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4894_-0.772…"
+  },
+  {
+    "ts": "2026-06-10T20:10:21",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonces brutes"
+  },
+  {
+    "ts": "2026-06-10T20:10:22",
+    "lvl": "BOT",
+    "msg": "Chrome fermé"
+  },
+  {
+    "ts": "2026-06-10T20:10:24",
+    "lvl": "SCAN",
+    "msg": "[JOUR] Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T20:10:25",
+    "lvl": "BOT",
+    "msg": "Chrome stealth 1363x852"
   }
 ]
