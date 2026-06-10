@@ -188,5 +188,65 @@
     "ts": "2026-06-10T11:55:19",
     "lvl": "NET",
     "msg": "Fetch description annonce 3213441470..."
+  },
+  {
+    "ts": "2026-06-10T11:58:04",
+    "lvl": "SYS",
+    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
+  },
+  {
+    "ts": "2026-06-10T11:58:04",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 11:58:04] ==="
+  },
+  {
+    "ts": "2026-06-10T11:58:04",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T11:58:05",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T11:58:05",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T11:58:06",
+    "lvl": "SYS",
+    "msg": "Historique : 0 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T11:58:06",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T11:58:06",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T11:58:07",
+    "lvl": "SYS",
+    "msg": "Base chargee — 0 vues | 0 annonces | 0 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T11:58:07",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : 206 ---"
+  },
+  {
+    "ts": "2026-06-10T11:58:07",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1277x969"
+  },
+  {
+    "ts": "2026-06-10T11:58:13",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
