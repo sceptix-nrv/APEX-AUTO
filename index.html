@@ -208,16 +208,30 @@
   .filter-chip { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: none; color: var(--muted); font-size: 0.8125rem; font-weight: 500; cursor: pointer; transition: all 0.15s; }
   .filter-chip:hover { border-color: var(--border2); color: var(--text); }
   .filter-chip.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
-  .annonce-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; transition: border-color 0.15s; }
-  .annonce-card:hover { border-color: var(--border2); }
-  .annonce-card.vue { opacity: 0.6; }
-  .annonce-card.ignoree { opacity: 0.35; }
-  .annonce-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; gap: 10px; }
-  .annonce-titre { font-weight: 600; font-size: 0.9375rem; flex: 1; }
-  .annonce-prix { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
-  .annonce-meta { display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.8125rem; color: var(--muted); margin-bottom: 10px; }
-  .annonce-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); gap: 8px; flex-wrap: wrap; }
-  .annonce-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .annonce-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.15s, box-shadow 0.15s; }
+  .annonce-card:hover { border-color: var(--border2); box-shadow: 0 4px 20px rgba(0,0,0,.25); }
+  .annonce-card.vue { opacity: 0.5; }
+  .annonce-card.ignoree { opacity: 0.25; }
+  .annonce-card .ac-stripe { height: 3px; background: var(--border); }
+  .annonce-card.interessante .ac-stripe { background: #3b82f6; }
+  .annonce-card.nouvelle .ac-stripe    { background: var(--accent); }
+
+  .ac-body { padding: 1rem 1.1rem; flex: 1; }
+  .ac-titre { font-weight: 600; font-size: .9375rem; line-height: 1.4; margin-bottom: .75rem; }
+  .ac-prix-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .5rem; }
+  .ac-prix { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.5rem; }
+  .ac-date { font-size: .7rem; color: var(--muted); }
+  .ac-meta { display: flex; flex-wrap: wrap; gap: 5px 14px; font-size: .8rem; color: var(--muted); margin-bottom: .75rem; }
+  .ac-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .ac-ia { background: var(--surface2); border-top: 1px solid var(--border); padding: .75rem 1.1rem; font-size: .78rem; line-height: 1.6; }
+  .ac-ia-warn { color: #ff9900; font-weight: 600; margin-bottom: 2px; }
+  .ac-ia-avis { color: var(--text); margin-bottom: 4px; }
+  .ac-ia-moteur { color: var(--muted); font-style: italic; }
+
+  .ac-footer { padding: .65rem 1.1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 8px; background: var(--surface2); }
+  .ac-actions { display: flex; gap: 5px; flex-wrap: wrap; }
   .score-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
   .score-excellent { background: var(--green-dim); color: var(--green); }
   .score-bon { background: var(--blue-dim); color: var(--blue); }
@@ -264,6 +278,7 @@
     <button class="nav-tab" onclick="showPage('historique')">Historique</button>
     <button class="nav-tab" onclick="showPage('annonces')">Annonces</button>
     <button class="nav-tab" onclick="showPage('bot')">Expert</button>
+    <button class="nav-tab" onclick="showPage('estimation')">Estimation</button>
   </div>
   <button class="nav-sync" onclick="forceSave()" title="Synchronisation GitHub">
     <div class="sync-dot" id="sync-dot"></div>
@@ -376,6 +391,78 @@
   </div>
   <div class="expert-stats" id="expert-stats"></div>
   <div class="bot-grid" id="bot-grid"></div>
+
+  <!-- TERMINAL LOGS -->
+  <div style="margin-top:2rem;">
+    <div class="section-header" style="margin-bottom:.75rem;">
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <span style="color:#00ff41;font-family:monospace;font-size:.85rem;letter-spacing:.08em;">SYSTEM LOGS</span>
+        <span id="log-status" style="font-size:.7rem;color:#666;font-family:monospace;"></span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center;">
+        <select id="log-filter" onchange="renderLogs()" style="background:#111;color:#aaa;border:1px solid #333;border-radius:4px;padding:3px 8px;font-size:.75rem;font-family:monospace;">
+          <option value="ALL">ALL</option>
+          <option value="SYS">SYS</option>
+          <option value="SCAN">SCAN</option>
+          <option value="NET">NET</option>
+          <option value="BOT">BOT</option>
+          <option value="OK">OK</option>
+          <option value="WARN">WARN</option>
+          <option value="ERR">ERR</option>
+        </select>
+        <button onclick="ghLoadLogs()" style="background:transparent;border:1px solid #333;color:#666;padding:3px 10px;border-radius:4px;font-size:.75rem;font-family:monospace;cursor:pointer;">↺ REFRESH</button>
+        <button onclick="clearLogsView()" style="background:transparent;border:1px solid #333;color:#666;padding:3px 10px;border-radius:4px;font-size:.75rem;font-family:monospace;cursor:pointer;">CLEAR</button>
+      </div>
+    </div>
+    <div id="log-terminal" style="
+      background:#0a0a0a;
+      border:1px solid #1a1a1a;
+      border-radius:6px;
+      padding:1rem 1.25rem;
+      font-family:'Courier New',Courier,monospace;
+      font-size:.78rem;
+      line-height:1.6;
+      height:420px;
+      overflow-y:auto;
+      color:#c0c0c0;
+      position:relative;
+    ">
+      <div style="color:#333;text-align:center;margin-top:180px;">// EN ATTENTE DE CONNEXION //</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE ESTIMATION -->
+<div id="page-estimation" class="page">
+  <div class="section-header" style="margin-bottom:1.5rem;">
+    <div>
+      <div class="page-title">Estimation de prix</div>
+      <div class="page-sub">Basé sur les annonces analysées par l'expert</div>
+    </div>
+    <div id="marche-count" style="font-size:.8rem;color:var(--muted);font-family:monospace;"></div>
+  </div>
+
+  <div class="card" style="max-width:560px;margin:0 auto 2rem;">
+    <div class="card-body" style="padding:1.5rem;">
+      <div class="form-grid" style="grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div class="form-group" style="grid-column:1/-1;">
+          <label>Modèle</label>
+          <input id="est-modele" type="text" placeholder="ex: Golf, 308, Clio…" oninput="resetEstimation()">
+        </div>
+        <div class="form-group">
+          <label>Année</label>
+          <input id="est-annee" type="number" placeholder="ex: 2018" min="2000" max="2030" oninput="resetEstimation()">
+        </div>
+        <div class="form-group">
+          <label>Kilométrage</label>
+          <input id="est-km" type="number" placeholder="ex: 85000" oninput="resetEstimation()">
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width:100%;" onclick="lancer_estimation()">Estimer le prix</button>
+    </div>
+  </div>
+
+  <div id="est-result"></div>
 </div>
 
 <!-- MODAL VEHICULE -->
@@ -572,7 +659,7 @@ async function startApp() {
     data.recherches = [{ id: uid(), nom: 'Peugeot 206 Nancy', keywords: '206', prix_max: 3000, km_max: 150000, fuel: 'diesel', rayon: 100, active: true }];
     await ghSave();
   }
-  renderDashboard(); renderVehicules(); renderBot(); ghLoadAnnonces();
+  renderDashboard(); renderVehicules(); renderBot(); ghLoadAnnonces(); ghLoadMarche();
 }
 if (ghToken) { startApp(); } else { document.getElementById('setup-overlay').classList.remove('hidden'); }
 
@@ -580,13 +667,15 @@ function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-' + name).classList.add('active');
-  const tabs = { dashboard: 0, vehicules: 1, historique: 2, annonces: 3, bot: 4 };
+  const tabs = { dashboard: 0, vehicules: 1, historique: 2, annonces: 3, bot: 4, estimation: 5 };
   if (tabs[name] !== undefined) document.querySelectorAll('.nav-tab')[tabs[name]].classList.add('active');
   if (name === 'dashboard') renderDashboard();
   if (name === 'vehicules') renderVehicules();
   if (name === 'historique') renderHistorique();
   if (name === 'annonces') { if (!annoncesData.length) ghLoadAnnonces().then(renderAnnonces); else renderAnnonces(); }
-  if (name === 'bot') { renderBot(); renderExpertStats(); }
+  if (name === 'bot') { renderBot(); renderExpertStats(); startLogsAutoRefresh(); }
+  else stopLogsAutoRefresh();
+  if (name === 'estimation') { if (!marcheData.length) ghLoadMarche().then(renderMarcheCount); else renderMarcheCount(); }
 }
 
 function totalInvesti(v) { return Number(v.achat) + (v.depenses||[]).reduce((s,d)=>s+Number(d.montant),0); }
@@ -901,31 +990,50 @@ function renderAnnonces() {
   }
 
   grid.innerHTML = filtered.map(a => {
-    const statut = a.statut || 'nouvelle';
-    const si = scoreInfo(a.score);
+    const statut  = a.statut || 'nouvelle';
+    const si      = scoreInfo(a.score);
     const dateStr = a.date ? new Date(a.date).toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '';
-    return `<div class="annonce-card ${statut==='ignoree'?'ignoree':statut==='vue'?'vue':''}">
-      <div class="annonce-header">
-        <div class="annonce-titre">${safe(a.titre)}</div>
-        <div class="annonce-prix">${a.prix ? fmt(a.prix) : 'N/C'}</div>
-      </div>
-      <div class="annonce-meta">
-        ${a.annee ? `<span>📅 ${safe(a.annee)}</span>` : ''}
-        ${a.km ? `<span>🛣️ ${fmtN(a.km)} km</span>` : ''}
-        ${a.ville ? `<span>📍 ${safe(a.ville)}</span>` : ''}
-        ${a.recherche ? `<span>🔍 ${safe(a.recherche)}</span>` : ''}
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-        <span class="score-badge ${si.cls}">${si.label}</span>
-        <span style="font-size:0.75rem;color:var(--muted);">${dateStr}</span>
-      </div>
-      <div class="annonce-footer">
-        <div class="annonce-actions">
-          ${statut!=='interessante'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','interessante')">⭐ Intéressante</button>`:''}
-          ${statut!=='vue'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','vue')">👁 Vue</button>`:''}
-          ${statut!=='ignoree'?`<button class="btn btn-danger btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','ignoree')">✕ Ignorer</button>`:''}
+
+    const iaBadge = a.ia_verdict === 'OK'
+      ? `<span class="score-badge" style="background:#00ff4120;color:#00ff41;border:1px solid #00ff4140;">✓ Expert OK</span>`
+      : a.ia_verdict === 'ATTENTION'
+      ? `<span class="score-badge" style="background:#ff990020;color:#ff9900;border:1px solid #ff990040;">⚠ Expert</span>`
+      : '';
+
+    const iaBlock = (a.ia_avis || a.ia_moteur || (a.ia_verdict === 'ATTENTION' && a.ia_detail)) ? `
+      <div class="ac-ia">
+        ${a.ia_verdict === 'ATTENTION' && a.ia_detail ? `<div class="ac-ia-warn">⚠ ${esc(a.ia_detail)}</div>` : ''}
+        ${a.ia_avis   ? `<div class="ac-ia-avis">🧠 ${esc(a.ia_avis)}</div>`   : ''}
+        ${a.ia_moteur ? `<div class="ac-ia-moteur">🔧 ${esc(a.ia_moteur)}</div>` : ''}
+      </div>` : '';
+
+    return `<div class="annonce-card ${statut}">
+      <div class="ac-stripe"></div>
+      <div class="ac-body">
+        <div class="ac-titre">${safe(a.titre)}</div>
+        <div class="ac-prix-row">
+          <div class="ac-prix">${a.prix ? fmtN(a.prix) + ' €' : 'N/C'}</div>
+          <div class="ac-date">${dateStr}</div>
         </div>
-        <a href="${esc(a.lien)}" target="_blank" class="btn btn-primary btn-sm">Voir →</a>
+        <div class="ac-meta">
+          ${a.annee    ? `<span>📅 ${safe(a.annee)}</span>`        : ''}
+          ${a.km       ? `<span>🛣 ${fmtN(a.km)} km</span>`        : ''}
+          ${a.ville    ? `<span>📍 ${safe(a.ville)}</span>`         : ''}
+          ${a.recherche? `<span>🔍 ${safe(a.recherche)}</span>`     : ''}
+        </div>
+        <div class="ac-badges">
+          <span class="score-badge ${si.cls}">${si.label}</span>
+          ${iaBadge}
+        </div>
+      </div>
+      ${iaBlock}
+      <div class="ac-footer">
+        <div class="ac-actions">
+          ${statut!=='interessante'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','interessante')">⭐</button>`:'<span style="font-size:.75rem;color:#3b82f6;font-weight:600;">⭐ Intéressante</span>'}
+          ${statut!=='vue'?`<button class="btn btn-ghost btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','vue')">👁</button>`:''}
+          ${statut!=='ignoree'?`<button class="btn btn-danger btn-sm" onclick="setAnnonceStatut('${esc(a.id)}','ignoree')">✕</button>`:''}
+        </div>
+        <a href="${esc(a.lien)}" target="_blank" class="btn btn-primary btn-sm">Voir l'annonce →</a>
       </div>
     </div>`;
   }).join('');
@@ -944,16 +1052,260 @@ async function setAnnonceStatut(id, statut) {
 
 function renderExpertStats() {
   const recherches = data.recherches || [];
-  const total = annoncesData.length;
-  const today = new Date().toISOString().slice(0, 10);
+  const total      = annoncesData.length;
+  const today      = new Date().toISOString().slice(0, 10);
   const todayCount = annoncesData.filter(a => a.date && a.date.startsWith(today)).length;
-  const bonnes = annoncesData.filter(a => (a.score ?? -999) >= 20).length;
+  const bonnes     = annoncesData.filter(a => (a.score ?? -999) >= 20).length;
+  const scanned    = marcheData.length;
   document.getElementById('expert-stats').innerHTML = `
     <div class="stat-card"><div class="stat-label">Recherches actives</div><div class="stat-value accent">${recherches.filter(r=>r.active!==false).length}</div></div>
-    <div class="stat-card"><div class="stat-label">Annonces totales</div><div class="stat-value blue">${total}</div></div>
+    <div class="stat-card"><div class="stat-label">Annonces détectées</div><div class="stat-value blue">${total}</div></div>
+    <div class="stat-card"><div class="stat-label">Analysées (marché)</div><div class="stat-value" style="color:#a78bfa;">${scanned}</div></div>
     <div class="stat-card"><div class="stat-label">Détectées aujourd'hui</div><div class="stat-value orange">${todayCount}</div></div>
     <div class="stat-card"><div class="stat-label">Excellentes affaires</div><div class="stat-value green">${bonnes}</div></div>`;
 }
+
+// ── MARCHÉ / ESTIMATION ───────────────────────────────────────────────────────
+
+let marcheData = [];
+
+async function ghLoadMarche() {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/marche.json`, {
+      headers: { Authorization: `token ${ghToken}` }
+    });
+    if (!res.ok) return;
+    const j = await res.json();
+    marcheData = JSON.parse(b64decode(j.content));
+  } catch { marcheData = []; }
+}
+
+function renderMarcheCount() {
+  const el = document.getElementById('marche-count');
+  if (el) el.textContent = `${marcheData.length} annonces en base`;
+}
+
+function resetEstimation() {
+  document.getElementById('est-result').innerHTML = '';
+}
+
+function lancer_estimation() {
+  const modeleRaw = document.getElementById('est-modele').value.trim().toLowerCase();
+  const annee     = parseInt(document.getElementById('est-annee').value) || null;
+  const km        = parseInt(document.getElementById('est-km').value)    || null;
+  const res       = document.getElementById('est-result');
+
+  if (!modeleRaw) { res.innerHTML = errCard('Entre un modèle de véhicule.'); return; }
+
+  // Filtre par modèle (fuzzy : chaque mot doit apparaître dans le titre)
+  const mots = modeleRaw.split(/\s+/).filter(Boolean);
+  const pool = marcheData.filter(a => {
+    const t = (a.titre || '').toLowerCase();
+    return mots.every(m => t.includes(m)) && a.prix;
+  });
+
+  if (pool.length < 30) {
+    res.innerHTML = errCard(
+      `Données insuffisantes — seulement <strong>${pool.length}</strong> annonce(s) trouvée(s) pour ce modèle.
+       <br>Il en faut au minimum <strong>30</strong> pour une estimation fiable.
+       <br><span style="color:var(--muted);font-size:.82rem;">L'expert accumule les données au fil des scans.</span>`
+    );
+    return;
+  }
+
+  // Score de pertinence par année + km
+  function pertinence(a) {
+    let s = 1;
+    if (annee && a.annee) s *= Math.max(0.1, 1 - Math.abs(a.annee - annee) * 0.15);
+    if (km    && a.km)    s *= Math.max(0.1, 1 - Math.abs(a.km - km) / 150000);
+    return s;
+  }
+
+  // Pondération : poids = pertinence²
+  const weighted = pool.map(a => ({ prix: a.prix, w: pertinence(a) ** 2 }));
+  const totalW   = weighted.reduce((s, x) => s + x.w, 0);
+  const estMoy   = weighted.reduce((s, x) => s + x.prix * x.w, 0) / totalW;
+
+  const prix = pool.map(a => a.prix).sort((a,b) => a-b);
+  const med  = prix[Math.floor(prix.length / 2)];
+  const min  = prix[0];
+  const max  = prix[prix.length - 1];
+  const p10  = prix[Math.floor(prix.length * 0.10)];
+  const p90  = prix[Math.floor(prix.length * 0.90)];
+
+  // Fourchette réaliste autour de la médiane pondérée
+  const bas  = Math.round(estMoy * 0.88 / 100) * 100;
+  const haut = Math.round(estMoy * 1.12 / 100) * 100;
+  const est  = Math.round(estMoy / 100) * 100;
+
+  // Confiance
+  const conf = pool.length >= 100 ? 'Élevée' : pool.length >= 50 ? 'Correcte' : 'Faible';
+  const confColor = pool.length >= 100 ? '#00ff41' : pool.length >= 50 ? '#e0a800' : '#ff9900';
+
+  // Si un prix a été fourni, calcul du score
+  let scoreHtml = '';
+  if (km && annee) {
+    const s = Math.round((estMoy - est) / estMoy * 100); // juste pour la demo, sera 0
+    // score par rapport à l'estimation
+    // on évalue le prix de l'utilisateur vs estimation
+  }
+
+  res.innerHTML = `
+  <div class="card" style="max-width:560px;margin:0 auto;">
+    <div class="card-body" style="padding:1.5rem;">
+      <div style="text-align:center;margin-bottom:1.5rem;">
+        <div style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem;">Estimation pondérée</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:2.8rem;font-weight:700;color:var(--accent);">${fmtN(est)} €</div>
+        <div style="color:var(--muted);font-size:.875rem;margin-top:.25rem;">Fourchette réaliste : ${fmtN(bas)} € — ${fmtN(haut)} €</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.25rem;">
+        <div style="background:var(--surface2);border-radius:6px;padding:.75rem;text-align:center;">
+          <div style="font-size:.7rem;color:var(--muted);margin-bottom:.25rem;">MÉDIANE BRUTE</div>
+          <div style="font-weight:700;">${fmtN(med)} €</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:6px;padding:.75rem;text-align:center;">
+          <div style="font-size:.7rem;color:var(--muted);margin-bottom:.25rem;">10e CENTILE</div>
+          <div style="font-weight:700;">${fmtN(p10)} €</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:6px;padding:.75rem;text-align:center;">
+          <div style="font-size:.7rem;color:var(--muted);margin-bottom:.25rem;">90e CENTILE</div>
+          <div style="font-weight:700;">${fmtN(p90)} €</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding-top:.85rem;">
+        <span>${pool.length} annonces analysées</span>
+        <span>Confiance : <strong style="color:${confColor};">${conf}</strong></span>
+        <span>Marché : ${fmtN(min)} – ${fmtN(max)} €</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function errCard(html) {
+  return `<div class="card" style="max-width:560px;margin:0 auto;border-color:#ff3c3c33;">
+    <div class="card-body" style="padding:1.5rem;text-align:center;color:var(--muted);line-height:1.7;">${html}</div>
+  </div>`;
+}
+
+// ── LOGS ──────────────────────────────────────────────────────────────────────
+
+let logsData = [];
+let logsClearOffset = 0;
+let logsAutoRefresh = null;
+
+const LOG_STYLE = {
+  SYS:  { color: '#7c7cff', prefix: 'SYS ' },
+  SCAN: { color: '#00cfff', prefix: 'SCAN' },
+  NET:  { color: '#888',    prefix: 'NET ' },
+  BOT:  { color: '#e0a800', prefix: 'BOT ' },
+  OK:   { color: '#00ff41', prefix: 'OK  ' },
+  WARN: { color: '#ff9900', prefix: 'WARN' },
+  ERR:  { color: '#ff3c3c', prefix: 'ERR ' },
+};
+
+function renderLogs() {
+  const term = document.getElementById('log-terminal');
+  if (!term) return;
+  const filter = document.getElementById('log-filter')?.value || 'ALL';
+  const visible = logsData
+    .slice(logsClearOffset)
+    .filter(l => filter === 'ALL' || l.lvl === filter);
+
+  if (!visible.length) {
+    term.innerHTML = `<span style="color:#333;">// AUCUN LOG — EN ATTENTE DU PROCHAIN CYCLE //</span>`;
+    return;
+  }
+
+  term.innerHTML = visible.map((l, i) => {
+    const s = LOG_STYLE[l.lvl] || { color: '#888', prefix: l.lvl.padEnd(4) };
+    const ts = l.ts ? l.ts.replace('T', ' ') : '??:??:??';
+    const isLast = i === visible.length - 1;
+    const cursor = isLast ? `<span class="log-cursor">█</span>` : '';
+    return `<div class="log-line">` +
+      `<span style="color:#333;">${ts}</span> ` +
+      `<span style="color:${s.color};font-weight:600;">[${s.prefix}]</span> ` +
+      `<span style="color:${l.lvl==='ERR'?'#ff6b6b':l.lvl==='OK'?'#b0ffb0':l.lvl==='WARN'?'#ffd27a':'#d0d0d0'};">${esc(l.msg)}</span>` +
+      `${cursor}</div>`;
+  }).join('');
+
+  // auto-scroll to bottom
+  term.scrollTop = term.scrollHeight;
+}
+
+let _lastLogsSha = null;
+
+async function ghLoadLogs() {
+  const status = document.getElementById('log-status');
+  if (!ghToken) {
+    if (status) status.textContent = 'NO TOKEN';
+    return;
+  }
+  try {
+    // cache-busting : timestamp en paramètre pour forcer GitHub à retourner du frais
+    const res = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/contents/logs.json?t=${Date.now()}`,
+      { headers: { Authorization: `token ${ghToken}`, Accept: 'application/vnd.github+json' } }
+    );
+    if (!res.ok) { if (status) status.textContent = `ERR ${res.status}`; return; }
+    const j = await res.json();
+    // Ne re-render que si le fichier a vraiment changé
+    if (j.sha === _lastLogsSha) return;
+    _lastLogsSha = j.sha;
+    logsData = JSON.parse(new TextDecoder('utf-8').decode(
+      Uint8Array.from(atob(j.content.replace(/\n/g,'')), c => c.charCodeAt(0))
+    ));
+    const last = logsData.length ? logsData[logsData.length-1] : null;
+    if (status && last) status.textContent = `LIVE · ${last.ts.replace('T',' ')}`;
+    renderLogs();
+  } catch(e) {
+    if (status) status.textContent = 'ERR';
+    console.error(e);
+  }
+}
+
+async function clearLogsView() {
+  if (!ghToken) return;
+  logsData = [];
+  _lastLogsSha = null;
+  renderLogs();
+  // Vide aussi le fichier sur GitHub
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/contents/logs.json?t=${Date.now()}`,
+      { headers: { Authorization: `token ${ghToken}`, Accept: 'application/vnd.github+json' } }
+    );
+    if (!res.ok) return;
+    const j = await res.json();
+    await fetch(
+      `https://api.github.com/repos/${GH_REPO}/contents/logs.json`,
+      {
+        method: 'PUT',
+        headers: { Authorization: `token ${ghToken}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: '[Logs] Clear',
+          content: btoa('[]'),
+          sha: j.sha
+        })
+      }
+    );
+  } catch(e) { console.error(e); }
+}
+
+// Auto-refresh toutes les 30s quand l'onglet Expert est actif
+function startLogsAutoRefresh() {
+  stopLogsAutoRefresh();
+  ghLoadLogs();
+  logsAutoRefresh = setInterval(ghLoadLogs, 5000);
+}
+function stopLogsAutoRefresh() {
+  if (logsAutoRefresh) { clearInterval(logsAutoRefresh); logsAutoRefresh = null; }
+}
 </script>
+
+<style>
+.log-line { white-space:pre-wrap; word-break:break-all; padding:1px 0; }
+.log-cursor { animation: blink 1s step-end infinite; color:#00ff41; }
+@keyframes blink { 50% { opacity:0; } }
+</style>
 </body>
 </html>

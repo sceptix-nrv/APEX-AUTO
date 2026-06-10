@@ -23,13 +23,101 @@ DESTINATAIRES = {
 # ── CONFIG GITHUB ─────────────────────────────────────────────────────────────
 try:
     from secret import GH_TOKEN
+    from secret import GROQ_KEY
 except ImportError:
-    GH_TOKEN = os.environ.get("GH_TOKEN", "")
+    GH_TOKEN  = os.environ.get("GH_TOKEN", "")
+    GROQ_KEY  = os.environ.get("GROQ_KEY", "")
 
 GH_REPO          = "sceptix-nrv/APEX-AUTO"
 GH_FILE_CONFIG   = "apexauto.json"
 GH_FILE_ANNONCES = "annonces.json"
 GH_FILE_MARCHE   = "marche.json"
+GH_FILE_LOGS     = "logs.json"
+GH_FILE_HISTO    = "historique.json"
+
+# ── LOGS ──────────────────────────────────────────────────────────────────────
+_logs          = []
+_sha_logs      = None
+_logs_dirty    = False   # True dès qu'un nouveau log est appended
+MAX_LOGS       = 300
+import threading
+
+
+def log(level, msg):
+    """level: SYS | SCAN | NET | OK | WARN | ERR | BOT"""
+    global _logs_dirty
+    entry = {
+        "ts":  datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+        "lvl": level,
+        "msg": msg,
+    }
+    _logs.append(entry)
+    _logs_dirty = True
+    tag = {"SYS": "[SYS]", "SCAN": "[SCAN]", "NET": "[NET]",
+           "OK": "[OK]", "WARN": "[WARN]", "ERR": "[ERR]", "BOT": "[BOT]"}.get(level, f"[{level}]")
+    print(f"  {tag} {msg}")
+
+
+def push_logs():
+    global _sha_logs, _logs_dirty
+    if not GH_TOKEN:
+        return
+    payload = _logs[-MAX_LOGS:]
+    content = base64.b64encode(
+        json.dumps(payload, indent=2, ensure_ascii=False).encode("utf-8")
+    ).decode("utf-8")
+    body = {"message": f"[Logs] {datetime.now().strftime('%d/%m %H:%M:%S')}", "content": content}
+    if _sha_logs:
+        body["sha"] = _sha_logs
+    for attempt in range(2):
+        try:
+            res = requests.put(
+                f"https://api.github.com/repos/{GH_REPO}/contents/{GH_FILE_LOGS}",
+                headers=_gh_headers(), json=body, timeout=15
+            )
+            if res.ok:
+                _sha_logs = res.json()["content"]["sha"]
+                _logs_dirty = False
+                return
+            elif res.status_code == 409 and attempt == 0:
+                # SHA désynchronisé (ex: clear depuis le site) — on re-fetch et on réessaie
+                r2 = requests.get(
+                    f"https://api.github.com/repos/{GH_REPO}/contents/{GH_FILE_LOGS}",
+                    headers=_gh_headers(), timeout=10
+                )
+                if r2.ok:
+                    _sha_logs = r2.json()["sha"]
+                    body["sha"] = _sha_logs
+            else:
+                print(f"  [Logs] Erreur push {res.status_code} : {res.text[:200]}")
+                return
+        except Exception as e:
+            print(f"  [Logs] Exception push : {e}")
+            return
+
+
+def _logs_pusher_thread():
+    """Pousse les logs sur GitHub toutes les 15s si de nouveaux logs existent."""
+    while True:
+        time.sleep(15)
+        if _logs_dirty:
+            push_logs()
+
+
+def _load_logs_sha():
+    global _sha_logs
+    try:
+        res = requests.get(
+            f"https://api.github.com/repos/{GH_REPO}/contents/{GH_FILE_LOGS}",
+            headers=_gh_headers(), timeout=10
+        )
+        if res.ok:
+            j = res.json()
+            _sha_logs = j["sha"]
+            existing  = json.loads(base64.b64decode(j["content"]).decode("utf-8"))
+            _logs.extend(existing[-MAX_LOGS:])
+    except Exception:
+        pass
 
 # ── CONFIG BOT ────────────────────────────────────────────────────────────────
 INTERVALLE_MINUTES = 10
@@ -46,7 +134,7 @@ VILLES = {
 FUEL_CODES  = {"diesel": "2", "essence": "1", "electrique": "3", "hybride": "5"}
 FUEL_LABELS = {"2": "diesel", "1": "essence", "3": "electrique", "5": "hybride"}
 
-_sha = {"config": None, "annonces": None, "marche": None}
+_sha = {"config": None, "annonces": None, "marche": None, "histo": None}
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -97,48 +185,68 @@ def _gh_put(file, data, sha_key, message):
 
 
 def charger_config():
-    data = _gh_load(GH_FILE_CONFIG, "config", {})
+    log("SYS", "Chargement config depuis GitHub...")
+    data    = _gh_load(GH_FILE_CONFIG, "config", {})
     actives = [r for r in data.get("recherches", []) if r.get("active", True)]
-    print(f"  [GitHub] {len(actives)} recherche(s) active(s)")
+    log("SYS", f"{len(actives)} recherche(s) active(s) chargee(s)")
     return actives
 
 
 def charger_annonces():
+    log("SYS", "Chargement index annonces...")
     return _gh_load(GH_FILE_ANNONCES, "annonces", [])
 
 
 def sauvegarder_annonces(annonces):
+    log("SYS", f"Sauvegarde annonces — {len(annonces)} entrees")
     _gh_put(GH_FILE_ANNONCES, annonces[-500:], "annonces",
             f"[Expert] {datetime.now().strftime('%d/%m %H:%M')}")
 
 
 def charger_marche():
+    log("SYS", "Chargement base marche...")
     return _gh_load(GH_FILE_MARCHE, "marche", [])
 
 
 def sauvegarder_marche(marche):
+    log("SYS", f"Sauvegarde marche — {len(marche)} entrees")
     _gh_put(GH_FILE_MARCHE, marche[-5000:], "marche",
             f"[Marche] {datetime.now().strftime('%d/%m %H:%M')}")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# HISTORIQUE LOCAL
+# HISTORIQUE — GitHub (+ fallback local pour compatibilité)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def charger_historique():
+    log("SYS", "Chargement historique annonces vues...")
+    ids = set()
+    # 1. Charge depuis GitHub
+    data = _gh_load(GH_FILE_HISTO, "histo", [])
+    ids.update(str(i) for i in data)
+    # 2. Fusionne avec le fichier local s'il existe (migration)
     if os.path.exists(FICHIER_HISTORIQUE):
-        with open(FICHIER_HISTORIQUE, "r", encoding="utf-8") as f:
-            try:
-                return set(json.load(f))
-            except Exception:
-                return set()
-    return set()
+        try:
+            with open(FICHIER_HISTORIQUE, "r", encoding="utf-8") as f:
+                local = json.load(f)
+                ids.update(str(i) for i in local)
+        except Exception:
+            pass
+    log("SYS", f"Historique : {len(ids)} annonces deja vues")
+    return ids
 
 
 def sauvegarder_historique(histo):
-    liste = list(histo)[-2000:]
-    with open(FICHIER_HISTORIQUE, "w", encoding="utf-8") as f:
-        json.dump(liste, f, indent=2)
+    liste = list(histo)[-5000:]
+    # Sauvegarde GitHub
+    _gh_put(GH_FILE_HISTO, liste, "histo",
+            f"[Histo] {datetime.now().strftime('%d/%m %H:%M')}")
+    # Sauvegarde locale (backup)
+    try:
+        with open(FICHIER_HISTORIQUE, "w", encoding="utf-8") as f:
+            json.dump(liste, f, indent=2)
+    except Exception:
+        pass
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -165,6 +273,7 @@ def construire_url(r):
 
 
 def scraper_url(driver, url, nom):
+    log("NET", f"GET {url[:80]}...")
     driver.get(url)
     try:
         WebDriverWait(driver, 20).until(
@@ -172,15 +281,15 @@ def scraper_url(driver, url, nom):
                 "return !!document.getElementById('__NEXT_DATA__')"
             )
         )
-        # Scroll humain sur la page de résultats
         time.sleep(random.uniform(1.5, 3))
         driver.execute_script("window.scrollTo({top: random.randint(200,600), behavior: 'smooth'})"
                               .replace("random.randint(200,600)", str(random.randint(200, 600))))
         time.sleep(random.uniform(1, 2))
+        log("NET", f"Page chargee — extraction __NEXT_DATA__")
     except Exception:
         with open("debug_lbc.html", "w", encoding="utf-8") as f:
             f.write(driver.page_source)
-        print(f"  [WARN] Timeout {nom} — voir debug_lbc.html")
+        log("WARN", f"Timeout sur '{nom}' — DataDome probable, dump HTML sauvegarde")
         return []
 
     try:
@@ -192,9 +301,10 @@ def scraper_url(driver, url, nom):
             props.get("searchData") or
             (props.get("hydrationData") or {}).get("searchData") or {}
         ).get("ads", [])
+        log("NET", f"Parsing OK — {len(ads)} annonce(s) brute(s) recues")
         return ads
     except Exception as e:
-        print(f"  [WARN] Parsing {nom} : {e}")
+        log("ERR", f"Parsing JSON echoue sur '{nom}' : {e}")
         return []
 
 
@@ -262,22 +372,64 @@ def envoyer_telegram(msg, chat_id):
             time.sleep(2)
 
 
-def formater_message(ad, nom, score):
-    attrs = _get_attrs(ad)
-    titre = ad.get("subject", "Sans titre")
-    prix  = ad.get("price", [None])[0] if ad.get("price") else "N/C"
-    lieu  = ad.get("location", {}).get("city", "")
-    lien  = f"https://www.leboncoin.fr/voitures/{ad.get('list_id', '')}.htm"
-    km    = f"{int(attrs['mileage']):,} km".replace(",", " ") if attrs.get("mileage") else "N/C"
-    annee = (attrs.get("regdate") or "")[:4] or "N/C"
-    sl    = score_label(score)
+FUEL_EMOJI = {"diesel": "🛢", "essence": "⛽", "electrique": "⚡", "hybride": "🔋"}
+
+def formater_message(ad, nom, score, ia=None):
+    attrs  = _get_attrs(ad)
+    titre  = ad.get("subject", "Sans titre")
+    prix   = ad.get("price", [None])[0] if ad.get("price") else None
+    lieu   = ad.get("location", {}).get("city", "")
+    cp     = ad.get("location", {}).get("zipcode", "")
+    lien   = f"https://www.leboncoin.fr/voitures/{ad.get('list_id', '')}.htm"
+    km     = f"{int(attrs['mileage']):,} km".replace(",", " ") if attrs.get("mileage") else "N/C"
+    annee  = (attrs.get("regdate") or "")[:4] or "N/C"
+    fuel_k = FUEL_LABELS.get(str(attrs.get("fuel", "")), "")
+    fuel_e = FUEL_EMOJI.get(fuel_k, "")
+    fuel_s = f"{fuel_e} {fuel_k.capitalize()}" if fuel_k else "N/C"
+    prix_s = f"{int(float(prix)):,} €".replace(",", " ") if prix else "N/C"
+
+    # Score
+    if score is None:
+        score_s = ""
+    elif score >= 20:
+        score_s = f"  🔥 *{score:+d}% vs marché*"
+    elif score >= 10:
+        score_s = f"  ✅ *{score:+d}% vs marché*"
+    elif score >= 0:
+        score_s = f"  〰️ {score:+d}% vs marché"
+    else:
+        score_s = f"  📈 {score:+d}% vs marché"
+
+    # Avis expert IA
+    if ia:
+        verdict  = ia.get("verdict", "OK")
+        avis     = ia.get("avis", "").strip()
+        fiab     = ia.get("fiabilite_moteur", "").strip()
+        if verdict == "ATTENTION":
+            redflag = (ia.get("redflag_detail") or "").strip()
+            ia_s  = f"⚠️ *Expert :* {redflag}\n💬 {avis}" if redflag else f"⚠️ *Expert :* {avis}"
+        else:
+            ia_s  = f"🧠 *Expert :* {avis}" if avis else "🧠 *Expert :* Pas d'infos suffisantes."
+        if fiab:
+            ia_s += f"\n🔧 *Moteur :* {fiab}"
+    else:
+        ia_s = "🧠 *Expert :* Analyse IA non disponible."
+
+    lieu_s = f"{lieu} ({cp[:2]})" if lieu and cp else lieu or "N/C"
+
     return (
-        f"*NOUVELLE ANNONCE - {nom}*\n\n"
-        f"*{titre}*\n"
-        f"Annee : {annee} | Ville : {lieu}\n"
-        f"Kilometrage : {km}\n"
-        f"Prix : *{prix} EUR*{sl}\n\n"
-        f"[Voir l'annonce]({lien})"
+        f"🚗 *{titre}*\n"
+        f"\n"
+        f"💰  *{prix_s}*{score_s}\n"
+        f"📅  {annee}   ·   🛣  {km}   ·   {fuel_s}\n"
+        f"📍  {lieu_s}\n"
+        f"\n"
+        f"━━━━━━━━━━━━━━━━━━━\n"
+        f"{ia_s}\n"
+        f"━━━━━━━━━━━━━━━━━━━\n"
+        f"\n"
+        f"🔍 _{nom}_\n"
+        f"👉 [Voir l'annonce]({lien})"
     )
 
 
@@ -285,7 +437,7 @@ def formater_message(ad, nom, score):
 # EXTRACTION
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def extraire_annonce(ad, nom, score):
+def extraire_annonce(ad, nom, score, ia=None):
     attrs = _get_attrs(ad)
     prix  = ad.get("price", [None])[0] if ad.get("price") else None
     an    = (attrs.get("regdate") or "")[:4]
@@ -297,10 +449,14 @@ def extraire_annonce(ad, nom, score):
         "annee":     an,
         "ville":     ad.get("location", {}).get("city", ""),
         "lien":      f"https://www.leboncoin.fr/voitures/{ad.get('list_id', '')}.htm",
-        "recherche": nom,
-        "score":     score,
-        "date":      datetime.now().isoformat(timespec="minutes"),
-        "statut":    "nouvelle",
+        "recherche":  nom,
+        "score":      score,
+        "date":       datetime.now().isoformat(timespec="minutes"),
+        "statut":     "nouvelle",
+        "ia_verdict": ia.get("verdict") if ia else None,
+        "ia_detail":  (ia.get("redflag_detail") or ia.get("raison_correspond", "")) if ia else None,
+        "ia_avis":    ia.get("avis", "") if ia else None,
+        "ia_moteur":  ia.get("fiabilite_moteur", "") if ia else None,
     }
 
 
@@ -323,20 +479,94 @@ def extraire_marche(ad, nom):
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
+# ANALYSE IA (Groq — gratuit, 14 400 req/jour, llama-3.1-8b-instant)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+GROQ_URL   = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_MODEL = "llama-3.1-8b-instant"
+
+PROMPT_ANALYSE = """Tu es un expert en achat de voitures d'occasion en France. Analyse cette annonce LeBonCoin comme un professionnel qui conseille un ami.
+
+Recherche : "{nom}" (mots-clés : {keywords})
+Titre : {titre}
+Description : {description}
+Prix : {prix} EUR | Kilométrage : {km} km | Année : {annee}
+
+Réponds UNIQUEMENT en JSON valide, sans markdown :
+{{"correspond": true/false, "raison_correspond": "...", "redflag": true/false, "redflag_detail": "...", "verdict": "OK", "avis": "...", "fiabilite_moteur": "..."}}
+
+Règles strictes :
+- "correspond" = le titre correspond EXACTEMENT au modèle recherché (cherche "206" → "207", "206+", "206 SW" = false)
+- "redflag" = true SEULEMENT si : moteur HS/changé, boîte cassée, accident grave non réparé, épave, papiers étrangers à refaire (allemands, belges, etc.)
+- Petites réparations (plaquettes, pneus, CT, révision) = PAS un redflag
+- "verdict" : "OK", "ATTENTION" ou "ELIMINER"
+- "avis" : commence TOUJOURS par une recommandation claire ("Je te conseille d'y aller", "À éviter", "Intéressant, négocie", "Fonce", "Méfie-toi", etc.) puis 1 phrase max sur les points clés de la description (distrib faite, CT ok, km cohérent, vendeur vague, carnet absent, etc.). Ton ami mécanicien direct. Si la description est vide, dis-le. NE PARLE PAS du modèle ou du titre, uniquement de l'état et des infos pratiques.
+- "fiabilite_moteur" : 1 à 2 phrases sur la fiabilité connue du moteur identifié dans l'annonce (ex: "Le 1.4 HDI est un moteur réputé très fiable et économique, peu de problèmes connus." ou "Le 1.6 THP est connu pour ses problèmes de distribution et de joints de culasse, surveille ça."). Si tu ne identifies pas le moteur précisément, donne un avis général sur la motorisation."""
+
+
+def analyser_annonce_ia(ad, r):
+    """Retourne dict avec correspond/redflag/verdict, ou None si IA indisponible."""
+    if not GROQ_KEY:
+        return None
+
+    attrs = _get_attrs(ad)
+    titre = ad.get("subject", "")
+    desc  = (ad.get("body") or "")[:500]
+    prix  = ad.get("price", [None])[0] if ad.get("price") else "?"
+    km    = attrs.get("mileage", "?")
+    annee = (attrs.get("regdate") or "")[:4] or "?"
+
+    prompt = PROMPT_ANALYSE.format(
+        nom=r.get("nom", ""), keywords=r.get("keywords", ""),
+        titre=titre, description=desc or "(aucune description)",
+        prix=prix, km=km, annee=annee,
+    )
+
+    for attempt in range(3):
+        try:
+            res = requests.post(
+                GROQ_URL,
+                headers={"Authorization": f"Bearer {GROQ_KEY}",
+                         "Content-Type": "application/json"},
+                json={"model": GROQ_MODEL, "temperature": 0.1,
+                      "messages": [{"role": "user", "content": prompt}],
+                      "response_format": {"type": "json_object"}},
+                timeout=15
+            )
+            if res.status_code == 429:
+                wait = 10 * (attempt + 1)
+                log("WARN", f"Groq rate limit — attente {wait}s ({attempt+1}/3)")
+                time.sleep(wait)
+                continue
+            if not res.ok:
+                log("WARN", f"Groq {res.status_code} : {res.text[:120]}")
+                return None
+            text = res.json()["choices"][0]["message"]["content"]
+            return json.loads(text)
+        except Exception as e:
+            log("WARN", f"Groq erreur : {e}")
+            return None
+    log("WARN", "Groq indisponible apres 3 tentatives")
+    return None
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
 # SCAN
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def scan():
     heure = datetime.now().hour
     if not (HEURE_DEBUT <= heure < HEURE_FIN):
-        print(f"[{datetime.now().strftime('%H:%M')}] Mode nuit.")
+        log("SYS", f"Mode nuit actif ({heure}h — plage {HEURE_DEBUT}h-{HEURE_FIN}h). Scan suspendu.")
+        push_logs()
         return
 
-    print(f"\n[{datetime.now().strftime('%H:%M')}] Scan en cours...")
+    log("SYS", f"=== CYCLE DE SCAN INITIE [{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] ===")
 
     recherches = charger_config()
     if not recherches:
-        print("  Aucune recherche active.")
+        log("WARN", "Aucune recherche active trouvee dans la config. Arret.")
+        push_logs()
         return
 
     historique          = charger_historique()
@@ -348,74 +578,113 @@ def scan():
     nouvelles_marche    = []
     total_new           = 0
 
-    driver = None
-    try:
-        opts = uc.ChromeOptions()
-        opts.add_argument("--window-size=1280,900")
-        opts.add_argument("--no-sandbox")
-        opts.add_argument("--disable-dev-shm-usage")
-        driver = uc.Chrome(options=opts, headless=False)
+    log("SYS", f"Base chargee — {len(historique)} vues | {len(annonces_existantes)} annonces | {len(marche)} entrees marche")
 
-        # Visite homepage pour établir la session DataDome
-        print("  Session LeBonCoin...", end=" ", flush=True)
-        driver.get("https://www.leboncoin.fr")
-        time.sleep(6)
-        # Scroll léger pour simuler une lecture humaine
-        driver.execute_script("window.scrollTo({top: 300, behavior: 'smooth'})")
-        time.sleep(2)
-        driver.execute_script("window.scrollTo({top: 0, behavior: 'smooth'})")
-        time.sleep(2)
-        print("OK")
+    for idx, r in enumerate(recherches):
+        nom = r.get("nom", "Recherche")
+        url = construire_url(r)
 
-        for r in recherches:
-            nom = r.get("nom", "Recherche")
-            url = construire_url(r)
-            print(f"  Scan : {nom}...", end=" ", flush=True)
+        if idx > 0:
+            pause = random.uniform(45, 90)
+            log("BOT", f"Pause anti-detection {int(pause)}s avant prochaine session Chrome...")
+            time.sleep(pause)
 
-            try:
-                annonces  = scraper_url(driver, url, nom)
-                valides   = [ad for ad in annonces if annonce_valide(ad, r)]
-                tous_prix = [float(ad["price"][0]) for ad in valides
-                             if ad.get("price") and ad["price"][0]]
+        log("SCAN", f"--- Recherche [{idx+1}/{len(recherches)}] : {nom} ---")
 
-                for ad in valides:
-                    ad_id = str(ad.get("list_id", ""))
-                    if ad_id and ad_id not in ids_marche:
-                        nouvelles_marche.append(extraire_marche(ad, nom))
-                        ids_marche.add(ad_id)
+        driver = None
+        try:
+            w = random.randint(1200, 1400)
+            h = random.randint(800, 1000)
+            log("BOT", f"Lancement Chrome stealth — viewport {w}x{h}")
+            opts = uc.ChromeOptions()
+            opts.add_argument(f"--window-size={w},{h}")
+            opts.add_argument("--no-sandbox")
+            opts.add_argument("--disable-dev-shm-usage")
+            driver = uc.Chrome(options=opts, headless=False)
 
-                nouvelles = 0
-                for ad in reversed(valides):
-                    ad_id = str(ad.get("list_id", ""))
-                    if not ad_id or ad_id in historique:
-                        continue
-                    prix  = ad.get("price", [None])[0] if ad.get("price") else None
-                    score = calculer_score(prix, tous_prix)
-                    dest  = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
-                    envoyer_telegram(formater_message(ad, nom, score), dest)
-                    historique.add(ad_id)
-                    if ad_id not in ids_annonces:
-                        nouvelles_annonces.append(extraire_annonce(ad, nom, score))
-                        ids_annonces.add(ad_id)
-                    nouvelles += 1
-                    total_new += 1
+            log("BOT", "Navigation homepage LeBonCoin — etablissement session...")
+            driver.get("https://www.leboncoin.fr")
+            t_home = random.uniform(5, 8)
+            time.sleep(t_home)
+            scroll_y = random.randint(100, 400)
+            driver.execute_script(f"window.scrollTo({{top: {scroll_y}, behavior: 'smooth'}})")
+            time.sleep(random.uniform(2, 4))
+            driver.execute_script("window.scrollTo({top: 0, behavior: 'smooth'})")
+            time.sleep(random.uniform(1, 3))
+            log("BOT", f"Session etablie ({t_home:.1f}s, scroll {scroll_y}px) — fingerprint OK")
 
-                print(f"{len(annonces)} scannees, {nouvelles} nouvelle(s)")
+            annonces  = scraper_url(driver, url, nom)
+            valides   = [ad for ad in annonces if annonce_valide(ad, r)]
+            tous_prix = [float(ad["price"][0]) for ad in valides
+                         if ad.get("price") and ad["price"][0]]
 
-            except Exception as e:
-                print(f"Erreur : {e}")
+            log("SCAN", f"{len(annonces)} brutes → {len(valides)} correspondent aux criteres")
+            if tous_prix:
+                median = sorted(tous_prix)[len(tous_prix) // 2]
+                log("SCAN", f"Prix marche : min {int(min(tous_prix))}€ | median {int(median)}€ | max {int(max(tous_prix))}€")
 
-            # Pause humaine entre chaque recherche
-            time.sleep(random.uniform(15, 25))
+            for ad in valides:
+                ad_id = str(ad.get("list_id", ""))
+                if ad_id and ad_id not in ids_marche:
+                    nouvelles_marche.append(extraire_marche(ad, nom))
+                    ids_marche.add(ad_id)
 
-    except Exception as e:
-        print(f"  Erreur navigateur : {e}")
-    finally:
-        if driver:
-            try:
-                driver.quit()
-            except Exception:
-                pass
+            nouvelles = 0
+            for ad in reversed(valides):
+                ad_id = str(ad.get("list_id", ""))
+                if not ad_id or ad_id in historique:
+                    continue
+                prix  = ad.get("price", [None])[0] if ad.get("price") else None
+                score = calculer_score(prix, tous_prix)
+                titre = ad.get("subject", "?")[:50]
+
+                # ── Analyse IA ────────────────────────────────────────────────
+                ia = None
+                if GROQ_KEY:
+                    log("SYS", f"Analyse IA : {titre[:40]}...")
+                    ia = analyser_annonce_ia(ad, r)
+                    if ia:
+                        verdict = ia.get("verdict", "OK")
+                        if not ia.get("correspond", True):
+                            log("WARN", f"IA ELIMINE (modele) : {titre[:40]} — {ia.get('raison_correspond','')}")
+                            historique.add(ad_id)   # on ne veut plus le revoir
+                            continue
+                        if ia.get("redflag", False):
+                            log("WARN", f"IA REDFLAG : {titre[:40]} — {ia.get('redflag_detail','')}")
+                            historique.add(ad_id)
+                            continue
+                        if verdict == "ATTENTION":
+                            log("WARN", f"IA ATTENTION : {titre[:40]} — {ia.get('redflag_detail','')}")
+                        else:
+                            log("OK", f"IA OK : {titre[:40]}")
+
+                # ── Telegram ──────────────────────────────────────────────────
+                dest = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
+                envoyer_telegram(formater_message(ad, nom, score, ia), dest)
+                historique.add(ad_id)
+                score_str = f" | score {score:+d}%" if score is not None else ""
+                log("OK", f"NOUVELLE : [{ad_id}] {titre} — {prix}€{score_str} → Telegram envoye")
+                if ad_id not in ids_annonces:
+                    nouvelles_annonces.append(extraire_annonce(ad, nom, score, ia))
+                    ids_annonces.add(ad_id)
+                nouvelles += 1
+                total_new += 1
+
+            if nouvelles == 0:
+                log("SCAN", f"Aucune nouvelle annonce — {len(valides)} deja connues")
+            else:
+                log("OK", f"{nouvelles} alerte(s) envoyee(s) pour '{nom}'")
+
+        except Exception as e:
+            log("ERR", f"Exception sur '{nom}' : {e}")
+        finally:
+            if driver:
+                try:
+                    driver.quit()
+                    log("BOT", "Session Chrome fermee proprement")
+                    time.sleep(2)
+                except Exception:
+                    log("WARN", "Fermeture Chrome forcee")
 
     sauvegarder_historique(historique)
 
@@ -426,9 +695,10 @@ def scan():
     if nouvelles_marche:
         marche.extend(nouvelles_marche)
         sauvegarder_marche(marche)
-        print(f"  [Marche] +{len(nouvelles_marche)} entrees ({len(marche)} total)")
+        log("SYS", f"Base marche mise a jour +{len(nouvelles_marche)} entrees ({len(marche)} total)")
 
-    print(f"Termine - {total_new} nouvelle(s) annonce(s).")
+    log("SYS", f"=== SCAN TERMINE — {total_new} nouvelle(s) | prochain cycle dans {INTERVALLE_MINUTES} min ===")
+    push_logs()
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -438,6 +708,11 @@ def scan():
 def main():
     print("Expert LeBonCoin demarre !")
     print(f"Intervalle : {INTERVALLE_MINUTES} min | Plage : {HEURE_DEBUT}h-{HEURE_FIN}h\n")
+    _load_logs_sha()
+    log("SYS", f"=== APEX AUTO EXPERT DEMARRE — v2 — intervalle {INTERVALLE_MINUTES}min ===")
+    # Thread de push continu (toutes les 15s)
+    t = threading.Thread(target=_logs_pusher_thread, daemon=True)
+    t.start()
     scan()
     while True:
         time.sleep(INTERVALLE_MINUTES * 60)
