@@ -24,6 +24,18 @@
       "ville": "nancy",
       "destinataire": "steven",
       "active": true
+    },
+    {
+      "id": "mq7tve6upwgunk8jnkq",
+      "nom": "206 chère",
+      "keywords": "206",
+      "prix_max": 8000,
+      "km_max": null,
+      "fuel": "",
+      "rayon": 100,
+      "ville": "nancy",
+      "destinataire": "steven",
+      "active": true
     }
   ],
   "initialized": true
