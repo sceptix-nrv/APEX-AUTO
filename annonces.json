@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": "3214094006",
+    "titre": "Peugeot 206+ 1.4 HDi Basis CT OK",
+    "prix": 4899.0,
+    "km": 138000,
+    "annee": 2011,
+    "carburant": "diesel",
+    "ville": "Bousse",
+    "cp": "57310",
+    "lien": "https://www.leboncoin.fr/voitures/3214094006.htm",
+    "recherche": "Peugeot 206",
+    "ia_correspond": true,
+    "ia_redflag": false,
+    "ia_verdict": "OK",
+    "ia_avis": "Fonce, le prix est raisonnable pour un véhicule de cette année et de ce kilométrage",
+    "ia_fiabilite": "Le moteur 1.4 HDi est connu pour être fiable, mais il est important de vérifier les conditions d'utilisation et les entretiens effectués",
+    "ia_note": 7,
+    "date": "2026-06-10T20:54:10"
+  },
+  {
+    "id": "3213973256",
+    "titre": "206 HDI 4 chevaux",
+    "prix": 4000.0,
+    "km": 114000,
+    "annee": 2005,
+    "carburant": "diesel",
+    "ville": "Conflans-sur-Lanterne",
+    "cp": "70800",
+    "lien": "https://www.leboncoin.fr/voitures/3213973256.htm",
+    "recherche": "Peugeot 206",
+    "ia_correspond": true,
+    "ia_redflag": false,
+    "ia_verdict": "OK",
+    "ia_avis": "Fonce, le prix est raisonnable pour un véhicule de cette année et ce kilométrage.",
+    "ia_fiabilite": "Le moteur HDI est généralement fiable, mais il est important de vérifier l'état du moteur avant d'acheter.",
+    "ia_note": 6,
+    "date": "2026-06-10T20:54:15"
+  }
+]
