@@ -1,7 +1,7 @@
 {
-  "etat": "sauvegarde",
-  "label": "💾 Sauvegarde",
-  "color": "#f59e0b",
-  "detail": "annonces.json",
-  "ts": "10/06 20:54:15"
+  "etat": "attente",
+  "label": "⏳ En attente",
+  "color": "#7e7fa8",
+  "detail": "Prochain scan dans 10min",
+  "ts": "10/06 20:54:17"
 }
