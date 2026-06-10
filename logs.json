@@ -878,5 +878,45 @@
     "ts": "2026-06-10T17:35:38",
     "lvl": "OK",
     "msg": "IA OK : Peugeot 206 1.1 POP ART 3P"
+  },
+  {
+    "ts": "2026-06-10T17:35:39",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3140645307] Peugeot 206 1.1 POP ART 3P — 2990€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:35:39",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206+ commercial..."
+  },
+  {
+    "ts": "2026-06-10T17:35:40",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T17:35:51",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 206+ commercial — Le titre mentionne '206+' qui n'est pas exactement le modèle recherché"
+  },
+  {
+    "ts": "2026-06-10T17:35:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206+ 1.1 60cv trendy..."
+  },
+  {
+    "ts": "2026-06-10T17:35:52",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot 206+ 1.1 60cv trendy — Le modèle recherché est le 206, mais l'annonce mentionne un 206+"
+  },
+  {
+    "ts": "2026-06-10T17:35:52",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 HDI 4 chevaux..."
+  },
+  {
+    "ts": "2026-06-10T17:35:53",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
