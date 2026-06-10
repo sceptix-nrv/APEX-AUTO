@@ -273,5 +273,145 @@
     "ts": "2026-06-10T10:36:38",
     "lvl": "SYS",
     "msg": "Analyse IA : 206.1.9d..."
+  },
+  {
+    "ts": "2026-06-10T10:36:39",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:40",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:40",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
+  },
+  {
+    "ts": "2026-06-10T10:36:41",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:42",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +28% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:42",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1,9D 172 000 km..."
+  },
+  {
+    "ts": "2026-06-10T10:36:43",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:44",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +44% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:44",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo faible kilométrage contrô..."
+  },
+  {
+    "ts": "2026-06-10T10:36:45",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:46",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3211663592] Renault Twingo faible kilométrage contrôle techniq — 2990€ | score -66% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:46",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 2l HDI..."
+  },
+  {
+    "ts": "2026-06-10T10:36:46",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:47",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:47",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T10:36:48",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:49",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213643613] 2007 Peugeot 206 1.4 hdi — 1500€ | score +17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:49",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
+  },
+  {
+    "ts": "2026-06-10T10:36:50",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:51",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3196725466] Peugeot206/Ford Ka /Fiesta/Chevrolet matiz /seat — 2490€ | score -38% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 + 1.4 hdi 70cv contrôle tech..."
+  },
+  {
+    "ts": "2026-06-10T10:36:51",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:52",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3205041448] Peugeot 206 + 1.4 hdi 70cv contrôle technique ok — 1690€ | score +6% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:52",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+..."
+  },
+  {
+    "ts": "2026-06-10T10:36:53",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:54",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213706241] 206+ — 2500€ | score -39% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:54",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206..."
+  },
+  {
+    "ts": "2026-06-10T10:36:55",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
   }
 ]
