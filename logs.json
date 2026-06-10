@@ -103,5 +103,160 @@
     "ts": "2026-06-10T10:58:38",
     "lvl": "SYS",
     "msg": "Analyse IA : Suzuki swift new 1.3 glx 5 portes..."
+  },
+  {
+    "ts": "2026-06-10T10:58:39",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le 206, mais l'annonce concerne un Suzuki Swift."
+  },
+  {
+    "ts": "2026-06-10T10:58:39",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T10:58:40",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T10:58:41",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score -67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:41",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1.4i..."
+  },
+  {
+    "ts": "2026-06-10T10:58:42",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 1.4i"
+  },
+  {
+    "ts": "2026-06-10T10:58:43",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213322986] Peugeot 206 1.4i — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:43",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1,4 essence de 2001..."
+  },
+  {
+    "ts": "2026-06-10T10:58:44",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 1,4 essence de 2001"
+  },
+  {
+    "ts": "2026-06-10T10:58:44",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213324581] Peugeot 206 1,4 essence de 2001 — 700€ | score +61% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:44",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T10:58:45",
+    "lvl": "OK",
+    "msg": "IA OK : 206 1.4 hdi"
+  },
+  {
+    "ts": "2026-06-10T10:58:46",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:46",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Clio 3 1l2 tce..."
+  },
+  {
+    "ts": "2026-06-10T10:58:47",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Clio 3 1l2 tce — Le modèle recherché est 206, mais l'annonce correspond à un Clio 3"
+  },
+  {
+    "ts": "2026-06-10T10:58:47",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+ ct ok pack clim..."
+  },
+  {
+    "ts": "2026-06-10T10:58:48",
+    "lvl": "OK",
+    "msg": "IA OK : 206+ ct ok pack clim"
+  },
+  {
+    "ts": "2026-06-10T10:58:48",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213409974] 206+ ct ok pack clim — 2000€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:48",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Renault Twingo II GT 1.2 TCE 101 cv..."
+  },
+  {
+    "ts": "2026-06-10T10:58:49",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Renault Twingo II GT 1.2 TCE 101 cv — Le modèle recherché est le 206, mais l'annonce concerne un Renault Twingo II"
+  },
+  {
+    "ts": "2026-06-10T10:58:49",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1.6 110 xt entretien a jour..."
+  },
+  {
+    "ts": "2026-06-10T10:58:50",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 1.6 110 xt entretien a jour"
+  },
+  {
+    "ts": "2026-06-10T10:58:51",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3207257169] Peugeot 206 1.6 110 xt entretien a jour — 2890€ | score -61% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T10:58:52",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T10:58:52",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:52",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206.1.9d..."
+  },
+  {
+    "ts": "2026-06-10T10:58:53",
+    "lvl": "OK",
+    "msg": "IA OK : 206.1.9d"
+  },
+  {
+    "ts": "2026-06-10T10:58:54",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:58:54",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
+  },
+  {
+    "ts": "2026-06-10T10:58:55",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 3portes 1.4HDI Eco"
   }
 ]
