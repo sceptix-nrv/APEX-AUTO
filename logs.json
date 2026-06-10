@@ -1228,5 +1228,75 @@
     "ts": "2026-06-10T10:53:57",
     "lvl": "OK",
     "msg": "NOUVELLE : [3205967687] 206cc Roland garos — 3200€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:01",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3170473007] RENAULT TWINGO 1L2i campus 60ch direction assistée — 3690€ | score -28% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:02",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3133428220] Bmw X1 (E84) XDRIVE18D 143CH LUXE — 6990€ | score -99% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:02",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3202916341] Peugeot 206+ 1.4 HDi Blue Lion 68cv — 3499€ | score -21% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:03",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213633886] Bêle Peugeot 206 1.6 16V 110cv — 3500€ | score -21% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:07",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [2625078704] Peugeot 206 CC 1.6 16V SPORT — 3990€ | score -38% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:07",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213758303] Peugeot 206+ / 3 portes / 1.4 75cv / édition pop a — 3300€ | score -14% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:08",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3205818422] Peugeot 206 Plus 1.4I 75CV / Garantie — 3490€ | score -21% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:09",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3147703144] Citroën DS3 1.6 THP 16V 206 cv Racing — 7990€ | score -99% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:54:09",
+    "lvl": "OK",
+    "msg": "11 alerte(s) envoyee(s) pour '206 chère'"
+  },
+  {
+    "ts": "2026-06-10T10:54:09",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T10:54:13",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 32 entrees"
+  },
+  {
+    "ts": "2026-06-10T10:54:14",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 35 entrees"
+  },
+  {
+    "ts": "2026-06-10T10:54:15",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +11 entrees (35 total)"
+  },
+  {
+    "ts": "2026-06-10T10:54:15",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 11 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
