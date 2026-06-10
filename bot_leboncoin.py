@@ -1,4 +1,4 @@
-import asyncio
+# -*- coding: utf-8 -*-
 import base64
 import json
 import os
@@ -6,9 +6,12 @@ import time
 from datetime import datetime
 
 import requests
-from camoufox.async_api import AsyncCamoufox
+import undetected_chromedriver as uc
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
-# ── CONFIG TELEGRAM ──────────────────────────────────────────────────────────
+# ── CONFIG TELEGRAM ───────────────────────────────────────────────────────────
 TELEGRAM_TOKEN = "8631165512:AAFtYjnanMCsF_SCwXd_8VEeNX31xM9x5UY"
 
 DESTINATAIRES = {
@@ -42,7 +45,6 @@ VILLES = {
 FUEL_CODES  = {"diesel": "2", "essence": "1", "electrique": "3", "hybride": "5"}
 FUEL_LABELS = {"2": "diesel", "1": "essence", "3": "electrique", "5": "hybride"}
 
-# ── ÉTAT GLOBAL (SHA pour éviter les conflits GitHub) ────────────────────────
 _sha = {"config": None, "annonces": None, "marche": None}
 
 
@@ -54,32 +56,12 @@ def _gh_headers():
     return {"Authorization": f"token {GH_TOKEN}", "Accept": "application/vnd.github+json"}
 
 
-def _gh_get(file):
-    return requests.get(
-        f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
-        headers=_gh_headers(), timeout=10
-    )
-
-
-def _gh_put(file, data, sha_key, message):
-    content = base64.b64encode(
-        json.dumps(data, indent=2, ensure_ascii=False).encode("utf-8")
-    ).decode("utf-8")
-    body = {"message": message, "content": content}
-    if _sha[sha_key]:
-        body["sha"] = _sha[sha_key]
-    res = requests.put(
-        f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
-        headers=_gh_headers(), json=body, timeout=15
-    )
-    if res.ok:
-        _sha[sha_key] = res.json()["content"]["sha"]
-    return res
-
-
 def _gh_load(file, sha_key, default):
     try:
-        res = _gh_get(file)
+        res = requests.get(
+            f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
+            headers=_gh_headers(), timeout=10
+        )
         if res.status_code == 404:
             return default
         if not res.ok:
@@ -93,10 +75,29 @@ def _gh_load(file, sha_key, default):
         return default
 
 
+def _gh_put(file, data, sha_key, message):
+    content = base64.b64encode(
+        json.dumps(data, indent=2, ensure_ascii=False).encode("utf-8")
+    ).decode("utf-8")
+    body = {"message": message, "content": content}
+    if _sha[sha_key]:
+        body["sha"] = _sha[sha_key]
+    try:
+        res = requests.put(
+            f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
+            headers=_gh_headers(), json=body, timeout=15
+        )
+        if res.ok:
+            _sha[sha_key] = res.json()["content"]["sha"]
+        else:
+            print(f"  [GitHub] Erreur sauvegarde {file} : {res.status_code}")
+    except Exception as e:
+        print(f"  [GitHub] Erreur sauvegarde {file} : {e}")
+
+
 def charger_config():
     data = _gh_load(GH_FILE_CONFIG, "config", {})
-    recherches = data.get("recherches", [])
-    actives = [r for r in recherches if r.get("active", True)]
+    actives = [r for r in data.get("recherches", []) if r.get("active", True)]
     print(f"  [GitHub] {len(actives)} recherche(s) active(s)")
     return actives
 
@@ -106,12 +107,8 @@ def charger_annonces():
 
 
 def sauvegarder_annonces(annonces):
-    if len(annonces) > 500:
-        annonces = annonces[-500:]
-    res = _gh_put(GH_FILE_ANNONCES, annonces, "annonces",
-                  f"[Expert] {datetime.now().strftime('%d/%m %H:%M')}")
-    if not res.ok:
-        print(f"  [GitHub] Erreur sauvegarde annonces : {res.status_code}")
+    _gh_put(GH_FILE_ANNONCES, annonces[-500:], "annonces",
+            f"[Expert] {datetime.now().strftime('%d/%m %H:%M')}")
 
 
 def charger_marche():
@@ -119,10 +116,8 @@ def charger_marche():
 
 
 def sauvegarder_marche(marche):
-    if len(marche) > 5000:
-        marche = marche[-5000:]
-    _gh_put(GH_FILE_MARCHE, marche, "marche",
-            f"[Marché] {datetime.now().strftime('%d/%m %H:%M')}")
+    _gh_put(GH_FILE_MARCHE, marche[-5000:], "marche",
+            f"[Marche] {datetime.now().strftime('%d/%m %H:%M')}")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -140,28 +135,24 @@ def charger_historique():
 
 
 def sauvegarder_historique(histo):
-    liste = list(histo)
-    if len(liste) > 2000:
-        liste = liste[-2000:]
+    liste = list(histo)[-2000:]
     with open(FICHIER_HISTORIQUE, "w", encoding="utf-8") as f:
         json.dump(liste, f, indent=2)
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# LEBONCOIN — URL
+# LEBONCOIN
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def construire_url(r):
     ville   = VILLES.get(r.get("ville", "nancy"), VILLES["nancy"])
     rayon_m = int(r.get("rayon", 100)) * 1000
     location = f"{ville['nom']}__{ville['lat']}_{ville['lng']}_0_{rayon_m}"
-
     params = [
         "category=2",
         f"text={requests.utils.quote(r.get('keywords', ''))}",
         f"locations={location}",
-        "sort=time",
-        "order=desc",
+        "sort=time", "order=desc",
     ]
     if r.get("prix_max"):
         params.append(f"price=max-{int(r['prix_max'])}")
@@ -169,13 +160,38 @@ def construire_url(r):
         params.append(f"mileage=max-{int(r['km_max'])}")
     if r.get("fuel") and r["fuel"] in FUEL_CODES:
         params.append(f"fuel={FUEL_CODES[r['fuel']]}")
-
     return "https://www.leboncoin.fr/recherche?" + "&".join(params)
 
 
-# ═══════════════════════════════════════════════════════════════════════════════
-# LEBONCOIN — SCRAPING
-# ═══════════════════════════════════════════════════════════════════════════════
+def scraper_url(driver, url, nom):
+    driver.get(url)
+    try:
+        WebDriverWait(driver, 20).until(
+            lambda d: d.execute_script(
+                "return !!document.getElementById('__NEXT_DATA__')"
+            )
+        )
+        time.sleep(1)
+    except Exception:
+        with open("debug_lbc.html", "w", encoding="utf-8") as f:
+            f.write(driver.page_source)
+        print(f"  [WARN] Timeout {nom} — voir debug_lbc.html")
+        return []
+
+    try:
+        raw = driver.execute_script(
+            "return JSON.parse(document.getElementById('__NEXT_DATA__').textContent)"
+        )
+        props = raw.get("props", {}).get("pageProps", {})
+        ads = (
+            props.get("searchData") or
+            (props.get("hydrationData") or {}).get("searchData") or {}
+        ).get("ads", [])
+        return ads
+    except Exception as e:
+        print(f"  [WARN] Parsing {nom} : {e}")
+        return []
+
 
 def _get_attrs(ad):
     result = {}
@@ -190,131 +206,90 @@ def _get_attrs(ad):
 def annonce_valide(ad, r):
     attrs = _get_attrs(ad)
     prix  = ad.get("price", [None])[0]
-
-    if r.get("prix_max") and prix is not None:
-        if float(prix) > r["prix_max"]:
-            return False
+    if r.get("prix_max") and prix and float(prix) > r["prix_max"]:
+        return False
     km = attrs.get("mileage")
-    if r.get("km_max") and km is not None:
-        if int(km) > r["km_max"]:
-            return False
+    if r.get("km_max") and km and int(km) > r["km_max"]:
+        return False
     fuel = attrs.get("fuel")
-    if r.get("fuel") and r["fuel"] and fuel is not None:
+    if r.get("fuel") and r["fuel"] and fuel:
         if FUEL_LABELS.get(str(fuel), "") != r["fuel"]:
             return False
     return True
 
 
-async def scraper_page(page, url, nom):
-    try:
-        await page.goto(url, wait_until="networkidle", timeout=35000)
-        await page.wait_for_timeout(2500)
-    except Exception as e:
-        print(f"\n  [WARN] Navigation ({nom}) : {e}")
-
-    next_data = await page.evaluate("""
-        () => {
-            const el = document.getElementById('__NEXT_DATA__');
-            if (!el) return null;
-            try { return JSON.parse(el.textContent); } catch { return null; }
-        }
-    """)
-
-    if not next_data:
-        # Sauvegarder pour diagnostic
-        html = await page.content()
-        with open("debug_lbc.html", "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"  [WARN] Pas de données pour {nom} — voir debug_lbc.html")
-        return []
-
-    try:
-        props = next_data.get("props", {}).get("pageProps", {})
-        ads   = (props.get("searchData") or props.get("hydrationData", {}).get("searchData") or {}).get("ads", [])
-        return ads
-    except Exception as e:
-        print(f"  [WARN] Parsing ({nom}) : {e}")
-        return []
-
-
 # ═══════════════════════════════════════════════════════════════════════════════
-# SCORE D'OPPORTUNITÉ
+# SCORE
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def calculer_score(prix, tous_prix):
     if not tous_prix or len(tous_prix) < 2 or prix is None:
         return None
     median = sorted(tous_prix)[len(tous_prix) // 2]
-    if median == 0:
+    if not median:
         return None
     return max(-99, min(99, round((median - float(prix)) / median * 100)))
 
 
 def score_label(score):
-    if score is None:         return ""
-    if score >= 20:           return f"🟢 Excellente affaire ({score:+d}% vs marché)"
-    if score >= 10:           return f"🔵 Bonne affaire ({score:+d}% vs marché)"
-    if score >= 0:            return f"🟠 Prix correct ({score:+d}% vs marché)"
-    return                           f"🔴 Surévalué ({score:+d}% vs marché)"
+    if score is None:  return ""
+    if score >= 20:    return f"\n{chr(55356)}{chr(57056)} Excellente affaire ({score:+d}% vs marche)"
+    if score >= 10:    return f"\n{chr(55357)}{chr(56320)} Bonne affaire ({score:+d}% vs marche)"
+    if score >= 0:     return f"\n{chr(55356)}{chr(57104)} Prix correct ({score:+d}% vs marche)"
+    return                    f"\n{chr(55356)}{chr(57088)} Surevalue ({score:+d}% vs marche)"
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TELEGRAM
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def envoyer_telegram(message, chat_id):
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+def envoyer_telegram(msg, chat_id):
     for _ in range(3):
         try:
-            requests.post(url, json={
-                "chat_id": chat_id,
-                "text": message,
-                "parse_mode": "Markdown",
-                "disable_web_page_preview": False,
-            }, timeout=10)
+            requests.post(
+                f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage",
+                json={"chat_id": chat_id, "text": msg,
+                      "parse_mode": "Markdown", "disable_web_page_preview": False},
+                timeout=10
+            )
             return
         except Exception:
             time.sleep(2)
 
 
 def formater_message(ad, nom, score):
-    attrs  = _get_attrs(ad)
-    ad_id  = str(ad.get("list_id", ""))
-    titre  = ad.get("subject", "Sans titre")
-    prix   = ad.get("price", [None])[0] if ad.get("price") else "N/C"
-    lieu   = ad.get("location", {}).get("city", "")
-    lien   = f"https://www.leboncoin.fr/voitures/{ad_id}.htm"
-    km_raw = attrs.get("mileage")
-    an_raw = attrs.get("regdate", "")
-    km     = f"{int(km_raw):,} km".replace(",", " ") if km_raw else "N/C"
-    annee  = an_raw[:4] if an_raw else "N/C"
-    sl     = f"\n{score_label(score)}" if score is not None else ""
-
+    attrs = _get_attrs(ad)
+    titre = ad.get("subject", "Sans titre")
+    prix  = ad.get("price", [None])[0] if ad.get("price") else "N/C"
+    lieu  = ad.get("location", {}).get("city", "")
+    lien  = f"https://www.leboncoin.fr/voitures/{ad.get('list_id', '')}.htm"
+    km    = f"{int(attrs['mileage']):,} km".replace(",", " ") if attrs.get("mileage") else "N/C"
+    annee = (attrs.get("regdate") or "")[:4] or "N/C"
+    sl    = score_label(score)
     return (
-        f"*NOUVELLE ANNONCE — {nom}*\n\n"
+        f"*NOUVELLE ANNONCE - {nom}*\n\n"
         f"*{titre}*\n"
-        f"Année : {annee} | Ville : {lieu}\n"
-        f"Kilométrage : {km}\n"
-        f"Prix : *{prix} €*{sl}\n\n"
+        f"Annee : {annee} | Ville : {lieu}\n"
+        f"Kilometrage : {km}\n"
+        f"Prix : *{prix} EUR*{sl}\n\n"
         f"[Voir l'annonce]({lien})"
     )
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# EXTRACTION DONNÉES
+# EXTRACTION
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def extraire_annonce(ad, nom, score):
-    attrs  = _get_attrs(ad)
-    prix   = ad.get("price", [None])[0] if ad.get("price") else None
-    km_raw = attrs.get("mileage")
-    an_raw = attrs.get("regdate", "")
+    attrs = _get_attrs(ad)
+    prix  = ad.get("price", [None])[0] if ad.get("price") else None
+    an    = (attrs.get("regdate") or "")[:4]
     return {
         "id":        str(ad.get("list_id", "")),
         "titre":     ad.get("subject", ""),
         "prix":      float(prix) if prix else None,
-        "km":        int(km_raw) if km_raw else None,
-        "annee":     an_raw[:4] if an_raw else "",
+        "km":        int(attrs["mileage"]) if attrs.get("mileage") else None,
+        "annee":     an,
         "ville":     ad.get("location", {}).get("city", ""),
         "lien":      f"https://www.leboncoin.fr/voitures/{ad.get('list_id', '')}.htm",
         "recherche": nom,
@@ -325,16 +300,15 @@ def extraire_annonce(ad, nom, score):
 
 
 def extraire_marche(ad, nom):
-    attrs  = _get_attrs(ad)
-    prix   = ad.get("price", [None])[0] if ad.get("price") else None
-    km_raw = attrs.get("mileage")
-    an_raw = attrs.get("regdate", "")
+    attrs = _get_attrs(ad)
+    prix  = ad.get("price", [None])[0] if ad.get("price") else None
+    an    = (attrs.get("regdate") or "")[:4]
     return {
         "id":        str(ad.get("list_id", "")),
         "titre":     ad.get("subject", ""),
         "prix":      float(prix) if prix else None,
-        "km":        int(km_raw) if km_raw else None,
-        "annee":     int(an_raw[:4]) if an_raw and len(an_raw) >= 4 else None,
+        "km":        int(attrs["mileage"]) if attrs.get("mileage") else None,
+        "annee":     int(an) if an else None,
         "carburant": FUEL_LABELS.get(str(attrs.get("fuel", "")), ""),
         "ville":     ad.get("location", {}).get("city", ""),
         "cp":        ad.get("location", {}).get("zipcode", ""),
@@ -344,13 +318,13 @@ def extraire_marche(ad, nom):
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# SCAN PRINCIPAL
+# SCAN
 # ═══════════════════════════════════════════════════════════════════════════════
 
-async def scan():
+def scan():
     heure = datetime.now().hour
     if not (HEURE_DEBUT <= heure < HEURE_FIN):
-        print(f"[{datetime.now().strftime('%H:%M')}] Mode nuit — expert en pause.")
+        print(f"[{datetime.now().strftime('%H:%M')}] Mode nuit.")
         return
 
     print(f"\n[{datetime.now().strftime('%H:%M')}] Scan en cours...")
@@ -360,69 +334,77 @@ async def scan():
         print("  Aucune recherche active.")
         return
 
-    historique         = charger_historique()
+    historique          = charger_historique()
     annonces_existantes = charger_annonces()
-    marche             = charger_marche()
-    ids_annonces       = {a["id"] for a in annonces_existantes}
-    ids_marche         = {a["id"] for a in marche}
-    nouvelles_annonces = []
-    nouvelles_marche   = []
-    total_new          = 0
+    marche              = charger_marche()
+    ids_annonces        = {a["id"] for a in annonces_existantes}
+    ids_marche          = {a["id"] for a in marche}
+    nouvelles_annonces  = []
+    nouvelles_marche    = []
+    total_new           = 0
 
-    async with AsyncCamoufox(headless=True) as browser:
-        page = await browser.new_page()
+    driver = None
+    try:
+        opts = uc.ChromeOptions()
+        opts.add_argument("--window-size=1280,900")
+        opts.add_argument("--no-sandbox")
+        opts.add_argument("--disable-dev-shm-usage")
+        driver = uc.Chrome(options=opts, headless=False)
 
-        # Visite la homepage en premier pour établir les cookies DataDome
-        print("  Établissement session LeBonCoin...", end=" ", flush=True)
-        try:
-            await page.goto("https://www.leboncoin.fr", wait_until="networkidle", timeout=30000)
-            await page.wait_for_timeout(3000)
-            print("OK")
-        except Exception as e:
-            print(f"WARN ({e})")
+        # Visite homepage pour établir la session DataDome
+        print("  Session LeBonCoin...", end=" ", flush=True)
+        driver.get("https://www.leboncoin.fr")
+        time.sleep(4)
+        print("OK")
 
         for r in recherches:
             nom = r.get("nom", "Recherche")
             url = construire_url(r)
             print(f"  Scan : {nom}...", end=" ", flush=True)
 
-            annonces  = await scraper_page(page, url, nom)
-            valides   = [ad for ad in annonces if annonce_valide(ad, r)]
-            tous_prix = [float(ad["price"][0]) for ad in valides
-                         if ad.get("price") and ad["price"][0]]
+            try:
+                annonces  = scraper_url(driver, url, nom)
+                valides   = [ad for ad in annonces if annonce_valide(ad, r)]
+                tous_prix = [float(ad["price"][0]) for ad in valides
+                             if ad.get("price") and ad["price"][0]]
 
-            # Données marché (toutes les annonces valides)
-            for ad in valides:
-                ad_id = str(ad.get("list_id", ""))
-                if ad_id and ad_id not in ids_marche:
-                    nouvelles_marche.append(extraire_marche(ad, nom))
-                    ids_marche.add(ad_id)
+                for ad in valides:
+                    ad_id = str(ad.get("list_id", ""))
+                    if ad_id and ad_id not in ids_marche:
+                        nouvelles_marche.append(extraire_marche(ad, nom))
+                        ids_marche.add(ad_id)
 
-            # Nouvelles annonces uniquement
-            nouvelles = 0
-            for ad in reversed(valides):
-                ad_id = str(ad.get("list_id", ""))
-                if not ad_id or ad_id in historique:
-                    continue
+                nouvelles = 0
+                for ad in reversed(valides):
+                    ad_id = str(ad.get("list_id", ""))
+                    if not ad_id or ad_id in historique:
+                        continue
+                    prix  = ad.get("price", [None])[0] if ad.get("price") else None
+                    score = calculer_score(prix, tous_prix)
+                    dest  = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
+                    envoyer_telegram(formater_message(ad, nom, score), dest)
+                    historique.add(ad_id)
+                    if ad_id not in ids_annonces:
+                        nouvelles_annonces.append(extraire_annonce(ad, nom, score))
+                        ids_annonces.add(ad_id)
+                    nouvelles += 1
+                    total_new += 1
 
-                prix  = ad.get("price", [None])[0] if ad.get("price") else None
-                score = calculer_score(prix, tous_prix)
+                print(f"{len(annonces)} scannees, {nouvelles} nouvelle(s)")
 
-                dest = DESTINATAIRES.get(r.get("destinataire", "steven"), DESTINATAIRES["steven"])
-                envoyer_telegram(formater_message(ad, nom, score), dest)
-                historique.add(ad_id)
+            except Exception as e:
+                print(f"Erreur : {e}")
 
-                if ad_id not in ids_annonces:
-                    nouvelles_annonces.append(extraire_annonce(ad, nom, score))
-                    ids_annonces.add(ad_id)
+            time.sleep(3)
 
-                nouvelles += 1
-                total_new += 1
-
-            print(f"{len(annonces)} scannées, {nouvelles} nouvelle(s)")
-            await page.wait_for_timeout(2000)
-
-        await page.close()
+    except Exception as e:
+        print(f"  Erreur navigateur : {e}")
+    finally:
+        if driver:
+            try:
+                driver.quit()
+            except Exception:
+                pass
 
     sauvegarder_historique(historique)
 
@@ -433,9 +415,9 @@ async def scan():
     if nouvelles_marche:
         marche.extend(nouvelles_marche)
         sauvegarder_marche(marche)
-        print(f"  [Marché] +{len(nouvelles_marche)} entrées ({len(marche)} total)")
+        print(f"  [Marche] +{len(nouvelles_marche)} entrees ({len(marche)} total)")
 
-    print(f"Terminé — {total_new} nouvelle(s) annonce(s).")
+    print(f"Termine - {total_new} nouvelle(s) annonce(s).")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -443,13 +425,12 @@ async def scan():
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def main():
-    print("Expert LeBonCoin démarré !")
-    print(f"Intervalle : {INTERVALLE_MINUTES} min | Plage : {HEURE_DEBUT}h–{HEURE_FIN}h\n")
-
-    asyncio.run(scan())
+    print("Expert LeBonCoin demarre !")
+    print(f"Intervalle : {INTERVALLE_MINUTES} min | Plage : {HEURE_DEBUT}h-{HEURE_FIN}h\n")
+    scan()
     while True:
         time.sleep(INTERVALLE_MINUTES * 60)
-        asyncio.run(scan())
+        scan()
 
 
 if __name__ == "__main__":
