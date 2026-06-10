@@ -2,11 +2,6 @@
   {
     "ts": "2026-06-10T16:05:06",
     "lvl": "SCAN",
-    "msg": "7 brutes → 4 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T16:05:06",
-    "lvl": "SCAN",
     "msg": "Prix marche : min 11990€ | median 41999€ | max 52000€"
   },
   {
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T16:52:48",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1310x918"
+  },
+  {
+    "ts": "2026-06-10T16:53:05",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
