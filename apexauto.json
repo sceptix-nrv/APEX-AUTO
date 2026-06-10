@@ -1,0 +1,44 @@
+{
+  "vehicules": [
+    {
+      "id": "mq7lrwbk7awppp9jgs9",
+      "marque": "Peugeot",
+      "modele": "206 Phase 1",
+      "annee": 1999,
+      "km": 89000,
+      "achat": 1750,
+      "dateAchat": "2026-05-10",
+      "statut": "en-cours",
+      "vente": 0,
+      "dateVente": "",
+      "notes": "Premier véhicule Apex Auto.",
+      "depenses": [
+        {
+          "id": "mq7lrwbks7wl2zvsrzn",
+          "type": "piece",
+          "desc": "Plaquettes + disques",
+          "montant": 320
+        },
+        {
+          "id": "mq7lrwbkfan6mvxv7b",
+          "type": "frais",
+          "desc": "CT",
+          "montant": 85
+        }
+      ]
+    }
+  ],
+  "recherches": [
+    {
+      "id": "mq7lrwbknspqhkt7yio",
+      "nom": "Peugeot 206 Nancy",
+      "keywords": "206",
+      "prix_max": 3000,
+      "km_max": 150000,
+      "fuel": "diesel",
+      "rayon": 100,
+      "active": true
+    }
+  ],
+  "initialized": true
+}
