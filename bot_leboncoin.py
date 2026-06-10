@@ -182,23 +182,60 @@ def construire_payload(r):
     }
 
 
+def construire_url_search(r):
+    ville = VILLES.get(r.get("ville", "nancy"), VILLES["nancy"])
+    rayon_m = int(r.get("rayon", 100)) * 1000
+    location = f"{ville['nom']}__{ville['lat']}_{ville['lng']}_0_{rayon_m}"
+    params = [
+        "category=2",
+        f"text={requests.utils.quote(r.get('keywords', ''))}",
+        f"locations={location}",
+        "sort=time",
+        "order=desc",
+    ]
+    if r.get("prix_max"):
+        params.append(f"price=max-{int(r['prix_max'])}")
+    if r.get("km_max"):
+        params.append(f"mileage=max-{int(r['km_max'])}")
+    if r.get("fuel") and r["fuel"] in FUEL_CODES:
+        params.append(f"fuel={FUEL_CODES[r['fuel']]}")
+    return "https://www.leboncoin.fr/recherche?" + "&".join(params)
+
+
 def scraper_recherche(r):
-    payload = construire_payload(r)
+    url = construire_url_search(r)
     try:
-        res = cf.post(
-            "https://api.leboncoin.fr/finder/search",
-            headers=LBC_HEADERS,
-            json=payload,
-            impersonate="chrome120",
-            timeout=15,
-        )
+        session = cf.Session(impersonate="chrome120")
+        # Visite la page d'accueil pour obtenir les cookies
+        session.get("https://www.leboncoin.fr", timeout=15)
+        time.sleep(1)
+        res = session.get(url, timeout=20)
         if res.status_code != 200:
             print(f"  [LBC] Erreur {res.status_code}")
             return []
-        data = res.json()
-        return data.get("ads", [])
+        html = res.text
+        # Extraire __NEXT_DATA__
+        marker = '"ads":'
+        idx = html.find(marker)
+        if idx == -1:
+            print(f"  [LBC] __NEXT_DATA__ introuvable")
+            return []
+        # Parser __NEXT_DATA__ proprement
+        start = html.find('id="__NEXT_DATA__"')
+        if start == -1:
+            print(f"  [LBC] __NEXT_DATA__ tag introuvable")
+            return []
+        start = html.find('>', start) + 1
+        end = html.find('</script>', start)
+        import json as _json
+        data = _json.loads(html[start:end])
+        props = data.get("props", {}).get("pageProps", {})
+        ads = props.get("searchData", {}).get("ads", [])
+        if not ads:
+            ads = props.get("hydrationData", {}).get("searchData", {}).get("ads", [])
+        return ads
     except Exception as e:
-        print(f"  [LBC] Erreur requête : {e}")
+        print(f"  [LBC] Erreur : {e}")
         return []
 
 
@@ -237,8 +274,17 @@ def sauvegarder_historique(historique):
         json.dump(liste, f, indent=2)
 
 
+def get_attrs(ad):
+    result = {}
+    for a in ad.get("attributes", []):
+        key = a.get("key")
+        val = a.get("value") or (a.get("values", [None])[0])
+        if key and val:
+            result[key] = val
+    return result
+
 def annonce_valide(ad, r):
-    attrs = {a["key"]: a["value"] for a in ad.get("attributes", []) if a.get("value")}
+    attrs = get_attrs(ad)
 
     prix = ad.get("price", [None])[0] if ad.get("price") else None
     if r.get("prix_max") and prix is not None:
@@ -265,7 +311,7 @@ def formater_annonce(ad, nom_recherche, score=None):
     lieu  = ad.get("location", {}).get("city", "")
     lien  = f"https://www.leboncoin.fr/voitures/{ad_id}.htm"
 
-    attrs  = {a["key"]: a["value"] for a in ad.get("attributes", []) if a.get("value")}
+    attrs  = get_attrs(ad)
     km_raw = attrs.get("mileage")
     an_raw = attrs.get("regdate", "")
     km     = f"{int(km_raw):,} km".replace(",", " ") if km_raw else "N/C"
@@ -287,7 +333,7 @@ def formater_annonce(ad, nom_recherche, score=None):
 
 def extraire_annonce_data(ad, nom_recherche, score=None):
     ad_id  = str(ad.get("list_id", ""))
-    attrs  = {a["key"]: a["value"] for a in ad.get("attributes", []) if a.get("value")}
+    attrs  = get_attrs(ad)
     prix   = ad.get("price", [None])[0] if ad.get("price") else None
     km_raw = attrs.get("mileage")
     an_raw = attrs.get("regdate", "")
