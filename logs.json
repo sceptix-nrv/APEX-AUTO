@@ -1,60 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:44:18",
-    "lvl": "SYS",
-    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
-  },
-  {
-    "ts": "2026-06-10T17:44:19",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est le 206 Peugeot, mais l'annonce concerne un Renault Twingo."
-  },
-  {
-    "ts": "2026-06-10T17:44:19",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1.4 hdi..."
-  },
-  {
-    "ts": "2026-06-10T17:44:20",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 1.4 hdi — "
-  },
-  {
-    "ts": "2026-06-10T17:44:21",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +40% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:44:21",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206..."
-  },
-  {
-    "ts": "2026-06-10T17:44:22",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206"
-  },
-  {
-    "ts": "2026-06-10T17:44:23",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +40% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:44:23",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206.1.9d..."
-  },
-  {
-    "ts": "2026-06-10T17:44:24",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206.1.9d — "
-  },
-  {
-    "ts": "2026-06-10T17:44:24",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score +1% → Telegram envoye"
-  },
-  {
     "ts": "2026-06-10T17:44:24",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
@@ -1498,5 +1443,60 @@
     "ts": "2026-06-10T18:16:08",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 1 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T18:19:23",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T18:19:23",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 18:19:23] ==="
+  },
+  {
+    "ts": "2026-06-10T18:19:23",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T18:19:24",
+    "lvl": "SYS",
+    "msg": "1 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T18:19:24",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T18:19:25",
+    "lvl": "SYS",
+    "msg": "Historique : 43 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T18:19:25",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T18:19:26",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T18:19:28",
+    "lvl": "SYS",
+    "msg": "Base chargee — 43 vues | 23 annonces | 66 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T18:19:28",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/1] : passat ---"
+  },
+  {
+    "ts": "2026-06-10T18:19:28",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1279x885"
   }
 ]
