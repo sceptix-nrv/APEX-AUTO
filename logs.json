@@ -338,5 +338,10 @@
     "ts": "2026-06-10T11:45:00",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T11:45:02",
+    "lvl": "BOT",
+    "msg": "Pause anti-detection 74s avant prochaine session Chrome..."
   }
 ]
