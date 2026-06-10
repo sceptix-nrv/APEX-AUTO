@@ -1,20 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:07",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 1.4 hdi — "
-  },
-  {
-    "ts": "2026-06-10T17:56:08",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +40% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:56:08",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206..."
-  },
-  {
     "ts": "2026-06-10T17:56:09",
     "lvl": "OK",
     "msg": "IA OK : Peugeot 206"
@@ -1498,5 +1483,20 @@
     "ts": "2026-06-10T18:55:07",
     "lvl": "BOT",
     "msg": "Pause anti-detection 51s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T18:55:58",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : Peugeot 206 ---"
+  },
+  {
+    "ts": "2026-06-10T18:55:58",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1312x943"
+  },
+  {
+    "ts": "2026-06-10T18:56:03",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
