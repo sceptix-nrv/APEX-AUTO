@@ -1,7 +1,7 @@
 {
-  "etat": "scan",
-  "label": "🔍 Scan en cours",
-  "color": "#00cfff",
-  "detail": "Peugeot 206",
-  "ts": "10/06 20:53:24"
+  "etat": "analyse",
+  "label": "🧠 Analyse IA",
+  "color": "#8b5cf6",
+  "detail": "Peugeot 206+ 1.4 HDi Basis CT OK",
+  "ts": "10/06 20:54:05"
 }
