@@ -68,5 +68,120 @@
     "ts": "2026-06-10T10:35:59",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=206&locations=Nancy__48.6954_..."
+  },
+  {
+    "ts": "2026-06-10T10:36:10",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T10:36:11",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T10:36:11",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 23 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T10:36:11",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 650€ | median 1800€ | max 3000€"
+  },
+  {
+    "ts": "2026-06-10T10:36:11",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 Roland Garros - Contre-visit..."
+  },
+  {
+    "ts": "2026-06-10T10:36:11",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:13",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213037367] Peugeot 206 Roland Garros - Contre-visite — 1400€ | score +22% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:13",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 🚀 opel astra gtc 1.9 cdti 120 cosmo – co..."
+  },
+  {
+    "ts": "2026-06-10T10:36:13",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:14",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3162569010] 🚀 opel astra gtc 1.9 cdti 120 cosmo – coupé sport  — 1100€ | score +39% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:14",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Suzuki swift new 1.3 glx 5 portes..."
+  },
+  {
+    "ts": "2026-06-10T10:36:15",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:16",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3197282595] Suzuki swift new 1.3 glx 5 portes — 2990€ | score -66% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:16",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T10:36:17",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:18",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score -67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:18",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1.4i..."
+  },
+  {
+    "ts": "2026-06-10T10:36:19",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:20",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213322986] Peugeot 206 1.4i — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:20",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1,4 essence de 2001..."
+  },
+  {
+    "ts": "2026-06-10T10:36:21",
+    "lvl": "WARN",
+    "msg": "Gemini 429 : {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your p"
+  },
+  {
+    "ts": "2026-06-10T10:36:21",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213324581] Peugeot 206 1,4 essence de 2001 — 700€ | score +61% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:36:21",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1.4 hdi..."
   }
 ]
