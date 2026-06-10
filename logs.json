@@ -218,5 +218,135 @@
     "ts": "2026-06-10T15:39:50",
     "lvl": "WARN",
     "msg": "IA ATTENTION : Peugeot 206 — "
+  },
+  {
+    "ts": "2026-06-10T15:39:50",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score -67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:50",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T15:39:51",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 1.4 hdi — "
+  },
+  {
+    "ts": "2026-06-10T15:39:51",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T15:39:52",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T15:39:52",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:52",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206.1.9d..."
+  },
+  {
+    "ts": "2026-06-10T15:39:53",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206.1.9d — "
+  },
+  {
+    "ts": "2026-06-10T15:39:54",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:54",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
+  },
+  {
+    "ts": "2026-06-10T15:39:54",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
+  },
+  {
+    "ts": "2026-06-10T15:39:55",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +28% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:55",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1,9D 172 000 km..."
+  },
+  {
+    "ts": "2026-06-10T15:39:55",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
+  },
+  {
+    "ts": "2026-06-10T15:39:56",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +44% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:56",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 2l HDI..."
+  },
+  {
+    "ts": "2026-06-10T15:39:56",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 2l HDI — "
+  },
+  {
+    "ts": "2026-06-10T15:39:57",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:57",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T15:39:57",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 2007 Peugeot 206 1.4 hdi — "
+  },
+  {
+    "ts": "2026-06-10T15:39:58",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213643613] 2007 Peugeot 206 1.4 hdi — 1500€ | score +17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:39:58",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
+  },
+  {
+    "ts": "2026-06-10T15:39:59",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot206/Ford Ka /Fiesta/Chevrolet mat — Le titre mentionne plusieurs modèles différents"
+  },
+  {
+    "ts": "2026-06-10T15:39:59",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 + 1.4 hdi 70cv contrôle tech..."
+  },
+  {
+    "ts": "2026-06-10T15:39:59",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
