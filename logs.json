@@ -558,5 +558,155 @@
     "ts": "2026-06-10T15:51:11",
     "lvl": "WARN",
     "msg": "IA ATTENTION : Peugeot 206 — "
+  },
+  {
+    "ts": "2026-06-10T15:51:12",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score -67% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:12",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T15:51:13",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 1.4 hdi — "
+  },
+  {
+    "ts": "2026-06-10T15:51:14",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213387238] 206 1.4 hdi — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:14",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T15:51:15",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206"
+  },
+  {
+    "ts": "2026-06-10T15:51:16",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213441470] Peugeot 206 — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:16",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206.1.9d..."
+  },
+  {
+    "ts": "2026-06-10T15:51:17",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206.1.9d — "
+  },
+  {
+    "ts": "2026-06-10T15:51:18",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213503832] 206.1.9d — 2950€ | score -64% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:18",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 3portes 1.4HDI Eco..."
+  },
+  {
+    "ts": "2026-06-10T15:51:18",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 3portes 1.4HDI Eco — "
+  },
+  {
+    "ts": "2026-06-10T15:51:19",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +28% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:19",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206 1,9D 172 000 km..."
+  },
+  {
+    "ts": "2026-06-10T15:51:20",
+    "lvl": "OK",
+    "msg": "IA OK : 206 1,9D 172 000 km"
+  },
+  {
+    "ts": "2026-06-10T15:51:21",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +44% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:21",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 2l HDI..."
+  },
+  {
+    "ts": "2026-06-10T15:51:22",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 2l HDI — "
+  },
+  {
+    "ts": "2026-06-10T15:51:22",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213637673] Peugeot 206 2l HDI — 1800€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:22",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 2007 Peugeot 206 1.4 hdi..."
+  },
+  {
+    "ts": "2026-06-10T15:51:23",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 2007 Peugeot 206 1.4 hdi — "
+  },
+  {
+    "ts": "2026-06-10T15:51:24",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213643613] 2007 Peugeot 206 1.4 hdi — 1500€ | score +17% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:24",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
+  },
+  {
+    "ts": "2026-06-10T15:51:25",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot206/Ford Ka /Fiesta/Chevrolet mat — Le titre mentionne plusieurs modèles différents"
+  },
+  {
+    "ts": "2026-06-10T15:51:25",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 + 1.4 hdi 70cv contrôle tech..."
+  },
+  {
+    "ts": "2026-06-10T15:51:26",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 206 + 1.4 hdi 70cv contrôle tech"
+  },
+  {
+    "ts": "2026-06-10T15:51:27",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3205041448] Peugeot 206 + 1.4 hdi 70cv contrôle technique ok — 1690€ | score +6% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:27",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+..."
+  },
+  {
+    "ts": "2026-06-10T15:51:28",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : 206+ — Le titre mentionne '206+' qui n'est pas exactement le modèle recherché"
+  },
+  {
+    "ts": "2026-06-10T15:51:28",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206..."
   }
 ]
