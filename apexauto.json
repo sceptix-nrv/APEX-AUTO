@@ -12,6 +12,18 @@
       "ville": "nancy",
       "destinataire": "steven",
       "active": true
+    },
+    {
+      "id": "mq878wpc7l0ne8o727",
+      "nom": "C4",
+      "keywords": "CITROEN C4",
+      "prix_max": 5000,
+      "km_max": null,
+      "fuel": "",
+      "rayon": 100,
+      "ville": "nancy",
+      "destinataire": "steven",
+      "active": true
     }
   ],
   "initialized": true,
