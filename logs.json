@@ -1,40 +1,5 @@
 [
   {
-    "ts": "2026-06-10T15:54:44",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 207 1.6 hdi 90 ch — "
-  },
-  {
-    "ts": "2026-06-10T15:54:44",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3198572594] Peugeot 207 1.6 hdi 90 ch — 3490€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:54:44",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 207 1.6 HDI..."
-  },
-  {
-    "ts": "2026-06-10T15:54:45",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 207 1.6 HDI — "
-  },
-  {
-    "ts": "2026-06-10T15:54:45",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213348513] Peugeot 207 1.6 HDI — 1600€ | score +54% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T15:54:45",
-    "lvl": "SYS",
-    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
-  },
-  {
-    "ts": "2026-06-10T15:54:46",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est le 206, mais l'annonce concerne un Renault Twingo"
-  },
-  {
     "ts": "2026-06-10T15:54:46",
     "lvl": "SYS",
     "msg": "Analyse IA : PEUGEOT 207 1.6 HDi 16v 110ch..."
@@ -1496,6 +1461,41 @@
   },
   {
     "ts": "2026-06-10T16:15:45",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T16:15:55",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 1.6 HDI90 PREMIUM PACK 5P"
+  },
+  {
+    "ts": "2026-06-10T16:15:56",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3185760381] Peugeot 207 1.6 HDI90 PREMIUM PACK 5P — 4999€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:15:56",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 CC 1.6 HDI110 FELINE FAP..."
+  },
+  {
+    "ts": "2026-06-10T16:15:56",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 CC 1.6 HDI110 FELINE FAP"
+  },
+  {
+    "ts": "2026-06-10T16:15:57",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3117293282] Peugeot 207 CC 1.6 HDI110 FELINE FAP — 5499€ | score -22% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:15:57",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI90 ACTIVE 3P..."
+  },
+  {
+    "ts": "2026-06-10T16:15:57",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
   }
