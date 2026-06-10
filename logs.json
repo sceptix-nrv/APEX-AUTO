@@ -23,5 +23,30 @@
     "ts": "2026-06-10T17:27:09",
     "lvl": "WARN",
     "msg": "Aucune recherche active trouvee dans la config. Arret."
+  },
+  {
+    "ts": "2026-06-10T17:28:27",
+    "lvl": "SYS",
+    "msg": "=== APEX AUTO EXPERT DEMARRE — v2 — intervalle 10min ==="
+  },
+  {
+    "ts": "2026-06-10T17:28:28",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 17:28:28] ==="
+  },
+  {
+    "ts": "2026-06-10T17:28:28",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T17:28:29",
+    "lvl": "SYS",
+    "msg": "0 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T17:28:29",
+    "lvl": "WARN",
+    "msg": "Aucune recherche active trouvee dans la config. Arret."
   }
 ]
