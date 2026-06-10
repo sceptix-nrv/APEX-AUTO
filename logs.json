@@ -103,5 +103,15 @@
     "ts": "2026-06-10T11:50:04",
     "lvl": "BOT",
     "msg": "Pause anti-detection 66s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T11:51:11",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : 207 ---"
+  },
+  {
+    "ts": "2026-06-10T11:51:11",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1323x979"
   }
 ]
