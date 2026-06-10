@@ -1,10 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:34:42",
-    "lvl": "WARN",
-    "msg": "Groq rate limit — attente 10s (1/3)"
-  },
-  {
     "ts": "2026-06-10T17:34:53",
     "lvl": "WARN",
     "msg": "IA ATTENTION : 2007 Peugeot 206 1.4 hdi — "
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T18:04:38",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1246x894"
+  },
+  {
+    "ts": "2026-06-10T18:04:43",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
   }
 ]
