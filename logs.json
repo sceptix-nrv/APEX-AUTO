@@ -388,5 +388,40 @@
     "ts": "2026-06-10T11:58:51",
     "lvl": "SYS",
     "msg": "Analyse IA : Peugeot206/Ford Ka /Fiesta/Chevrolet mat..."
+  },
+  {
+    "ts": "2026-06-10T11:58:53",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Peugeot206/Ford Ka /Fiesta/Chevrolet mat — Le titre mentionne plusieurs modèles différents (206, Ka, Fiesta, Matiz, Seat)"
+  },
+  {
+    "ts": "2026-06-10T11:58:53",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206+ 1,4 75ch 1500..."
+  },
+  {
+    "ts": "2026-06-10T11:58:54",
+    "lvl": "OK",
+    "msg": "IA OK : 206+ 1,4 75ch 1500"
+  },
+  {
+    "ts": "2026-06-10T11:58:55",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213716246] 206+ 1,4 75ch 1500 — 1500€ | score +40% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:58:55",
+    "lvl": "OK",
+    "msg": "6 alerte(s) envoyee(s) pour '206'"
+  },
+  {
+    "ts": "2026-06-10T11:58:55",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T11:58:57",
+    "lvl": "BOT",
+    "msg": "Pause anti-detection 74s avant prochaine session Chrome..."
   }
 ]
