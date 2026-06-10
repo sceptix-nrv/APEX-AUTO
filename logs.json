@@ -1,15 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:50",
-    "lvl": "SYS",
-    "msg": "Chargement base marche..."
-  },
-  {
-    "ts": "2026-06-10T17:56:51",
-    "lvl": "SYS",
-    "msg": "Base chargee — 10 vues | 8 annonces | 27 entrees marche"
-  },
-  {
     "ts": "2026-06-10T17:56:51",
     "lvl": "SCAN",
     "msg": "--- Recherche [1/1] : 206 ---"
@@ -1498,5 +1488,15 @@
     "ts": "2026-06-10T19:08:17",
     "lvl": "BOT",
     "msg": "Pause anti-detection 67s avant prochaine session Chrome..."
+  },
+  {
+    "ts": "2026-06-10T19:09:24",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [2/2] : Peugeot 206 ---"
+  },
+  {
+    "ts": "2026-06-10T19:09:24",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1295x829"
   }
 ]
