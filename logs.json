@@ -43,5 +43,20 @@
     "ts": "2026-06-10T20:50:55",
     "lvl": "BOT",
     "msg": "Refresh cookie DataDome via UC…"
+  },
+  {
+    "ts": "2026-06-10T20:51:30",
+    "lvl": "BOT",
+    "msg": "UC cookies récupérés : ['datadome', '_pctx', 'didomi_token', 'cnfdVisitorId', '__Secure-Install', 'pa_privacy', '_crcl3b62c763', '_pcid']"
+  },
+  {
+    "ts": "2026-06-10T20:51:32",
+    "lvl": "BOT",
+    "msg": "Cookie DataDome valide jusqu'à 21:46"
+  },
+  {
+    "ts": "2026-06-10T20:51:33",
+    "lvl": "NET",
+    "msg": "HTML OK — 35 annonces brutes (page 1)"
   }
 ]
