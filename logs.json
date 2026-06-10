@@ -438,5 +438,55 @@
     "ts": "2026-06-10T12:00:18",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T12:00:32",
+    "lvl": "BOT",
+    "msg": "Session etablie (6.8s, scroll 397px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T12:00:32",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=207&locations=Nancy__48.6954_..."
+  },
+  {
+    "ts": "2026-06-10T12:00:41",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T12:00:41",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T12:00:41",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 1 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T12:00:41",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 2270€ | median 2270€ | max 2270€"
+  },
+  {
+    "ts": "2026-06-10T12:00:41",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 fap 1.6 HDi 112ch Sport..."
+  },
+  {
+    "ts": "2026-06-10T12:00:42",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 fap 1.6 HDi 112ch Sport"
+  },
+  {
+    "ts": "2026-06-10T12:00:42",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213616761] Peugeot 207 fap 1.6 HDi 112ch Sport — 2270€ → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T12:00:42",
+    "lvl": "OK",
+    "msg": "1 alerte(s) envoyee(s) pour '207'"
   }
 ]
