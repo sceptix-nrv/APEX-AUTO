@@ -1,55 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:13",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213506944] Peugeot 206 3portes 1.4HDI Eco — 1300€ | score +57% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:56:13",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1,9D 172 000 km..."
-  },
-  {
-    "ts": "2026-06-10T17:56:14",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206 1,9D 172 000 km — "
-  },
-  {
-    "ts": "2026-06-10T17:56:15",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213539388] 206 1,9D 172 000 km — 1000€ | score +67% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:56:15",
-    "lvl": "OK",
-    "msg": "8 alerte(s) envoyee(s) pour '206'"
-  },
-  {
-    "ts": "2026-06-10T17:56:15",
-    "lvl": "BOT",
-    "msg": "Session Chrome fermee proprement"
-  },
-  {
-    "ts": "2026-06-10T17:56:18",
-    "lvl": "SYS",
-    "msg": "Sauvegarde annonces — 8 entrees"
-  },
-  {
-    "ts": "2026-06-10T17:56:20",
-    "lvl": "SYS",
-    "msg": "Annonces sauvegardees — 8 total"
-  },
-  {
-    "ts": "2026-06-10T17:56:20",
-    "lvl": "SYS",
-    "msg": "Sauvegarde marche — 27 entrees"
-  },
-  {
-    "ts": "2026-06-10T17:56:21",
-    "lvl": "SYS",
-    "msg": "Base marche mise a jour +27 entrees (27 total)"
-  },
-  {
     "ts": "2026-06-10T17:56:21",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 8 nouvelle(s) | prochain cycle dans 10 min ==="
@@ -1498,5 +1448,55 @@
     "ts": "2026-06-10T18:56:41",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T19:07:32",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 19:07:32] ==="
+  },
+  {
+    "ts": "2026-06-10T19:07:32",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T19:07:33",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T19:07:33",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T19:07:34",
+    "lvl": "SYS",
+    "msg": "Historique : 43 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T19:07:34",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
+  },
+  {
+    "ts": "2026-06-10T19:07:35",
+    "lvl": "SYS",
+    "msg": "Chargement base marche..."
+  },
+  {
+    "ts": "2026-06-10T19:07:36",
+    "lvl": "SYS",
+    "msg": "Base chargee — 43 vues | 23 annonces | 66 entrees marche"
+  },
+  {
+    "ts": "2026-06-10T19:07:36",
+    "lvl": "SCAN",
+    "msg": "--- Recherche [1/2] : passat ---"
+  },
+  {
+    "ts": "2026-06-10T19:07:36",
+    "lvl": "BOT",
+    "msg": "Lancement Chrome stealth — viewport 1201x963"
   }
 ]
