@@ -2,7 +2,7 @@
   {
     "id": "3213322986",
     "titre": "Peugeot 206 1.4i",
-    "prix": 1800.0,
+    "prix": 1800,
     "km": 185000,
     "annee": "2005",
     "ville": "Sarreguemines",
@@ -19,7 +19,7 @@
   {
     "id": "3213409974",
     "titre": "206+ ct ok pack clim",
-    "prix": 2000.0,
+    "prix": 2000,
     "km": 182000,
     "annee": "2010",
     "ville": "Longeville-lès-Metz",
@@ -36,7 +36,7 @@
   {
     "id": "3213441470",
     "titre": "Peugeot 206",
-    "prix": 1800.0,
+    "prix": 1800,
     "km": 123000,
     "annee": "2004",
     "ville": "Forbach",
@@ -53,7 +53,7 @@
   {
     "id": "3213503832",
     "titre": "206.1.9d",
-    "prix": 2950.0,
+    "prix": 2950,
     "km": 170000,
     "annee": "2000",
     "ville": "Rigny-la-Salle",
@@ -70,7 +70,7 @@
   {
     "id": "3213539388",
     "titre": "206 1,9D 172 000 km",
-    "prix": 1000.0,
+    "prix": 1000,
     "km": 172000,
     "annee": "1999",
     "ville": "Erching",
@@ -87,7 +87,7 @@
   {
     "id": "3213716246",
     "titre": "206+ 1,4 75ch 1500",
-    "prix": 1500.0,
+    "prix": 1500,
     "km": 195000,
     "annee": "2010",
     "ville": "Thionville",
@@ -95,7 +95,7 @@
     "recherche": "206",
     "score": 40,
     "date": "2026-06-10T11:36",
-    "statut": "nouvelle",
+    "statut": "interessante",
     "ia_verdict": "ATTENTION",
     "ia_detail": "Le titre correspond exactement au modèle recherché",
     "ia_avis": "Intéressant, négocie, mais attention au kilométrage élevé (195 000 km) et à la description vide.",
