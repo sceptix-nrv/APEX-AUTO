@@ -1048,5 +1048,20 @@
     "ts": "2026-06-10T17:41:59",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T17:42:07",
+    "lvl": "ERR",
+    "msg": "Exception sur '206' : Message: invalid session id: session deleted as the browser has closed the connection\nfrom disconnected: not connected to DevTools\n  (Session info: chrome=149.0.7827.54); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception\nStacktrace:\n\tundetected_chromedriver!GetHandleVerifier [0xf2fa13+106c3]\n\tundetected_chromedriver!GetHandleVerifier [0xf2fa54+10704]\n\tundetected_chromedriver!(No symbol) [0xd2a830]\n\tundetected_chromedriver!(No symbol) [0xd19a3e]\n\tundetected_chromedriver!(No symbol) [0xd381b9]\n\tundetected_chromedriver!(No symbol) [0xd9c80c]\n\tundetected_chromedriver!(No symbol) [0xdb2d59]\n\tundetected_chromedriver!(No symbol) [0xd96026]\n\tundetected_chromedriver!(No symbol) [0xd69289]\n\tundetected_chromedriver!(No symbol) [0xd6a054]\n\tundetected_chromedriver!GetHandleVerifier [0x11b44fa+2951aa]\n\tundetected_chromedriver!GetHandleVerifier [0x11afb56+290806]\n\tundetected_chromedriver!GetHandleVerifier [0x11cff8b+2b0c3b]\n\tundetected_chromedriver!GetHandleVerifier [0xf49ed6+2ab86]\n\tundetected_chromedriver!GetHandleVerifier [0xf5124d+31efd]\n\tundetected_chromedriver!GetHandleVerifier [0xf383d8+19088]\n\tundetected_chromedriver!GetHandleVerifier [0xf38585+19235]\n\tundetected_chromedriver!GetHandleVerifier [0xf2125f+1f0f]\n\tKERNEL32!BaseThreadInitThunk [0x75cc5d49+19]\n\tntdll!RtlInitializeExceptionChain [0x7705d83b+6b]\n\tntdll!RtlGetAppContainerNamedObjectPath [0x7705d7c1+231]\n"
+  },
+  {
+    "ts": "2026-06-10T17:42:07",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T17:42:11",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
