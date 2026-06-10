@@ -1,35 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:57:18",
-    "lvl": "SCAN",
-    "msg": "Prix marche : min 1€ | median 2990€ | max 4000€"
-  },
-  {
-    "ts": "2026-06-10T17:57:18",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206+ 1.4 HDi Blue Lion 68cv..."
-  },
-  {
-    "ts": "2026-06-10T17:57:19",
-    "lvl": "OK",
-    "msg": "IA OK : Peugeot 206+ 1.4 HDi Blue Lion 68cv"
-  },
-  {
-    "ts": "2026-06-10T17:57:20",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3202916341] Peugeot 206+ 1.4 HDi Blue Lion 68cv — 3499€ | score -17% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:57:20",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Bêle Peugeot 206 1.6 16V 110cv..."
-  },
-  {
-    "ts": "2026-06-10T17:57:21",
-    "lvl": "OK",
-    "msg": "IA OK : Bêle Peugeot 206 1.6 16V 110cv"
-  },
-  {
     "ts": "2026-06-10T17:57:22",
     "lvl": "OK",
     "msg": "NOUVELLE : [3213633886] Bêle Peugeot 206 1.6 16V 110cv — 3500€ | score -17% → Telegram envoye"
@@ -1498,5 +1468,35 @@
     "ts": "2026-06-10T19:10:07",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T19:21:18",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 19:21:18] ==="
+  },
+  {
+    "ts": "2026-06-10T19:21:18",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T19:21:19",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T19:21:19",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
+  },
+  {
+    "ts": "2026-06-10T19:21:20",
+    "lvl": "SYS",
+    "msg": "Historique : 43 annonces deja vues"
+  },
+  {
+    "ts": "2026-06-10T19:21:20",
+    "lvl": "SYS",
+    "msg": "Chargement index annonces..."
   }
 ]
