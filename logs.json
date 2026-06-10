@@ -1,30 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:34:19",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le 206 Peugeot, mais l'annonce concerne un Suzuki Swift."
-  },
-  {
-    "ts": "2026-06-10T17:34:19",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206+ 1.4 hdi 70cv..."
-  },
-  {
-    "ts": "2026-06-10T17:34:20",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Peugeot 206+ 1.4 hdi 70cv — Le modèle recherché est le 206, mais l'annonce mentionne un 206+"
-  },
-  {
-    "ts": "2026-06-10T17:34:20",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206cc Roland garos..."
-  },
-  {
-    "ts": "2026-06-10T17:34:21",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : 206cc Roland garos — "
-  },
-  {
     "ts": "2026-06-10T17:34:22",
     "lvl": "OK",
     "msg": "NOUVELLE : [3205967687] 206cc Roland garos — 3200€ | score -7% → Telegram envoye"
@@ -1498,5 +1473,30 @@
     "ts": "2026-06-10T17:58:42",
     "lvl": "SYS",
     "msg": "=== SCAN TERMINE — 6 nouvelle(s) | prochain cycle dans 10 min ==="
+  },
+  {
+    "ts": "2026-06-10T18:02:16",
+    "lvl": "SYS",
+    "msg": "Force scan demande depuis l'interface !"
+  },
+  {
+    "ts": "2026-06-10T18:02:16",
+    "lvl": "SYS",
+    "msg": "=== CYCLE DE SCAN INITIE [10/06/2026 18:02:16] ==="
+  },
+  {
+    "ts": "2026-06-10T18:02:16",
+    "lvl": "SYS",
+    "msg": "Chargement config depuis GitHub..."
+  },
+  {
+    "ts": "2026-06-10T18:02:18",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s) chargee(s)"
+  },
+  {
+    "ts": "2026-06-10T18:02:18",
+    "lvl": "SYS",
+    "msg": "Chargement historique annonces vues..."
   }
 ]
