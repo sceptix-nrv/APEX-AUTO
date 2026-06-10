@@ -1,45 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:12:34",
-    "lvl": "SYS",
-    "msg": "Base chargee — 0 vues | 22 annonces | 32 entrees marche"
-  },
-  {
-    "ts": "2026-06-10T16:12:34",
-    "lvl": "SCAN",
-    "msg": "--- Recherche [1/1] : 7R ---"
-  },
-  {
-    "ts": "2026-06-10T16:12:34",
-    "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1203x975"
-  },
-  {
-    "ts": "2026-06-10T16:12:39",
-    "lvl": "BOT",
-    "msg": "Navigation homepage LeBonCoin — etablissement session..."
-  },
-  {
-    "ts": "2026-06-10T16:12:54",
-    "lvl": "BOT",
-    "msg": "Session etablie (7.8s, scroll 328px) — fingerprint OK"
-  },
-  {
-    "ts": "2026-06-10T16:12:54",
-    "lvl": "NET",
-    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=GOLF%207R&locations=Nancy__48..."
-  },
-  {
-    "ts": "2026-06-10T16:13:00",
-    "lvl": "NET",
-    "msg": "Page chargee — extraction __NEXT_DATA__"
-  },
-  {
-    "ts": "2026-06-10T16:13:01",
-    "lvl": "NET",
-    "msg": "Parsing OK — 18 annonce(s) brute(s) recues"
-  },
-  {
     "ts": "2026-06-10T16:13:01",
     "lvl": "SCAN",
     "msg": "18 brutes → 17 correspondent aux criteres"
@@ -1496,6 +1456,46 @@
   },
   {
     "ts": "2026-06-10T16:57:12",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T16:57:23",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : PEUGEOT 407 SW 2.0 HDI 16V FAP 136CH EXÉ — Le modèle recherché est le 407, mais l'annonce concerne un 407 SW"
+  },
+  {
+    "ts": "2026-06-10T16:57:23",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 407 1,6l HDi 110 ch..."
+  },
+  {
+    "ts": "2026-06-10T16:57:24",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 407 1,6l HDi 110 ch"
+  },
+  {
+    "ts": "2026-06-10T16:57:24",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213534270] Peugeot 407 1,6l HDi 110 ch — 900€ | score +70% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:57:24",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 407..."
+  },
+  {
+    "ts": "2026-06-10T16:57:26",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : 407 — Le modèle recherché est '407' mais l'annonce mentionne un '407' sans spécifier une version spécifique (SW, GT, etc.)"
+  },
+  {
+    "ts": "2026-06-10T16:57:26",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Opel INSIGNIA SP TOURER 2.0 CDTI 170CH..."
+  },
+  {
+    "ts": "2026-06-10T16:57:27",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
   }
