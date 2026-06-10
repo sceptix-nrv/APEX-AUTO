@@ -413,5 +413,20 @@
     "ts": "2026-06-10T11:00:20",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T11:00:37",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.5s, scroll 220px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T11:00:37",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=CLIO%202&locations=Nancy__48...."
+  },
+  {
+    "ts": "2026-06-10T11:00:49",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
   }
 ]
