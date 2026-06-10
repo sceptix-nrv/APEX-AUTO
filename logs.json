@@ -488,5 +488,30 @@
     "ts": "2026-06-10T12:00:42",
     "lvl": "OK",
     "msg": "1 alerte(s) envoyee(s) pour '207'"
+  },
+  {
+    "ts": "2026-06-10T12:00:43",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T12:00:45",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 7 entrees"
+  },
+  {
+    "ts": "2026-06-10T12:00:47",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 11 entrees"
+  },
+  {
+    "ts": "2026-06-10T12:00:48",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +11 entrees (11 total)"
+  },
+  {
+    "ts": "2026-06-10T12:00:48",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 7 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
