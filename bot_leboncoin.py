@@ -171,17 +171,30 @@ def _gh_put(file, data, sha_key, message):
     body = {"message": message, "content": content}
     if _sha[sha_key]:
         body["sha"] = _sha[sha_key]
-    try:
-        res = requests.put(
-            f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
-            headers=_gh_headers(), json=body, timeout=15
-        )
-        if res.ok:
-            _sha[sha_key] = res.json()["content"]["sha"]
-        else:
-            print(f"  [GitHub] Erreur sauvegarde {file} : {res.status_code}")
-    except Exception as e:
-        print(f"  [GitHub] Erreur sauvegarde {file} : {e}")
+    for attempt in range(2):
+        try:
+            res = requests.put(
+                f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
+                headers=_gh_headers(), json=body, timeout=15
+            )
+            if res.ok:
+                _sha[sha_key] = res.json()["content"]["sha"]
+                return
+            elif res.status_code == 409 and attempt == 0:
+                # SHA désynchronisé — re-fetch le vrai SHA et réessaie
+                r2 = requests.get(
+                    f"https://api.github.com/repos/{GH_REPO}/contents/{file}",
+                    headers=_gh_headers(), timeout=10
+                )
+                if r2.ok:
+                    _sha[sha_key] = r2.json()["sha"]
+                    body["sha"] = _sha[sha_key]
+            else:
+                print(f"  [GitHub] Erreur sauvegarde {file} : {res.status_code}")
+                return
+        except Exception as e:
+            print(f"  [GitHub] Erreur sauvegarde {file} : {e}")
+            return
 
 
 def charger_config():
