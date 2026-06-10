@@ -1,80 +1,5 @@
 [
   {
-    "ts": "2026-06-10T16:09:13",
-    "lvl": "NET",
-    "msg": "Parsing OK — 7 annonce(s) brute(s) recues"
-  },
-  {
-    "ts": "2026-06-10T16:09:13",
-    "lvl": "SCAN",
-    "msg": "7 brutes → 4 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T16:09:13",
-    "lvl": "SCAN",
-    "msg": "Prix marche : min 11990€ | median 41999€ | max 52000€"
-  },
-  {
-    "ts": "2026-06-10T16:09:13",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Golf 8r..."
-  },
-  {
-    "ts": "2026-06-10T16:09:14",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Golf 8r — Le modèle recherché est A45S, mais le titre mentionne Golf 8r"
-  },
-  {
-    "ts": "2026-06-10T16:09:14",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Mercedes A200d kit a45s..."
-  },
-  {
-    "ts": "2026-06-10T16:09:15",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : Mercedes A200d kit a45s — Le modèle recherché est A45S, mais l'annonce correspond à un Mercedes A200d"
-  },
-  {
-    "ts": "2026-06-10T16:09:15",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Mercedes A45S AMG..."
-  },
-  {
-    "ts": "2026-06-10T16:09:16",
-    "lvl": "OK",
-    "msg": "IA OK : Mercedes A45S AMG"
-  },
-  {
-    "ts": "2026-06-10T16:09:16",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3206516137] Mercedes A45S AMG — 41999€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:09:16",
-    "lvl": "SYS",
-    "msg": "Analyse IA : MERCEDES A 45 S EDITION ONE Mercedes-AMG..."
-  },
-  {
-    "ts": "2026-06-10T16:09:17",
-    "lvl": "OK",
-    "msg": "IA OK : MERCEDES A 45 S EDITION ONE Mercedes-AMG"
-  },
-  {
-    "ts": "2026-06-10T16:09:18",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3172611519] MERCEDES A 45 S EDITION ONE Mercedes-AMG 8G-DCT Sp — 52000€ | score -24% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T16:09:18",
-    "lvl": "OK",
-    "msg": "2 alerte(s) envoyee(s) pour 'A45S'"
-  },
-  {
-    "ts": "2026-06-10T16:09:18",
-    "lvl": "BOT",
-    "msg": "Session Chrome fermee proprement"
-  },
-  {
     "ts": "2026-06-10T16:09:21",
     "lvl": "SYS",
     "msg": "Reset detecte (GitHub=0 < memoire=4) — historique non ecrase"
@@ -1498,5 +1423,80 @@
     "ts": "2026-06-10T16:53:44",
     "lvl": "SYS",
     "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
+  },
+  {
+    "ts": "2026-06-10T16:53:46",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est le 207 PEUGEOT, mais l'annonce concerne un RENAULT TWINGO"
+  },
+  {
+    "ts": "2026-06-10T16:53:46",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 cc sport 1.6 hdi 112..."
+  },
+  {
+    "ts": "2026-06-10T16:53:47",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 cc sport 1.6 hdi 112"
+  },
+  {
+    "ts": "2026-06-10T16:53:48",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3207003975] Peugeot 207 cc sport 1.6 hdi 112 — 7990€ | score -78% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:53:48",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI90 PREMIUM PACK 5P..."
+  },
+  {
+    "ts": "2026-06-10T16:53:50",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 1.6 HDI90 PREMIUM PACK 5P"
+  },
+  {
+    "ts": "2026-06-10T16:53:51",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3185760381] Peugeot 207 1.6 HDI90 PREMIUM PACK 5P — 4999€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:53:51",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 CC 1.6 HDI110 FELINE FAP..."
+  },
+  {
+    "ts": "2026-06-10T16:53:53",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 CC 1.6 HDI110 FELINE FAP"
+  },
+  {
+    "ts": "2026-06-10T16:53:55",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3117293282] Peugeot 207 CC 1.6 HDI110 FELINE FAP — 5499€ | score -22% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:53:55",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 HDI90 ACTIVE 3P..."
+  },
+  {
+    "ts": "2026-06-10T16:53:56",
+    "lvl": "OK",
+    "msg": "IA OK : Peugeot 207 1.6 HDI90 ACTIVE 3P"
+  },
+  {
+    "ts": "2026-06-10T16:53:57",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3182095678] Peugeot 207 1.6 HDI90 ACTIVE 3P — 4990€ | score -11% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T16:53:57",
+    "lvl": "SYS",
+    "msg": "Analyse IA : PEUGEOT 207 1.4i 16V - Boite auto Premiu..."
+  },
+  {
+    "ts": "2026-06-10T16:53:58",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
