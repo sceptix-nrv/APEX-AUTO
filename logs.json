@@ -1,15 +1,5 @@
 [
   {
-    "ts": "2026-06-10T15:39:21",
-    "lvl": "BOT",
-    "msg": "Lancement Chrome stealth — viewport 1315x942"
-  },
-  {
-    "ts": "2026-06-10T15:39:26",
-    "lvl": "BOT",
-    "msg": "Navigation homepage LeBonCoin — etablissement session..."
-  },
-  {
     "ts": "2026-06-10T15:39:40",
     "lvl": "BOT",
     "msg": "Session etablie (6.3s, scroll 358px) — fingerprint OK"
@@ -1498,5 +1488,15 @@
     "ts": "2026-06-10T16:11:47",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T16:12:05",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.5s, scroll 368px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T16:12:05",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=A45S&locations=Nancy__48.6954..."
   }
 ]
