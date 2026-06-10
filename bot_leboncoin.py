@@ -27,6 +27,10 @@ except ImportError:
 GH_REPO          = "sceptix-nrv/APEX-AUTO"
 GH_FILE          = "apexauto.json"
 GH_FILE_ANNONCES = "annonces.json"
+GH_FILE_MARCHE   = "marche.json"
+
+annonces_sha = None
+marche_sha   = None
 
 VILLES = {
     "nancy":  {"lat": 48.6954, "lng": 6.1844,  "nom": "Nancy"},
@@ -40,8 +44,6 @@ DESTINATAIRES = {
 
 FUEL_CODES  = {"diesel": "2", "essence": "1", "electrique": "3", "hybride": "5"}
 FUEL_LABELS = {"2": "diesel", "1": "essence", "3": "electrique", "5": "hybride"}
-
-annonces_sha = None
 
 
 
@@ -118,6 +120,63 @@ def sauvegarder_annonces_github(annonces):
             print(f"  [GitHub] Erreur sauvegarde annonces : {res.status_code}")
     except Exception as e:
         print(f"  [GitHub] Erreur sauvegarde annonces : {e}")
+
+
+def charger_marche_github():
+    global marche_sha
+    try:
+        res = gh_get(GH_FILE_MARCHE)
+        if res.status_code == 404:
+            marche_sha = None
+            return []
+        if res.status_code != 200:
+            return []
+        data = res.json()
+        marche_sha = data["sha"]
+        content = base64.b64decode(data["content"]).decode("utf-8")
+        return json.loads(content)
+    except Exception as e:
+        print(f"  [GitHub] Erreur chargement marché : {e}")
+        return []
+
+
+def sauvegarder_marche_github(marche):
+    global marche_sha
+    # Garder max 5000 entrées
+    if len(marche) > 5000:
+        marche = marche[-5000:]
+    try:
+        content_str = json.dumps(marche, indent=2, ensure_ascii=False)
+        res = gh_put(
+            GH_FILE_MARCHE,
+            content_str,
+            marche_sha,
+            f"[Marché] Scan {datetime.now().strftime('%d/%m/%Y %H:%M')}"
+        )
+        if res.ok:
+            marche_sha = res.json()["content"]["sha"]
+    except Exception as e:
+        print(f"  [GitHub] Erreur sauvegarde marché : {e}")
+
+
+def extraire_donnee_marche(ad, recherche):
+    attrs  = get_attrs(ad)
+    prix   = ad.get("price", [None])[0] if ad.get("price") else None
+    km_raw = attrs.get("mileage")
+    an_raw = attrs.get("regdate", "")
+    fuel   = FUEL_LABELS.get(str(attrs.get("fuel", "")), "")
+    return {
+        "id":        str(ad.get("list_id", "")),
+        "titre":     ad.get("subject", ""),
+        "prix":      float(prix) if prix else None,
+        "km":        int(km_raw) if km_raw else None,
+        "annee":     int(an_raw[:4]) if an_raw and len(an_raw) >= 4 else None,
+        "carburant": fuel,
+        "ville":     ad.get("location", {}).get("city", ""),
+        "cp":        ad.get("location", {}).get("zipcode", ""),
+        "recherche": recherche,
+        "date":      datetime.now().strftime("%Y-%m-%d"),
+    }
 
 
 def calculer_score(prix, tous_prix):
@@ -200,16 +259,16 @@ def construire_url(r):
 
 async def scraper_recherche(page, url, nom):
     try:
-        await page.goto(url, timeout=40000)
-        # Attendre que __NEXT_DATA__ soit présent dans le DOM
-        await page.wait_for_function(
-            "() => !!document.getElementById('__NEXT_DATA__')",
-            timeout=20000,
-        )
-        await page.wait_for_timeout(1500)
+        await page.goto(url, wait_until="domcontentloaded", timeout=40000)
+        await page.wait_for_timeout(4000)
     except Exception as e:
         print(f"  Erreur navigation ({nom}) : {e}")
         return []
+
+    # Debug : sauvegarder le HTML pour voir ce que LBC retourne
+    html = await page.content()
+    with open("debug_lbc.html", "w", encoding="utf-8") as f:
+        f.write(html)
 
     next_data = await page.evaluate("""
         () => {
@@ -221,7 +280,7 @@ async def scraper_recherche(page, url, nom):
     """)
 
     if not next_data:
-        print(f"  [WARN] __NEXT_DATA__ introuvable pour {nom}")
+        print(f"  [WARN] __NEXT_DATA__ introuvable — voir debug_lbc.html")
         return []
 
     try:
@@ -365,8 +424,11 @@ async def scan():
 
     historique            = charger_historique()
     annonces_sauvegardees = charger_annonces_github()
+    marche                = charger_marche_github()
     ids_existants         = {a["id"] for a in annonces_sauvegardees}
+    ids_marche            = {a["id"] for a in marche}
     nouvelles_annonces    = []
+    nouvelles_marche      = []
     total_nouvelles       = 0
 
     try:
@@ -385,6 +447,13 @@ async def scan():
                         float(ad["price"][0]) for ad in valides
                         if ad.get("price") and ad["price"][0]
                     ]
+
+                    # Alimenter marche.json avec toutes les annonces valides
+                    for ad in valides:
+                        ad_id = str(ad.get("list_id", ""))
+                        if ad_id and ad_id not in ids_marche:
+                            nouvelles_marche.append(extraire_donnee_marche(ad, nom))
+                            ids_marche.add(ad_id)
 
                     nouvelles = 0
                     for ad in reversed(valides):
@@ -422,6 +491,11 @@ async def scan():
     if nouvelles_annonces:
         annonces_sauvegardees.extend(nouvelles_annonces)
         sauvegarder_annonces_github(annonces_sauvegardees)
+
+    if nouvelles_marche:
+        marche.extend(nouvelles_marche)
+        sauvegarder_marche_github(marche)
+        print(f"  [Marché] {len(nouvelles_marche)} entrée(s) ajoutée(s) ({len(marche)} total)")
 
     print(f"Terminé — {total_nouvelles} nouvelle(s) annonce(s).")
 

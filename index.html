@@ -483,6 +483,12 @@ let editBotId = null;
 let tempDepenses = [];
 
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2); }
+function b64decode(b64) {
+  const bin = atob(b64.replace(/\n/g, ''));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(bytes);
+}
 function esc(str) {
   return String(str ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
@@ -522,7 +528,7 @@ async function ghLoad() {
     if (!res.ok) throw new Error(res.status);
     const json = await res.json();
     ghSha = json.sha;
-    const decoded = JSON.parse(atob(json.content.replace(/\n/g, '')));
+    const decoded = JSON.parse(b64decode(json.content));
     data = { vehicules: [], recherches: [], initialized: false, ...decoded };
     setSyncState('ok', 'GitHub');
     return true;
@@ -836,7 +842,7 @@ async function ghLoadAnnonces() {
     if (!res.ok) return;
     const json = await res.json();
     ghAnnoncesSha = json.sha;
-    annoncesData = JSON.parse(atob(json.content.replace(/\n/g, '')));
+    annoncesData = JSON.parse(b64decode(json.content));
   } catch { annoncesData = []; }
 }
 
