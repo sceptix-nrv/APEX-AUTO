@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "ts": "2026-06-10T20:15:34",
+    "lvl": "SYS",
+    "msg": "── Cycle jour #1  [20:15] ──────────────"
+  },
+  {
+    "ts": "2026-06-10T20:15:35",
+    "lvl": "SYS",
+    "msg": "─── Scan jour ─────────────────────────────"
+  },
+  {
+    "ts": "2026-06-10T20:15:36",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:15:36",
+    "lvl": "SYS",
+    "msg": "Vues locales chargées : 0 IDs"
+  },
+  {
+    "ts": "2026-06-10T20:15:36",
+    "lvl": "SYS",
+    "msg": "Chargement config GitHub…"
+  },
+  {
+    "ts": "2026-06-10T20:15:36",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s)"
+  },
+  {
+    "ts": "2026-06-10T20:15:37",
+    "lvl": "SCAN",
+    "msg": "[JOUR] passat"
+  },
+  {
+    "ts": "2026-06-10T20:15:37",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:15:37",
+    "lvl": "BOT",
+    "msg": "Chrome stealth 1262x815"
+  }
+]
