@@ -1,7 +1,7 @@
 {
-  "etat": "analyse",
-  "label": "🧠 Analyse IA",
-  "color": "#8b5cf6",
+  "etat": "envoi",
+  "label": "📤 Envoi Telegram",
+  "color": "#22d3a0",
   "detail": "Peugeot 206+ 1.4 HDi Basis CT OK",
-  "ts": "10/06 20:54:05"
+  "ts": "10/06 20:54:07"
 }
