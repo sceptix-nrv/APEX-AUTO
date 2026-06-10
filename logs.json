@@ -98,5 +98,10 @@
     "ts": "2026-06-10T11:54:08",
     "lvl": "NET",
     "msg": "Fetch description annonce 3197282595..."
+  },
+  {
+    "ts": "2026-06-10T11:54:25",
+    "lvl": "WARN",
+    "msg": "Aucune description trouvee pour 3197282595"
   }
 ]
