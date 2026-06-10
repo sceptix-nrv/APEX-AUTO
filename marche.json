@@ -334,5 +334,53 @@
     "cp": "57800",
     "recherche": "207",
     "date": "2026-06-10"
+  },
+  {
+    "id": "3172611519",
+    "titre": "MERCEDES A 45 S EDITION ONE Mercedes-AMG 8G-DCT Speedshift 4Matic+ A45S",
+    "prix": 52000.0,
+    "km": 80000,
+    "annee": 2020,
+    "carburant": "essence",
+    "ville": "Nancy",
+    "cp": "54000",
+    "recherche": "A45S",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3206516137",
+    "titre": "Mercedes A45S AMG",
+    "prix": 41999.0,
+    "km": 73700,
+    "annee": 2019,
+    "carburant": "essence",
+    "ville": "Thionville",
+    "cp": "57100",
+    "recherche": "A45S",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3197270387",
+    "titre": "Mercedes A200d kit a45s",
+    "prix": 11990.0,
+    "km": 185000,
+    "annee": 2013,
+    "carburant": "diesel",
+    "ville": "Damelevières",
+    "cp": "54360",
+    "recherche": "A45S",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "3181636520",
+    "titre": "Golf 8r",
+    "prix": 38490.0,
+    "km": 75000,
+    "annee": 2022,
+    "carburant": "essence",
+    "ville": "Metz",
+    "cp": "57000",
+    "recherche": "A45S",
+    "date": "2026-06-10"
   }
 ]
