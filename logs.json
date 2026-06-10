@@ -918,5 +918,55 @@
     "ts": "2026-06-10T17:35:53",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T17:36:05",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 HDI 4 chevaux — "
+  },
+  {
+    "ts": "2026-06-10T17:36:05",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213973256] 206 HDI 4 chevaux — 4000€ | score -34% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:36:05",
+    "lvl": "SYS",
+    "msg": "Analyse IA : PEUGEOT 206 \\'FAIBLE KILOMETRAGE\\' - URB..."
+  },
+  {
+    "ts": "2026-06-10T17:36:06",
+    "lvl": "OK",
+    "msg": "IA OK : PEUGEOT 206 \\'FAIBLE KILOMETRAGE\\' - URB"
+  },
+  {
+    "ts": "2026-06-10T17:36:07",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3212210452] PEUGEOT 206 \\'FAIBLE KILOMETRAGE\\' - URBAN - 1.1i  — 3990€ | score -33% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T17:36:07",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Vend / échange 206 1.4 hdi édition Xbox ..."
+  },
+  {
+    "ts": "2026-06-10T17:36:08",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Vend / échange 206 1.4 hdi édition Xbox  — Le titre mentionne 'Xbox 360' qui n'est pas un modèle de voiture."
+  },
+  {
+    "ts": "2026-06-10T17:36:08",
+    "lvl": "OK",
+    "msg": "19 alerte(s) envoyee(s) pour '206'"
+  },
+  {
+    "ts": "2026-06-10T17:36:08",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T17:36:11",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=27) — historique non ecrase"
   }
 ]
