@@ -93,5 +93,55 @@
     "ts": "2026-06-10T20:16:41",
     "lvl": "BOT",
     "msg": "Chrome stealth 1387x932"
+  },
+  {
+    "ts": "2026-06-10T20:46:48",
+    "lvl": "SYS",
+    "msg": "── Cycle jour #1  [20:46] ──────────────"
+  },
+  {
+    "ts": "2026-06-10T20:46:49",
+    "lvl": "SYS",
+    "msg": "─── Scan jour ─────────────────────────────"
+  },
+  {
+    "ts": "2026-06-10T20:46:50",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:46:50",
+    "lvl": "SYS",
+    "msg": "Vues locales chargées : 0 IDs"
+  },
+  {
+    "ts": "2026-06-10T20:46:50",
+    "lvl": "SYS",
+    "msg": "Chargement config GitHub…"
+  },
+  {
+    "ts": "2026-06-10T20:46:50",
+    "lvl": "SYS",
+    "msg": "2 recherche(s) active(s)"
+  },
+  {
+    "ts": "2026-06-10T20:46:51",
+    "lvl": "SCAN",
+    "msg": "[JOUR] passat"
+  },
+  {
+    "ts": "2026-06-10T20:46:52",
+    "lvl": "WARN",
+    "msg": "GitHub PUT status.json → 422"
+  },
+  {
+    "ts": "2026-06-10T20:46:52",
+    "lvl": "BOT",
+    "msg": "Scrape 'passat' p.1 — cookie valide: False"
+  },
+  {
+    "ts": "2026-06-10T20:46:52",
+    "lvl": "BOT",
+    "msg": "Refresh cookie DataDome via UC…"
   }
 ]
