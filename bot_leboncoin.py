@@ -19,7 +19,10 @@ HEURE_FIN = 24
 FICHIER_HISTORIQUE = "annonces_vues.json"
 
 # CONFIG GITHUB
-GH_TOKEN = os.environ.get("GH_TOKEN", "")
+try:
+    from secret import GH_TOKEN
+except ImportError:
+    GH_TOKEN = os.environ.get("GH_TOKEN", "")
 GH_REPO  = "sceptix-nrv/APEX-AUTO"
 GH_FILE  = "apexauto.json"
 GH_FILE_ANNONCES = "annonces.json"

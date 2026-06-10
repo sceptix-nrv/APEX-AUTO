@@ -1,0 +1,4 @@
+secret.py
+annonces_vues.json
+__pycache__/
+*.pyc
