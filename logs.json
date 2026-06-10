@@ -258,5 +258,65 @@
     "ts": "2026-06-10T10:25:45",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=CLIO%202&locations=Nancy__48...."
+  },
+  {
+    "ts": "2026-06-10T10:25:55",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T10:25:56",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T10:25:56",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 2 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T10:25:56",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 2699€ | median 4000€ | max 4000€"
+  },
+  {
+    "ts": "2026-06-10T10:25:57",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213636520] Renault Clio 3 1.2 TCe 2009 – Faible kil — 4000€ | score +0% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:25:58",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213712526] Renault Clio 2 campus 1.2 60 cv — 2699€ | score +33% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T10:25:58",
+    "lvl": "OK",
+    "msg": "2 alerte(s) envoyee(s) pour 'CLIO 2'"
+  },
+  {
+    "ts": "2026-06-10T10:25:58",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T10:26:02",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 88 entrees"
+  },
+  {
+    "ts": "2026-06-10T10:26:03",
+    "lvl": "SYS",
+    "msg": "Sauvegarde marche — 89 entrees"
+  },
+  {
+    "ts": "2026-06-10T10:26:05",
+    "lvl": "SYS",
+    "msg": "Base marche mise a jour +2 entrees (89 total)"
+  },
+  {
+    "ts": "2026-06-10T10:26:05",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 2 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
