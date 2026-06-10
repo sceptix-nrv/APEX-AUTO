@@ -403,5 +403,65 @@
     "ts": "2026-06-10T12:55:09",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T12:55:19",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : 206+ — Le titre mentionne '206+' qui n'est pas exactement le modèle recherché"
+  },
+  {
+    "ts": "2026-06-10T12:55:19",
+    "lvl": "SYS",
+    "msg": "Analyse IA : 206..."
+  },
+  {
+    "ts": "2026-06-10T12:55:20",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : 206 — "
+  },
+  {
+    "ts": "2026-06-10T12:55:20",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213715488] 206 — 1150€ | score +36% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T12:55:20",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T12:55:21",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 — "
+  },
+  {
+    "ts": "2026-06-10T12:55:21",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213818520] Peugeot 206 — 500€ | score +72% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T12:55:21",
+    "lvl": "OK",
+    "msg": "13 alerte(s) envoyee(s) pour '206'"
+  },
+  {
+    "ts": "2026-06-10T12:55:21",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T12:55:24",
+    "lvl": "SYS",
+    "msg": "Reset detecte (GitHub=0 < memoire=16) — historique non ecrase"
+  },
+  {
+    "ts": "2026-06-10T12:55:24",
+    "lvl": "SYS",
+    "msg": "Sauvegarde annonces — 13 entrees"
+  },
+  {
+    "ts": "2026-06-10T12:55:25",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 13 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
