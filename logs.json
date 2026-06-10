@@ -1258,5 +1258,50 @@
     "ts": "2026-06-10T11:11:27",
     "lvl": "WARN",
     "msg": "Groq rate limit — attente 10s (1/3)"
+  },
+  {
+    "ts": "2026-06-10T11:11:38",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 SW 1.4i 95CV 1 ères mains — "
+  },
+  {
+    "ts": "2026-06-10T11:11:39",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3203610506] Peugeot 207 SW 1.4i 95CV 1 ères mains — 4290€ | score -7% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:11:39",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 fap 1.6 HDi 112ch Sport..."
+  },
+  {
+    "ts": "2026-06-10T11:11:40",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 207 fap 1.6 HDi 112ch Sport — "
+  },
+  {
+    "ts": "2026-06-10T11:11:41",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213616761] Peugeot 207 fap 1.6 HDi 112ch Sport — 2270€ | score +43% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T11:11:41",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Jaguar S-TYPE 2,7L V6 207Ch EXECUTIVE BV..."
+  },
+  {
+    "ts": "2026-06-10T11:11:42",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Jaguar S-TYPE 2,7L V6 207Ch EXECUTIVE BV — Le modèle recherché est le 206, mais l'annonce concerne un Jaguar S-TYPE"
+  },
+  {
+    "ts": "2026-06-10T11:11:42",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 207 1.6 hdi 90cv an. 2010..."
+  },
+  {
+    "ts": "2026-06-10T11:11:43",
+    "lvl": "WARN",
+    "msg": "Groq rate limit — attente 10s (1/3)"
   }
 ]
