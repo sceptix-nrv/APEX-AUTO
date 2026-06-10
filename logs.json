@@ -1,40 +1,5 @@
 [
   {
-    "ts": "2026-06-10T17:56:02",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3205967687] 206cc Roland garos — 3200€ | score -7% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:56:02",
-    "lvl": "SYS",
-    "msg": "Analyse IA : Peugeot 206..."
-  },
-  {
-    "ts": "2026-06-10T17:56:04",
-    "lvl": "WARN",
-    "msg": "IA ATTENTION : Peugeot 206 — "
-  },
-  {
-    "ts": "2026-06-10T17:56:04",
-    "lvl": "OK",
-    "msg": "NOUVELLE : [3213307024] Peugeot 206 — 3000€ | score +0% → Telegram envoye"
-  },
-  {
-    "ts": "2026-06-10T17:56:04",
-    "lvl": "SYS",
-    "msg": "Analyse IA : RENAULT TWINGO 1L2i campus 60ch directio..."
-  },
-  {
-    "ts": "2026-06-10T17:56:06",
-    "lvl": "WARN",
-    "msg": "IA ELIMINE (modele) : RENAULT TWINGO 1L2i campus 60ch directio — Le modèle recherché est le 206 Peugeot, mais l'annonce concerne un Renault Twingo."
-  },
-  {
-    "ts": "2026-06-10T17:56:06",
-    "lvl": "SYS",
-    "msg": "Analyse IA : 206 1.4 hdi..."
-  },
-  {
     "ts": "2026-06-10T17:56:07",
     "lvl": "WARN",
     "msg": "IA ATTENTION : 206 1.4 hdi — "
@@ -1498,5 +1463,40 @@
     "ts": "2026-06-10T18:54:59",
     "lvl": "NET",
     "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=passat&locations=Orthez__43.4..."
+  },
+  {
+    "ts": "2026-06-10T18:55:04",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T18:55:04",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T18:55:04",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 6 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T18:55:04",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 3400€ | median 7500€ | max 8990€"
+  },
+  {
+    "ts": "2026-06-10T18:55:04",
+    "lvl": "SCAN",
+    "msg": "Aucune nouvelle annonce — 6 deja connues"
+  },
+  {
+    "ts": "2026-06-10T18:55:05",
+    "lvl": "BOT",
+    "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T18:55:07",
+    "lvl": "BOT",
+    "msg": "Pause anti-detection 51s avant prochaine session Chrome..."
   }
 ]
