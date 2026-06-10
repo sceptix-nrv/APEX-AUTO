@@ -493,5 +493,70 @@
     "ts": "2026-06-10T15:50:40",
     "lvl": "BOT",
     "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T15:50:58",
+    "lvl": "BOT",
+    "msg": "Session etablie (7.4s, scroll 152px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T15:50:58",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=Peugeot%20206&locations=Nancy..."
+  },
+  {
+    "ts": "2026-06-10T15:51:07",
+    "lvl": "NET",
+    "msg": "Page chargee — extraction __NEXT_DATA__"
+  },
+  {
+    "ts": "2026-06-10T15:51:07",
+    "lvl": "NET",
+    "msg": "Parsing OK — 35 annonce(s) brute(s) recues"
+  },
+  {
+    "ts": "2026-06-10T15:51:07",
+    "lvl": "SCAN",
+    "msg": "35 brutes → 15 correspondent aux criteres"
+  },
+  {
+    "ts": "2026-06-10T15:51:07",
+    "lvl": "SCAN",
+    "msg": "Prix marche : min 1000€ | median 1800€ | max 3000€"
+  },
+  {
+    "ts": "2026-06-10T15:51:07",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206 1.4 75cv soucis moteur joint..."
+  },
+  {
+    "ts": "2026-06-10T15:51:08",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 1.4 75cv soucis moteur joint — "
+  },
+  {
+    "ts": "2026-06-10T15:51:09",
+    "lvl": "OK",
+    "msg": "NOUVELLE : [3213024054] Peugeot 206 1.4 75cv soucis moteur joint culasse — 1000€ | score +44% → Telegram envoye"
+  },
+  {
+    "ts": "2026-06-10T15:51:09",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Suzuki swift new 1.3 glx 5 portes..."
+  },
+  {
+    "ts": "2026-06-10T15:51:10",
+    "lvl": "WARN",
+    "msg": "IA ELIMINE (modele) : Suzuki swift new 1.3 glx 5 portes — Le modèle recherché est le Peugeot 206, mais l'annonce concerne un Suzuki Swift."
+  },
+  {
+    "ts": "2026-06-10T15:51:10",
+    "lvl": "SYS",
+    "msg": "Analyse IA : Peugeot 206..."
+  },
+  {
+    "ts": "2026-06-10T15:51:11",
+    "lvl": "WARN",
+    "msg": "IA ATTENTION : Peugeot 206 — "
   }
 ]
