@@ -2,11 +2,6 @@
   {
     "ts": "2026-06-10T17:57:18",
     "lvl": "SCAN",
-    "msg": "35 brutes → 27 correspondent aux criteres"
-  },
-  {
-    "ts": "2026-06-10T17:57:18",
-    "lvl": "SCAN",
     "msg": "Prix marche : min 1€ | median 2990€ | max 4000€"
   },
   {
@@ -1498,5 +1493,10 @@
     "ts": "2026-06-10T19:10:03",
     "lvl": "BOT",
     "msg": "Session Chrome fermee proprement"
+  },
+  {
+    "ts": "2026-06-10T19:10:07",
+    "lvl": "SYS",
+    "msg": "=== SCAN TERMINE — 0 nouvelle(s) | prochain cycle dans 10 min ==="
   }
 ]
