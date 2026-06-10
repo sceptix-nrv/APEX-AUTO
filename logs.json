@@ -113,5 +113,20 @@
     "ts": "2026-06-10T11:51:11",
     "lvl": "BOT",
     "msg": "Lancement Chrome stealth — viewport 1323x979"
+  },
+  {
+    "ts": "2026-06-10T11:51:19",
+    "lvl": "BOT",
+    "msg": "Navigation homepage LeBonCoin — etablissement session..."
+  },
+  {
+    "ts": "2026-06-10T11:51:33",
+    "lvl": "BOT",
+    "msg": "Session etablie (6.0s, scroll 221px) — fingerprint OK"
+  },
+  {
+    "ts": "2026-06-10T11:51:33",
+    "lvl": "NET",
+    "msg": "GET https://www.leboncoin.fr/recherche?category=2&text=207&locations=Nancy__48.6954_..."
   }
 ]
